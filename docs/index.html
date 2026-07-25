@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poppie's Navy Journal Viewer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <strong>Poppie's Navy Journal</strong>
+      <span id="pageMeta">Page 01 of 51</span>
+    </div>
+    <div class="controls" aria-label="Page controls">
+      <a class="downloadBtn" href="downloads/Poppies_Navy_Journal_revised.pdf" download>Download PDF</a>
+      <button id="prevPage" class="iconBtn" type="button" aria-label="Previous page">‹</button>
+      <select id="pageSelect" aria-label="Choose page"></select>
+      <button id="nextPage" class="iconBtn" type="button" aria-label="Next page">›</button>
+      <label class="switch" aria-label="Switch page view">
+        <span>Handwritten + Text</span>
+        <input id="modeSwitch" type="checkbox" />
+        <i></i>
+        <span>Text + Details</span>
+      </label>
+    </div>
+  </header>
+  <main class="pageShell">
+    <section class="viewer" id="viewer"></section>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
