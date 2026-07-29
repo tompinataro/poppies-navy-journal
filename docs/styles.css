@@ -109,10 +109,9 @@ select { padding: 0 30px 0 10px; }
 .cebu { left: 57%; top: 47%; } .cebu::before { width: 18px; height: 72px; }
 .leyte { left: 68%; top: 43%; } .leyte::before { width: 24px; height: 72px; }
 .mindanao { left: 62%; top: 72%; } .mindanao::before { width: 110px; height: 48px; }
-.route { margin-top: 18px; padding: 20px 10px 26px; }
-.routeLine { position: relative; height: 76px; border-top: 3px solid #5b6470; margin: 32px 12px 0; }
-.stop { position: absolute; top: -12px; transform: translateX(-50%); text-align: center; font-size: 13px; color: #1d2939; }
-.stop::before { content: ""; display: block; width: 18px; height: 18px; margin: 0 auto 8px; border-radius: 50%; background: var(--accent); border: 3px solid white; box-shadow: 0 0 0 1px #42636c; }
+.routeMap { margin: 16px 0 0; }
+.routeMap img { display: block; width: 100%; border: 1px solid #b9c0c8; border-radius: 8px; background: #d6edf8; }
+.routeMap figcaption { margin-top: 7px; color: var(--muted); font-size: 15px; line-height: 1.35; }
 @media (max-width: 880px) {
   .topbar { align-items: flex-start; }
   .spread { grid-template-columns: 1fr; }

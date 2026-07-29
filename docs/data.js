@@ -221,7 +221,12 @@ window.JOURNAL_PAGES = [
     "paragraphs": [
       "pool today. We get 60 men to put up a dollar each. Then we got 60 sealed envelopes with numbers in them from one to 60. Every man puts his name on one of them. When we hit Guam & the anchor drops its recorded to the minute on the bridge. So if its 4:35 the man with the number 35 wins $60.00. We're starting one for Frisco soon for $5.00 per man. Thats a $300.00 prize. We will arrive in Guam tomorrow I think. Then we'll find out who has won."
     ],
-    "details": []
+    "details": [
+      {
+        "title": "Anchor pool money note",
+        "body": "Approximate 2026 CPI equivalents for the 1946 anchor pool amounts: $1 is about $17; $5 is about $86; $60 is about $1,031; and the $300 Frisco prize is about $5,157."
+      }
+    ]
   },
   {
     "num": 20,
@@ -235,7 +240,7 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Book and route note",
-        "body": "Valiant Libertine was a 1942 novel by John Bryson. The route below is schematic, not to scale.",
+        "body": "Valiant Libertine was a 1942 novel by John Bryson. The map below shows the approximate geography of the route, not the ship's exact track.",
         "visual": "route"
       }
     ]

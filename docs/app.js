@@ -35,8 +35,7 @@ function leyteMap() {
   </div>`;
 }
 function routeMap() {
-  const stops = [['Leyte',3],['Guam',25],['Eniwetok',47],['Pearl Harbor',70],['San Francisco',94]];
-  return `<div class="route"><div class="routeLine">${stops.map(([label,pos]) => `<div class="stop" style="left:${pos}%">${label}</div>`).join('')}</div></div>`;
+  return `<figure class="routeMap"><img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco"><figcaption>Approximate geography only; not the ship's exact track.</figcaption></figure>`;
 }
 function renderDetails(page) {
   if (!page.details.length) return '<div class="detailEmpty">No added details for this page yet.</div>';
