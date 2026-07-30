@@ -323,6 +323,58 @@ select { padding: 0 30px 0 10px; }
 .mediaMore:hover {
   border-color: var(--accent);
 }
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.detailPhoto {
+  display: grid;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #d9d2c6;
+  border-radius: 8px;
+  background: #fbfaf7;
+}
+.detailPhoto > a {
+  display: block;
+  background: #ece5da;
+}
+.detailPhoto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.detailPhoto figcaption {
+  display: grid;
+  gap: 5px;
+  padding: 9px 10px 10px;
+}
+.detailPhoto strong {
+  font-size: 15px;
+  line-height: 1.2;
+}
+.detailPhoto span {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.3;
+}
+.detailPhoto figcaption a {
+  width: fit-content;
+  min-height: 28px;
+  padding: 4px 8px;
+  border: 1px solid #cfc7ba;
+  border-radius: 6px;
+  background: white;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.detailPhoto figcaption a:hover { border-color: var(--accent); }
 .detailEmpty { color: var(--muted); font-size: 18px; line-height: 1.45; padding: 10px 0; }
 .mapBox { margin-top: 14px; border: 1px solid #b9c0c8; background: #eaf3f8; height: 270px; border-radius: 8px; position: relative; overflow: hidden; }
 .island { position: absolute; display: grid; place-items: end center; color: #1d2939; font-size: 13px; }
@@ -409,6 +461,7 @@ select { padding: 0 30px 0 10px; }
   .detailsArrow { display: none; }
   .manuscriptPanel img { max-height: none; }
   .mediaCard { grid-template-columns: 82px 1fr; }
+  .photoGrid { grid-template-columns: 1fr; }
   .routeTable div { grid-template-columns: 1fr; }
   .routeTable span { text-align: left; }
 }

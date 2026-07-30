@@ -659,7 +659,47 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Royal Hawaiian",
-        "body": "The Royal Hawaiian opened in 1927 and was known as the Pink Palace of the Pacific; during WWII it served military R&R use."
+        "body": "The Royal Hawaiian opened in 1927 and was known as the Pink Palace of the Pacific; during WWII it served military R&R use.",
+        "photos": [
+          {
+            "title": "Period view, 1930s",
+            "caption": "Aerial view of Waikiki Beach with the Royal Hawaiian Hotel and mountains, between 1930 and 1940.",
+            "image": "https://cdn.loc.gov/service/pnp/cph/3b10000/3b14000/3b14400/3b14469r.jpg",
+            "alt": "Black-and-white aerial view of Waikiki Beach showing the Royal Hawaiian Hotel and mountains, circa 1930s.",
+            "url": "https://www.loc.gov/item/2003690382/"
+          },
+          {
+            "title": "Period postcard, 1938",
+            "caption": "Royal Hawaiian Hotel postcard, Honolulu, Hawaii, 1938.",
+            "image": "https://tile.loc.gov/storage-services/service/pnp/pcrd/1d00000/1d00000/1d00800/1d00838v.jpg",
+            "alt": "Color postcard view of the Royal Hawaiian Hotel in Honolulu, 1938.",
+            "url": "https://www.loc.gov/item/2024687168/"
+          },
+          {
+            "title": "Current view, 2024",
+            "caption": "The Royal Hawaiian Resort seen from Waikiki Beach, March 2, 2024.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/The_Royal_Hawaiian_%282024%29-L1004750.jpg/960px-The_Royal_Hawaiian_%282024%29-L1004750.jpg",
+            "alt": "The Royal Hawaiian Resort seen from Waikiki Beach in 2024.",
+            "url": "https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_(2024)-L1004750.jpg"
+          },
+          {
+            "title": "Current beach view, 2024",
+            "caption": "The Royal Hawaiian Hotel from Waikiki Beach, March 3, 2024.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/The_Royal_Hawaiian_%282024%29-L1004805.jpg/960px-The_Royal_Hawaiian_%282024%29-L1004805.jpg",
+            "alt": "The Royal Hawaiian Hotel viewed from Waikiki Beach in 2024.",
+            "url": "https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_(2024)-L1004805.jpg"
+          }
+        ],
+        "links": [
+          {
+            "label": "Hotel history",
+            "url": "https://www.royal-hawaiian.com/history-overview/"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Royal_Hawaiian_Hotel"
+          }
+        ]
       }
     ]
   },
