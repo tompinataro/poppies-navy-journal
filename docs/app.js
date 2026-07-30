@@ -42,7 +42,7 @@ function renderCoverPage(page) {
   </section>`;
 }
 function renderIntroPage(page) {
-  const specs = page.specs.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd>`).join('');
+  const specs = page.specs.map(([label, value]) => `<div class="specItem"><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('');
   const photos = page.photos.map(photo => `<figure><img src="${photo.src}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.caption)}</figcaption></figure>`).join('');
   return `<section class="frontPage introPage">
     <div class="introLead">

@@ -141,11 +141,16 @@ select { padding: 0 30px 0 10px; }
 }
 .specGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(160px, 1fr));
-  gap: 12px 18px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px 28px;
   margin: 0;
   padding-top: 18px;
   border-top: 1px solid var(--line);
+}
+.specItem {
+  display: grid;
+  gap: 4px;
+  align-content: start;
 }
 .specGrid dt {
   color: var(--muted);
@@ -154,7 +159,7 @@ select { padding: 0 30px 0 10px; }
   text-transform: uppercase;
 }
 .specGrid dd {
-  margin: 4px 0 0;
+  margin: 0;
   font-size: 17px;
   line-height: 1.35;
 }
