@@ -1,10 +1,8 @@
 const pages = window.JOURNAL_PAGES;
 let pageIndex = 0;
-let detailsMode = false;
 const viewer = document.getElementById('viewer');
 const pageSelect = document.getElementById('pageSelect');
 const pageMeta = document.getElementById('pageMeta');
-const modeSwitch = document.getElementById('modeSwitch');
 
 function lineSplit(text, max = 22) {
   const words = text.trim().split(/\s+/).filter(Boolean);
@@ -90,7 +88,7 @@ function renderDetails(page) {
 }
 async function fitHandTextToManuscript(page) {
   const img = viewer.querySelector('.manuscriptPanel img');
-  const textPanel = viewer.querySelector('.textPanel');
+  const textPanel = viewer.querySelector('.transcriptionPanel');
   if (!img || !textPanel) return;
   try {
     if (!img.complete) await img.decode();
@@ -98,10 +96,18 @@ async function fitHandTextToManuscript(page) {
   const maxHeight = img.getBoundingClientRect().height;
   let max = baseLineMax(page);
   while (max <= 48) {
-    textPanel.innerHTML = renderHandText(page, max);
+    const currentText = textPanel.querySelector('.handText');
+    if (currentText) currentText.outerHTML = renderHandText(page, max);
     const text = textPanel.querySelector('.handText');
     if (!text || text.getBoundingClientRect().height <= maxHeight + 4) break;
     max += 2;
+  }
+  const text = textPanel.querySelector('.handText');
+  if (!text) return;
+  let fontSize = parseFloat(getComputedStyle(text).fontSize);
+  while (fontSize > 18 && text.getBoundingClientRect().height > maxHeight + 4) {
+    fontSize -= 1;
+    text.style.fontSize = `${fontSize}px`;
   }
 }
 function render() {
@@ -116,12 +122,16 @@ function render() {
     viewer.innerHTML = renderIntroPage(page);
     return;
   }
-  if (detailsMode) {
-    viewer.innerHTML = `<div class="spread"><section class="panel textPanel">${renderTypedText(page)}</section><section class="panel textPanel">${renderDetails(page)}</section></div>`;
-  } else {
-    viewer.innerHTML = `<div class="spread"><section class="panel manuscriptPanel"><img src="${page.image}" alt="Handwritten diary ${page.label}" /></section><section class="panel textPanel">${renderHandText(page)}</section></div>`;
-    fitHandTextToManuscript(page);
-  }
+  const hasDetails = page.details.length > 0;
+  viewer.innerHTML = `<div class="triSpread">
+    <section class="panel manuscriptPanel"><img src="${page.image}" alt="Handwritten diary ${page.label}" /></section>
+    <section class="panel textPanel transcriptionPanel">
+      ${renderHandText(page)}
+      ${hasDetails ? '<button class="detailsArrow" type="button" aria-label="Show details column">›</button>' : ''}
+    </section>
+    <section class="panel textPanel detailsPanel">${renderDetails(page)}</section>
+  </div>`;
+  fitHandTextToManuscript(page);
 }
 pages.forEach((page, idx) => {
   const opt = document.createElement('option'); opt.value = String(idx); opt.textContent = page.label; pageSelect.appendChild(opt);
@@ -129,7 +139,12 @@ pages.forEach((page, idx) => {
 document.getElementById('prevPage').addEventListener('click', () => { pageIndex = Math.max(0, pageIndex - 1); render(); });
 document.getElementById('nextPage').addEventListener('click', () => { pageIndex = Math.min(pages.length - 1, pageIndex + 1); render(); });
 pageSelect.addEventListener('change', e => { pageIndex = Number(e.target.value); render(); });
-modeSwitch.addEventListener('change', e => { detailsMode = e.target.checked; render(); });
+viewer.addEventListener('click', e => {
+  const arrow = e.target.closest('.detailsArrow');
+  if (!arrow) return;
+  const details = viewer.querySelector('.detailsPanel');
+  if (details) details.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+});
 document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') { pageIndex = Math.max(0, pageIndex - 1); render(); }
   if (e.key === 'ArrowRight') { pageIndex = Math.min(pages.length - 1, pageIndex + 1); render(); }

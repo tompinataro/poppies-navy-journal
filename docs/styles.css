@@ -61,7 +61,15 @@ select { padding: 0 30px 0 10px; }
 .switch input:checked + i { background: var(--accent); }
 .switch input:checked + i::after { transform: translateX(24px); }
 .pageShell { max-width: 1440px; margin: 0 auto; padding: 18px; }
-.viewer { min-height: calc(100vh - 84px); }
+.viewer { min-height: calc(100vh - 84px); overflow-x: auto; overscroll-behavior-inline: contain; padding-bottom: 8px; }
+.triSpread {
+  display: grid;
+  grid-template-columns: minmax(560px, 640px) minmax(440px, 520px) minmax(420px, 520px);
+  gap: 22px;
+  align-items: start;
+  width: max-content;
+  min-width: 100%;
+}
 .spread { display: grid; grid-template-columns: minmax(320px, .95fr) minmax(340px, 1.05fr); gap: 22px; align-items: start; }
 .panel {
   background: var(--panel);
@@ -73,6 +81,29 @@ select { padding: 0 30px 0 10px; }
 }
 .textPanel {
   padding-left: clamp(30px, 3vw, 46px);
+}
+.transcriptionPanel {
+  position: relative;
+}
+.detailsArrow {
+  position: absolute;
+  top: 50%;
+  right: -17px;
+  z-index: 2;
+  width: 34px;
+  height: 48px;
+  transform: translateY(-50%);
+  border: 1px solid #c9c2b6;
+  border-radius: 999px;
+  background: rgba(255, 253, 248, .96);
+  color: var(--accent);
+  box-shadow: 0 6px 16px rgba(38, 31, 20, .16);
+  font: 700 30px/1 ui-serif, Georgia, "Times New Roman", serif;
+  cursor: pointer;
+}
+.detailsArrow:hover {
+  border-color: var(--accent);
+  background: white;
 }
 .frontPage {
   min-height: calc(100vh - 120px);
@@ -225,9 +256,11 @@ select { padding: 0 30px 0 10px; }
   .topbar { align-items: flex-start; }
   .coverPage, .introLead, .photoStrip { grid-template-columns: 1fr; }
   .specGrid { grid-template-columns: repeat(2, minmax(130px, 1fr)); }
+  .viewer { overflow-x: visible; padding-bottom: 0; }
+  .triSpread { grid-template-columns: 1fr; width: auto; min-width: 0; }
   .spread { grid-template-columns: 1fr; }
   .panel { min-height: auto; }
   .textPanel { padding-left: 24px; }
+  .detailsArrow { display: none; }
   .manuscriptPanel img { max-height: none; }
-  .switch { width: 100%; grid-template-columns: 1fr 54px 1fr; }
 }
