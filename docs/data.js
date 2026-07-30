@@ -625,7 +625,33 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Whales and money",
-        "body": "Pacific whale sightings could include large species such as sperm, humpback, or blue whales. $11.50 in 1946 is about $197 today; $50 is about $856."
+        "body": "Pacific whale sightings could include large species such as sperm, humpback, or blue whales. Poppie's February 1946 sightings came while Pegasus was at sea between Enewetak and Pearl Harbor; these NOAA sanctuary photos show representative humpback whales in Hawaiian waters. $11.50 in 1946 is about $197 today; $50 is about $856.",
+        "photos": [
+          {
+            "title": "Humpback whale breaching",
+            "caption": "A humpback whale breaching in the Hawaiian Islands Humpback Whale National Marine Sanctuary. Photo: HIHWNMS/NOAA, permit #14097.",
+            "image": "assets/details/whales/humpback-breach-hihwnms-noaa.jpg",
+            "alt": "Humpback whale breaching out of the ocean near the Hawaiian Islands.",
+            "url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg",
+            "linkLabel": "View source"
+          },
+          {
+            "title": "Humpback whale surfacing",
+            "caption": "A humpback whale rising at the surface in the Hawaiian Islands Humpback Whale National Marine Sanctuary. Photo: R. Finn/NOAA, permit #15240.",
+            "image": "assets/details/whales/humpback-breach-r-finn-noaa.jpg",
+            "alt": "Humpback whale surfacing with spray and ocean around it.",
+            "url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_-_humpback_whale_breaching_(31458927013).jpg",
+            "linkLabel": "View source"
+          },
+          {
+            "title": "Humpback near the surface",
+            "caption": "A humpback whale just below the surface in Hawaiian waters. Photo: Ed Lyman/HIHWNMS/NOAA, permit #14097.",
+            "image": "assets/details/whales/humpback-surface-noaa.jpg",
+            "alt": "Humpback whale visible just below the ocean surface.",
+            "url": "https://commons.wikimedia.org/wiki/File:Humpback_Whale_Underwater_(37209287981).jpg",
+            "linkLabel": "View source"
+          }
+        ]
       }
     ]
   },
