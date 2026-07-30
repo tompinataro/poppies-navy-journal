@@ -83,6 +83,7 @@ function routeMap() {
   return `<figure class="routeMap">
     <div class="routeMapFrame">
       <img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco">
+      <span class="routeTitleOverlay">Approximate Pacific Route, Jan. 4-Mar. 4, 1946</span>
       <span class="routeLeg routeLegLeyteGuam">1,172 nmi</span>
       <span class="routeLeg routeLegGuamEnewetak">1,036 nmi</span>
       <span class="routeLeg routeLegEnewetakPearl">2,359 nmi</span>

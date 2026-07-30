@@ -852,6 +852,30 @@ window.JOURNAL_PAGES = [
       {
         "title": "Ship and crew note",
         "body": "USS Pegasus (AK-48/IX-222) had a listed complement of 156; 25 discharged men would be a noticeable part of the crew. Pegasus reached San Francisco on March 4, 1946 and decommissioned April 19, 1946."
+      },
+      {
+        "title": "59-day route check",
+        "body": "The route shown totals about 6,650 nautical miles. Poppie's 59-day count lines up with Jan. 4, 1946, the diary's first homeward-order entry, through the Mar. 4 arrival in San Francisco. From the Jan. 6 departure from Leyte to Mar. 4 is about 57 elapsed days. Spread across 59 days, the mapped distance averages about 113 nautical miles per day, which fits his notes about slow speed, engine trouble, Guam and Pearl Harbor delays, and port days.",
+        "visual": "route"
+      },
+      {
+        "title": "Golden Gate Bridge",
+        "body": "Poppie wrote that Pegasus went under the Golden Gate Bridge at 0830 on Mar. 4, 1946. This period U.S. Navy image shows aircraft carriers passing under the bridge on Nov. 12, 1936, while the bridge was still under construction.",
+        "photos": [
+          {
+            "title": "U.S. Navy ships under the Golden Gate",
+            "caption": "USS Lexington, USS Ranger, and USS Saratoga passing under the Golden Gate Bridge, Nov. 12, 1936.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg/960px-US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg",
+            "alt": "U.S. Navy aircraft carriers passing under the Golden Gate Bridge in November 1936.",
+            "url": "https://commons.wikimedia.org/wiki/File:US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg"
+          }
+        ],
+        "links": [
+          {
+            "label": "Image source",
+            "url": "https://commons.wikimedia.org/wiki/File:US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg"
+          }
+        ]
       }
     ]
   },

@@ -329,6 +329,9 @@ select { padding: 0 30px 0 10px; }
   gap: 12px;
   margin-top: 14px;
 }
+.photoGrid:has(.detailPhoto:only-child) {
+  grid-template-columns: 1fr;
+}
 .detailPhoto {
   display: grid;
   margin: 0;
@@ -396,6 +399,20 @@ select { padding: 0 30px 0 10px; }
   background: #d6edf8;
 }
 .routeMap img { display: block; width: 100%; }
+.routeTitleOverlay {
+  position: absolute;
+  left: 1.5%;
+  top: 1.5%;
+  z-index: 1;
+  max-width: 76%;
+  padding: 2px 7px 3px;
+  border-radius: 4px;
+  background: rgba(214, 237, 248, .94);
+  color: #132d3a;
+  font-size: clamp(9px, 1.8vw, 15px);
+  font-weight: 900;
+  line-height: 1.1;
+}
 .routeLeg {
   position: absolute;
   z-index: 1;
