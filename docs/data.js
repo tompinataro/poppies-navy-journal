@@ -715,11 +715,11 @@ window.JOURNAL_PAGES = [
             "url": "https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_(2024)-L1004750.jpg"
           },
           {
-            "title": "Current beach view, 2024",
-            "caption": "The Royal Hawaiian Hotel from Waikiki Beach, March 3, 2024.",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/The_Royal_Hawaiian_%282024%29-L1004805.jpg/960px-The_Royal_Hawaiian_%282024%29-L1004805.jpg",
-            "alt": "The Royal Hawaiian Hotel viewed from Waikiki Beach in 2024.",
-            "url": "https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_(2024)-L1004805.jpg"
+            "title": "Waikiki beach view",
+            "caption": "Waikiki Beach at sunset, looking east from the Royal Hawaiian Hotel, March 22, 2007.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Waikiki_Beach_at_Sunset.jpg/960px-Waikiki_Beach_at_Sunset.jpg",
+            "alt": "Waikiki Beach at sunset, looking east from the Royal Hawaiian Hotel.",
+            "url": "https://commons.wikimedia.org/wiki/File:Waikiki_Beach_at_Sunset.jpg"
           }
         ],
         "links": [
