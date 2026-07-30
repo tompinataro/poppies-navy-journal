@@ -443,8 +443,8 @@ window.JOURNAL_PAGES = [
           {
             "title": "Pillow to Post",
             "subtitle": "1945 film poster",
-            "image": "https://a.ltrbxd.com/resized/sm/upload/g1/gv/se/b8/pMFgLqxgjsP2rc02hq42DvLgt9y-1200-1200-675-675-crop-000000.jpg?v=cfac5d653c",
-            "alt": "Promotional image for Pillow to Post, 1945.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/2/26/Pillow_to_Post.jpg",
+            "alt": "Full theatrical poster for Pillow to Post, 1945.",
             "url": "https://en.wikipedia.org/wiki/Pillow_to_Post"
           }
         ],

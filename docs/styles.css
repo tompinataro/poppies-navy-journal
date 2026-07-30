@@ -281,14 +281,14 @@ select { padding: 0 30px 0 10px; }
   overflow: hidden;
   border: 1px solid #cfc7ba;
   border-radius: 6px;
-  background: #ece5da;
+  background: #f8f3ea;
   text-decoration: none;
 }
 .mediaImageLink img {
   display: block;
   width: 100%;
   aspect-ratio: 2 / 3;
-  object-fit: cover;
+  object-fit: contain;
 }
 .mediaCoverPlaceholder {
   display: grid;
