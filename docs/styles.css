@@ -237,6 +237,30 @@ select { padding: 0 30px 0 10px; }
 }
 .detailCard h3 { margin: 0 0 8px; font-size: 20px; }
 .detailCard p { margin: 0; font-size: 17px; line-height: 1.45; }
+.detailLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.detailLinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 9px;
+  border: 1px solid #cfc7ba;
+  border-radius: 6px;
+  background: #fbfaf7;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.detailLinks a:hover {
+  border-color: var(--accent);
+  background: white;
+}
 .detailEmpty { color: var(--muted); font-size: 18px; line-height: 1.45; padding: 10px 0; }
 .mapBox { margin-top: 14px; border: 1px solid #b9c0c8; background: #eaf3f8; height: 270px; border-radius: 8px; position: relative; overflow: hidden; }
 .island { position: absolute; display: grid; place-items: end center; color: #1d2939; font-size: 13px; }

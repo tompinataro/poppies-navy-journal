@@ -82,9 +82,13 @@ function leyteMap() {
 function routeMap() {
   return `<figure class="routeMap"><img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco"><figcaption>Approximate geography only; not the ship's exact track.</figcaption></figure>`;
 }
+function renderDetailLinks(detail) {
+  if (!detail.links || !detail.links.length) return '';
+  return `<div class="detailLinks">${detail.links.map(link => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join('')}</div>`;
+}
 function renderDetails(page) {
   if (!page.details.length) return '<div class="detailEmpty">No added details for this page yet.</div>';
-  return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap() : ''}</article>`).join('')}</div>`;
+  return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap() : ''}</article>`).join('')}</div>`;
 }
 async function fitHandTextToManuscript(page) {
   const img = viewer.querySelector('.manuscriptPanel img');

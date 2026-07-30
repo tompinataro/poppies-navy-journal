@@ -229,7 +229,17 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Film note",
-        "body": "What a Woman! is a 1943 romantic comedy starring Rosalind Russell and Brian Aherne."
+        "body": "What a Woman! is a 1943 romantic comedy starring Rosalind Russell and Brian Aherne.",
+        "links": [
+          {
+            "label": "IMDb",
+            "url": "https://www.imdb.com/title/tt0036526/"
+          },
+          {
+            "label": "TCM",
+            "url": "https://www.tcm.com/articles/1341278/what-a-woman"
+          }
+        ]
       }
     ]
   },
@@ -291,6 +301,12 @@ window.JOURNAL_PAGES = [
       {
         "title": "Book and route note",
         "body": "Valiant Libertine was a 1942 novel by John Bryson. The map below shows the approximate geography of the route, not the ship's exact track.",
+        "links": [
+          {
+            "label": "Copyright catalog",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Catalog_of_Copyright_Entries_1942_Books_New_Series_Vol_39_Pt_1_For_the_Year_1942_%28IA_catalogofcopyrig391li%29.pdf"
+          }
+        ],
         "visual": "route"
       }
     ]
@@ -338,7 +354,17 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Film note",
-        "body": "Pardon My Past is a 1945 comedy starring Fred MacMurray."
+        "body": "Pardon My Past is a 1945 comedy starring Fred MacMurray.",
+        "links": [
+          {
+            "label": "IMDb",
+            "url": "https://www.imdb.com/title/tt0038826/"
+          },
+          {
+            "label": "Rotten Tomatoes",
+            "url": "https://www.rottentomatoes.com/m/pardon-my-past"
+          }
+        ]
       }
     ]
   },
@@ -380,7 +406,21 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Song and film notes",
-        "body": "It's Been a Long, Long Time was a 1945 homecoming-era hit. Pillow to Post is a 1945 film starring Ida Lupino."
+        "body": "It's Been a Long, Long Time was a 1945 homecoming-era hit. Pillow to Post is a 1945 film starring Ida Lupino.",
+        "links": [
+          {
+            "label": "Song info",
+            "url": "https://en.wikipedia.org/wiki/It%27s_Been_a_Long%2C_Long_Time"
+          },
+          {
+            "label": "Pillow to Post",
+            "url": "https://en.wikipedia.org/wiki/Pillow_to_Post"
+          },
+          {
+            "label": "AFI Catalog",
+            "url": "https://catalog.afi.com/Film/24533-PILLOW-TOPOST?cp=1&pos=0&sid=cacf412f-0e3f-43c0-a6c9-977e2a2ed681&sr=14.589262"
+          }
+        ]
       }
     ]
   },
@@ -396,7 +436,17 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Film note",
-        "body": "Chip Off the Old Block is a 1944 musical comedy starring Donald O'Connor and Peggy Ryan."
+        "body": "Chip Off the Old Block is a 1944 musical comedy starring Donald O'Connor and Peggy Ryan.",
+        "links": [
+          {
+            "label": "IMDb",
+            "url": "https://www.imdb.com/title/tt0036710/"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Chip_Off_the_Old_Block"
+          }
+        ]
       }
     ]
   },
@@ -445,7 +495,25 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Speed note",
-        "body": "92 miles per day is roughly 3.8 miles per hour; 86 turns likely refers to engine or shaft RPM, not miles per hour. Girl Crazy and Scared Stiff were period films."
+        "body": "92 miles per day is roughly 3.8 miles per hour; 86 turns likely refers to engine or shaft RPM, not miles per hour. Girl Crazy and Scared Stiff (written in the diary as \"Sacred Stiff\") were period films.",
+        "links": [
+          {
+            "label": "Girl Crazy",
+            "url": "https://en.wikipedia.org/wiki/Girl_Crazy_%281943_film%29"
+          },
+          {
+            "label": "Girl Crazy IMDb",
+            "url": "https://www.imdb.com/title/tt0035942/"
+          },
+          {
+            "label": "Scared Stiff",
+            "url": "https://en.wikipedia.org/wiki/Scared_Stiff_%281945_film%29"
+          },
+          {
+            "label": "Scared Stiff IMDb",
+            "url": "https://www.imdb.com/title/tt0038055/"
+          }
+        ]
       }
     ]
   },
@@ -600,7 +668,22 @@ window.JOURNAL_PAGES = [
       "Mon. Feb. 25 - At Sea",
       "Sea very calm. Making good progress now. Covered 213 miles today. O.K.!"
     ],
-    "details": []
+    "details": [
+      {
+        "title": "Film note",
+        "body": "Duffy's Tavern is a 1945 musical comedy based on the popular radio program of the same name.",
+        "links": [
+          {
+            "label": "IMDb",
+            "url": "https://www.imdb.com/title/tt0037662/"
+          },
+          {
+            "label": "AFI Catalog",
+            "url": "https://catalog.afi.com/Film/24392-DUFFYS-TAVERN?cxt=filmography"
+          }
+        ]
+      }
+    ]
   },
   {
     "num": 43,
