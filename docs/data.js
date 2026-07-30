@@ -40,12 +40,12 @@ window.JOURNAL_PAGES = [
       {
         "src": "assets/front/poppie-with-brother.jpg",
         "alt": "Poppie in Navy uniform standing with his brother in Army uniform.",
-        "caption": "Poppie in Navy uniform with his brother."
+        "caption": "Homecoming: Poppie, in his Navy uniform with his oldest brother Joe, who is in his Army uniform."
       },
       {
         "src": "assets/front/pignataro-brothers.jpg",
         "alt": "Two Pignataro brothers standing together in Army uniforms.",
-        "caption": "Two Pignataro brothers together."
+        "caption": "Poppie's two older brothers, Joe and Carmine Pignataro, were drafted into the army during WWII. They wrote home telling of the very rough conditions in Europe and told their younger brother to enlist in the Navy ahead of his 18th birthday."
       }
     ]
   },
