@@ -18,15 +18,28 @@ function lineSplit(text, max = 22) {
   if (line) lines.push(line);
   return lines;
 }
+function lineSplitForPage(page, paragraph, paragraphIndex, max = baseLineMax(page)) {
+  if (page.num === 1 && paragraphIndex === 1) {
+    return ['Account of my travels', 'back home from the', 'Philippines.'];
+  }
+  if (page.num === 1 && paragraphIndex === 2) {
+    return ['Written in diary form', 'to Mom & Dad.'];
+  }
+  return lineSplit(paragraph, max);
+}
 function escapeHtml(s) {
   return s.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
 }
-function renderHandText(page) {
-  const max = page.num === 1 ? 25 : page.num === 51 ? 32 : 21;
-  return `<div class="handText">${page.paragraphs.map(p => `<p>${lineSplit(p, max).map(line => `<span class="line">${escapeHtml(line)}</span>`).join('')}</p>`).join('')}</div>`;
+function baseLineMax(page) {
+  if (page.num === 1) return 25;
+  if (page.num === 51) return 32;
+  return 30;
 }
-function renderTypedText(page) {
-  return `<div class="typedText">${page.paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('')}</div>`;
+function renderHandText(page, max = baseLineMax(page)) {
+  return `<div class="handText">${page.paragraphs.map((p, i) => `<p>${lineSplitForPage(page, p, i, max).map(line => `<span class="line">${escapeHtml(line)}</span>`).join('')}</p>`).join('')}</div>`;
+}
+function renderTypedText(page, max = baseLineMax(page)) {
+  return `<div class="typedText">${page.paragraphs.map((p, i) => `<p>${lineSplitForPage(page, p, i, max).map(line => `<span class="line">${escapeHtml(line)}</span>`).join('')}</p>`).join('')}</div>`;
 }
 function renderCoverPage(page) {
   return `<section class="frontPage coverPage">
@@ -75,6 +88,22 @@ function renderDetails(page) {
   if (!page.details.length) return '<div class="detailEmpty">No added details for this page yet.</div>';
   return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap() : ''}</article>`).join('')}</div>`;
 }
+async function fitHandTextToManuscript(page) {
+  const img = viewer.querySelector('.manuscriptPanel img');
+  const textPanel = viewer.querySelector('.textPanel');
+  if (!img || !textPanel) return;
+  try {
+    if (!img.complete) await img.decode();
+  } catch {}
+  const maxHeight = img.getBoundingClientRect().height;
+  let max = baseLineMax(page);
+  while (max <= 48) {
+    textPanel.innerHTML = renderHandText(page, max);
+    const text = textPanel.querySelector('.handText');
+    if (!text || text.getBoundingClientRect().height <= maxHeight + 4) break;
+    max += 2;
+  }
+}
 function render() {
   const page = pages[pageIndex];
   pageMeta.textContent = `${page.label} of ${pages.length}`;
@@ -91,6 +120,7 @@ function render() {
     viewer.innerHTML = `<div class="spread"><section class="panel textPanel">${renderTypedText(page)}</section><section class="panel textPanel">${renderDetails(page)}</section></div>`;
   } else {
     viewer.innerHTML = `<div class="spread"><section class="panel manuscriptPanel"><img src="${page.image}" alt="Handwritten diary ${page.label}" /></section><section class="panel textPanel">${renderHandText(page)}</section></div>`;
+    fitHandTextToManuscript(page);
   }
 }
 pages.forEach((page, idx) => {

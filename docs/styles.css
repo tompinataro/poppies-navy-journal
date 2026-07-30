@@ -184,18 +184,19 @@ select { padding: 0 30px 0 10px; }
 .handText {
   font-family: BradleyLocal, "Comic Sans MS", cursive;
   font-size: clamp(24px, 2.15vw, 36px);
-  line-height: 1.18;
+  line-height: 1.12;
   color: #071624;
   letter-spacing: 0;
 }
-.handText p { margin: 0 0 1.05em; }
-.handText .line { display: block; min-height: 1.18em; }
+.handText p { margin: 0 0 .18em; }
+.handText .line { display: block; min-height: 1.12em; }
 .typedText {
   font-size: clamp(20px, 1.45vw, 25px);
   line-height: 1.55;
   max-width: 780px;
 }
 .typedText p { margin: 0 0 1em; }
+.typedText .line { display: block; }
 .detailsGrid { display: grid; gap: 16px; align-content: start; }
 .detailCard {
   border: 1px solid #d9d2c6;
