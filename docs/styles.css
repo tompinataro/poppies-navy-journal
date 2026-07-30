@@ -71,6 +71,9 @@ select { padding: 0 30px 0 10px; }
   padding: 18px;
   box-shadow: 0 10px 26px rgba(38, 31, 20, .08);
 }
+.textPanel {
+  padding-left: clamp(30px, 3vw, 46px);
+}
 .frontPage {
   min-height: calc(100vh - 120px);
   background: var(--panel);
@@ -223,6 +226,7 @@ select { padding: 0 30px 0 10px; }
   .specGrid { grid-template-columns: repeat(2, minmax(130px, 1fr)); }
   .spread { grid-template-columns: 1fr; }
   .panel { min-height: auto; }
+  .textPanel { padding-left: 24px; }
   .manuscriptPanel img { max-height: none; }
   .switch { width: 100%; grid-template-columns: 1fr 54px 1fr; }
 }

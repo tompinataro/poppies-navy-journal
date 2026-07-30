@@ -88,9 +88,9 @@ function render() {
     return;
   }
   if (detailsMode) {
-    viewer.innerHTML = `<div class="spread"><section class="panel">${renderTypedText(page)}</section><section class="panel">${renderDetails(page)}</section></div>`;
+    viewer.innerHTML = `<div class="spread"><section class="panel textPanel">${renderTypedText(page)}</section><section class="panel textPanel">${renderDetails(page)}</section></div>`;
   } else {
-    viewer.innerHTML = `<div class="spread"><section class="panel manuscriptPanel"><img src="${page.image}" alt="Handwritten diary ${page.label}" /></section><section class="panel">${renderHandText(page)}</section></div>`;
+    viewer.innerHTML = `<div class="spread"><section class="panel manuscriptPanel"><img src="${page.image}" alt="Handwritten diary ${page.label}" /></section><section class="panel textPanel">${renderHandText(page)}</section></div>`;
   }
 }
 pages.forEach((page, idx) => {
