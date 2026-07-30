@@ -116,7 +116,7 @@ function renderDetailPhotos(detail) {
   return `<div class="photoGrid">${detail.photos.map(photo => `<figure class="detailPhoto"><a href="${escapeHtml(photo.url)}" target="_blank" rel="noopener"><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}" loading="lazy"></a><figcaption><strong>${escapeHtml(photo.title)}</strong><span>${escapeHtml(photo.caption)}</span><a href="${escapeHtml(photo.url)}" target="_blank" rel="noopener">${escapeHtml(photo.linkLabel || 'View source')}</a></figcaption></figure>`).join('')}</div>`;
 }
 function renderDetails(page) {
-  if (!page.details.length) return '<div class="detailEmpty">No added details for this page yet.</div>';
+  if (!page.details.length) return '';
   return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${renderMediaCards(d)}${renderDetailPhotos(d)}${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap() : ''}</article>`).join('')}</div>`;
 }
 async function fitHandTextToManuscript(page) {
