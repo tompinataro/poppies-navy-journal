@@ -379,6 +379,24 @@ select { padding: 0 30px 0 10px; }
 }
 .detailPhoto figcaption a:hover { border-color: var(--accent); }
 .detailEmpty { color: var(--muted); font-size: 18px; line-height: 1.45; padding: 10px 0; }
+.leyteRealMap {
+  margin: 16px 0 0;
+  overflow: hidden;
+  border: 1px solid #b9c0c8;
+  border-radius: 8px;
+  background: #fbfaf7;
+}
+.leyteRealMap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.leyteRealMap figcaption {
+  padding: 8px 10px 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
 .mapBox { margin-top: 14px; border: 1px solid #b9c0c8; background: #eaf3f8; height: 270px; border-radius: 8px; position: relative; overflow: hidden; }
 .island { position: absolute; display: grid; place-items: end center; color: #1d2939; font-size: 13px; }
 .island::before { content: ""; display: block; margin: auto; background: #516f55; border-radius: 48% 52% 55% 45%; box-shadow: inset -5px -7px 0 rgba(0,0,0,.08); }

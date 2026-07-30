@@ -76,8 +76,14 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Leyte and liberation",
-        "body": "Leyte is an island in the eastern Philippines. In this WWII context, liberation means the Allied campaign to free the Philippines from Japanese occupation; U.S. forces landed on Leyte on Oct. 20, 1944.",
-        "visual": "leyte"
+        "body": "Leyte is an island in the eastern Philippines. In this WWII context, liberation means the Allied campaign to free the Philippines from Japanese occupation; U.S. forces landed on Leyte on Oct. 20, 1944. The map below shows Leyte, Samar, Leyte Gulf, San Pedro Bay, and the surrounding islands with their actual coastlines.",
+        "visual": "leyte",
+        "links": [
+          {
+            "label": "Map source",
+            "url": "https://commons.wikimedia.org/wiki/File:Map_of_Samar_and_Leyte.jpg"
+          }
+        ]
       }
     ]
   },

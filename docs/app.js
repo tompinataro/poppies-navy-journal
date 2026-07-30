@@ -73,11 +73,10 @@ function renderIntroPage(page) {
   </section>`;
 }
 function leyteMap() {
-  return `<div class="mapBox" aria-label="Schematic map of Leyte in the central Philippines">
-    <div class="island luzon"><span>Luzon</span></div><div class="island mindoro"><span>Mindoro</span></div>
-    <div class="island panay"><span>Panay</span></div><div class="island cebu"><span>Cebu</span></div>
-    <div class="island leyte"><span>Leyte</span></div><div class="island mindanao"><span>Mindanao</span></div>
-  </div>`;
+  return `<figure class="leyteRealMap">
+    <img src="assets/details/samar-leyte-map.jpg" alt="1947 map showing the real coastlines of Samar, Leyte, Leyte Gulf, San Pedro Bay, Biliran, Dinagat, and nearby islands">
+    <figcaption>Map of Samar and Leyte, from <em>Building the Navy's Bases in World War II</em>, Volume II.</figcaption>
+  </figure>`;
 }
 function routeMap() {
   return `<figure class="routeMap">
