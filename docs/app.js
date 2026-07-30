@@ -80,7 +80,23 @@ function leyteMap() {
   </div>`;
 }
 function routeMap() {
-  return `<figure class="routeMap"><img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco"><figcaption>Approximate geography only; not the ship's exact track.</figcaption></figure>`;
+  return `<figure class="routeMap">
+    <div class="routeMapFrame">
+      <img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco">
+      <span class="routeLeg routeLegLeyteGuam">1,172 nmi</span>
+      <span class="routeLeg routeLegGuamEnewetak">1,036 nmi</span>
+      <span class="routeLeg routeLegEnewetakPearl">2,359 nmi</span>
+      <span class="routeLeg routeLegPearlSf">2,083 nmi</span>
+    </div>
+    <div class="routeTable" aria-label="Approximate route distances and diary dates">
+      <h4>Dates and approximate leg distances</h4>
+      <div><strong>Leyte -> Guam</strong><span>1,172 nmi / 1,349 mi</span><em>Departed Jan. 6; arrived Jan. 15</em></div>
+      <div><strong>Guam -> Enewetak</strong><span>1,036 nmi / 1,192 mi</span><em>At Guam Jan. 15-19; at Enewetak Jan. 27-29</em></div>
+      <div><strong>Enewetak -> Pearl Harbor</strong><span>2,359 nmi / 2,714 mi</span><em>Departed Jan. 29; arrived/anchored Feb. 11</em></div>
+      <div><strong>Pearl Harbor -> San Francisco</strong><span>2,083 nmi / 2,397 mi</span><em>At Pearl Feb. 11-21; arrived San Francisco Mar. 4</em></div>
+    </div>
+    <figcaption>Distances are approximate great-circle distances between locations, not Pegasus's exact track. Total shown route: about 6,650 nautical miles.</figcaption>
+  </figure>`;
 }
 function renderDetailLinks(detail) {
   if (!detail.links || !detail.links.length) return '';
