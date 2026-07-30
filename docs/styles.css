@@ -261,6 +261,68 @@ select { padding: 0 30px 0 10px; }
   border-color: var(--accent);
   background: white;
 }
+.mediaGrid {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+.mediaCard {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 10px;
+  border: 1px solid #d9d2c6;
+  border-radius: 8px;
+  background: #fbfaf7;
+}
+.mediaImageLink {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #cfc7ba;
+  border-radius: 6px;
+  background: #ece5da;
+  text-decoration: none;
+}
+.mediaImageLink img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+.mediaCoverPlaceholder {
+  display: grid;
+  align-content: space-between;
+  min-height: 144px;
+  padding: 12px 9px;
+  aspect-ratio: 2 / 3;
+  background: linear-gradient(135deg, #214d57, #7b2d27);
+  color: white;
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  text-align: center;
+}
+.mediaCoverPlaceholder strong { font-size: 16px; line-height: 1.05; }
+.mediaCoverPlaceholder span { font-size: 12px; line-height: 1.2; }
+.mediaCard h4 { margin: 2px 0 5px; font-size: 18px; line-height: 1.15; }
+.mediaCard p { margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.3; }
+.mediaMore {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 9px;
+  border: 1px solid #cfc7ba;
+  border-radius: 6px;
+  background: white;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.mediaImageLink:hover,
+.mediaMore:hover {
+  border-color: var(--accent);
+}
 .detailEmpty { color: var(--muted); font-size: 18px; line-height: 1.45; padding: 10px 0; }
 .mapBox { margin-top: 14px; border: 1px solid #b9c0c8; background: #eaf3f8; height: 270px; border-radius: 8px; position: relative; overflow: hidden; }
 .island { position: absolute; display: grid; place-items: end center; color: #1d2939; font-size: 13px; }
@@ -346,6 +408,7 @@ select { padding: 0 30px 0 10px; }
   .textPanel { padding-left: 24px; }
   .detailsArrow { display: none; }
   .manuscriptPanel img { max-height: none; }
+  .mediaCard { grid-template-columns: 82px 1fr; }
   .routeTable div { grid-template-columns: 1fr; }
   .routeTable span { text-align: left; }
 }

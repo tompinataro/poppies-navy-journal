@@ -230,6 +230,15 @@ window.JOURNAL_PAGES = [
       {
         "title": "Film note",
         "body": "What a Woman! is a 1943 romantic comedy starring Rosalind Russell and Brian Aherne.",
+        "media": [
+          {
+            "title": "What a Woman!",
+            "subtitle": "1943 film poster",
+            "image": "https://resizing.flixster.com/QPupapMT-tXPTrl2yA8mBMb45w8=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p41596_p_v7_aa.jpg",
+            "alt": "Poster for What a Woman!, 1943.",
+            "url": "https://en.wikipedia.org/wiki/What_a_Woman%21"
+          }
+        ],
         "links": [
           {
             "label": "IMDb",
@@ -301,6 +310,14 @@ window.JOURNAL_PAGES = [
       {
         "title": "Book and route note",
         "body": "Valiant Libertine was a 1942 novel by John Bryson. The map below shows the approximate geography of the route, not the ship's exact track.",
+        "media": [
+          {
+            "title": "Valiant Libertine",
+            "subtitle": "John Bryson, 1942",
+            "alt": "Placeholder cover for Valiant Libertine by John Bryson.",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Catalog_of_Copyright_Entries_1942_Books_New_Series_Vol_39_Pt_1_For_the_Year_1942_%28IA_catalogofcopyrig391li%29.pdf"
+          }
+        ],
         "links": [
           {
             "label": "Copyright catalog",
@@ -355,6 +372,15 @@ window.JOURNAL_PAGES = [
       {
         "title": "Film note",
         "body": "Pardon My Past is a 1945 comedy starring Fred MacMurray.",
+        "media": [
+          {
+            "title": "Pardon My Past",
+            "subtitle": "1945 theatrical poster",
+            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Pardon_My_Past_-_1945_Poster-color.jpg/250px-Pardon_My_Past_-_1945_Poster-color.jpg",
+            "alt": "Theatrical poster for Pardon My Past, 1945.",
+            "url": "https://en.wikipedia.org/wiki/Pardon_My_Past"
+          }
+        ],
         "links": [
           {
             "label": "IMDb",
@@ -407,6 +433,15 @@ window.JOURNAL_PAGES = [
       {
         "title": "Song and film notes",
         "body": "It's Been a Long, Long Time was a 1945 homecoming-era hit. Pillow to Post is a 1945 film starring Ida Lupino.",
+        "media": [
+          {
+            "title": "Pillow to Post",
+            "subtitle": "1945 film poster",
+            "image": "https://a.ltrbxd.com/resized/sm/upload/g1/gv/se/b8/pMFgLqxgjsP2rc02hq42DvLgt9y-1200-1200-675-675-crop-000000.jpg?v=cfac5d653c",
+            "alt": "Promotional image for Pillow to Post, 1945.",
+            "url": "https://en.wikipedia.org/wiki/Pillow_to_Post"
+          }
+        ],
         "links": [
           {
             "label": "Song info",
@@ -437,6 +472,15 @@ window.JOURNAL_PAGES = [
       {
         "title": "Film note",
         "body": "Chip Off the Old Block is a 1944 musical comedy starring Donald O'Connor and Peggy Ryan.",
+        "media": [
+          {
+            "title": "Chip Off the Old Block",
+            "subtitle": "1944 film poster",
+            "image": "https://a.ltrbxd.com/resized/film-poster/2/2/0/6/1/7/220617-chip-off-the-old-block-0-230-0-345-crop.jpg?v=ca769a3947",
+            "alt": "Poster for Chip Off the Old Block, 1944.",
+            "url": "https://en.wikipedia.org/wiki/Chip_Off_the_Old_Block"
+          }
+        ],
         "links": [
           {
             "label": "IMDb",
@@ -496,6 +540,22 @@ window.JOURNAL_PAGES = [
       {
         "title": "Speed note",
         "body": "92 miles per day is roughly 3.8 miles per hour; 86 turns likely refers to engine or shaft RPM, not miles per hour. Girl Crazy and Scared Stiff (written in the diary as \"Sacred Stiff\") were period films.",
+        "media": [
+          {
+            "title": "Girl Crazy",
+            "subtitle": "1943 film poster",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Girl_Crazy.webp/500px-Girl_Crazy.webp.png",
+            "alt": "Poster for Girl Crazy, 1943.",
+            "url": "https://en.wikipedia.org/wiki/Girl_Crazy_%281943_film%29"
+          },
+          {
+            "title": "Scared Stiff",
+            "subtitle": "1945 film poster",
+            "image": "https://a.ltrbxd.com/resized/sm/upload/lc/kq/kx/vw/fojZicpGQCzhWCXea08FdJGCHBd-1200-1200-675-675-crop-000000.jpg?v=a39e58c328",
+            "alt": "Promotional image for Scared Stiff, 1945.",
+            "url": "https://en.wikipedia.org/wiki/Scared_Stiff_%281945_film%29"
+          }
+        ],
         "links": [
           {
             "label": "Girl Crazy",
@@ -672,6 +732,15 @@ window.JOURNAL_PAGES = [
       {
         "title": "Film note",
         "body": "Duffy's Tavern is a 1945 musical comedy based on the popular radio program of the same name.",
+        "media": [
+          {
+            "title": "Duffy's Tavern",
+            "subtitle": "1945 film poster",
+            "image": "https://a.ltrbxd.com/resized/sm/upload/st/8m/5h/pw/2R7O7OsXXfELGRjTjukPNAqyL3V-1200-1200-675-675-crop-000000.jpg?v=85505b5862",
+            "alt": "Promotional image for Duffy's Tavern, 1945.",
+            "url": "https://en.wikipedia.org/wiki/Duffy%27s_Tavern_%28film%29"
+          }
+        ],
         "links": [
           {
             "label": "IMDb",

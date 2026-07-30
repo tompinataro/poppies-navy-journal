@@ -102,9 +102,18 @@ function renderDetailLinks(detail) {
   if (!detail.links || !detail.links.length) return '';
   return `<div class="detailLinks">${detail.links.map(link => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`).join('')}</div>`;
 }
+function renderMediaCards(detail) {
+  if (!detail.media || !detail.media.length) return '';
+  return `<div class="mediaGrid">${detail.media.map(item => {
+    const image = item.image
+      ? `<img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt || item.title)}" loading="lazy">`
+      : `<div class="mediaCoverPlaceholder" aria-label="${escapeHtml(item.alt || item.title)}"><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.subtitle || '')}</span></div>`;
+    return `<article class="mediaCard"><a class="mediaImageLink" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${image}</a><div><h4>${escapeHtml(item.title)}</h4>${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ''}<a class="mediaMore" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.moreLabel || 'More info')}</a></div></article>`;
+  }).join('')}</div>`;
+}
 function renderDetails(page) {
   if (!page.details.length) return '<div class="detailEmpty">No added details for this page yet.</div>';
-  return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap() : ''}</article>`).join('')}</div>`;
+  return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${renderMediaCards(d)}${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap() : ''}</article>`).join('')}</div>`;
 }
 async function fitHandTextToManuscript(page) {
   const img = viewer.querySelector('.manuscriptPanel img');
