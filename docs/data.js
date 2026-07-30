@@ -882,10 +882,6 @@ window.JOURNAL_PAGES = [
     ],
     "details": [
       {
-        "title": "Ship and crew note",
-        "body": "USS Pegasus (AK-48/IX-222) had a listed complement of 156; 25 discharged men would be a noticeable part of the crew. Pegasus reached San Francisco on March 4, 1946 and decommissioned April 19, 1946."
-      },
-      {
         "title": "59-day route check",
         "body": "The route shown totals about 6,650 nautical miles. Poppie's 59-day count lines up with Jan. 4, 1946, the diary's first homeward-order entry, through the Mar. 4 arrival in San Francisco. From the Jan. 6 departure from Leyte to Mar. 4 is about 57 elapsed days. Spread across 59 days, the mapped distance averages about 113 nautical miles per day, which fits his notes about slow speed, engine trouble, Guam and Pearl Harbor delays, and port days.",
         "visual": "route"
