@@ -27,6 +27,39 @@ function renderHandText(page) {
 function renderTypedText(page) {
   return `<div class="typedText">${page.paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('')}</div>`;
 }
+function renderCoverPage(page) {
+  return `<section class="frontPage coverPage">
+    <div class="coverCopy">
+      <p class="kicker">${escapeHtml(page.kicker)}</p>
+      <h1>${escapeHtml(page.title)}</h1>
+      <p class="subtitle">${escapeHtml(page.subtitle)}</p>
+      <p>${escapeHtml(page.body)}</p>
+    </div>
+    <figure class="coverPortrait">
+      <img src="${page.image}" alt="${escapeHtml(page.imageAlt)}">
+      <figcaption>${escapeHtml(page.caption)}</figcaption>
+    </figure>
+  </section>`;
+}
+function renderIntroPage(page) {
+  const specs = page.specs.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd>`).join('');
+  const photos = page.photos.map(photo => `<figure><img src="${photo.src}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.caption)}</figcaption></figure>`).join('');
+  return `<section class="frontPage introPage">
+    <div class="introLead">
+      <div>
+        <p class="kicker">${escapeHtml(page.kicker)}</p>
+        <h1>${escapeHtml(page.title)}</h1>
+        ${page.paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('')}
+      </div>
+      <figure class="shipFigure">
+        <img src="${page.shipImage}" alt="${escapeHtml(page.shipAlt)}">
+        <figcaption>${escapeHtml(page.shipCaption)}</figcaption>
+      </figure>
+    </div>
+    <dl class="specGrid">${specs}</dl>
+    <div class="photoStrip">${photos}</div>
+  </section>`;
+}
 function leyteMap() {
   return `<div class="mapBox" aria-label="Schematic map of Leyte in the central Philippines">
     <div class="island luzon"><span>Luzon</span></div><div class="island mindoro"><span>Mindoro</span></div>
@@ -45,6 +78,14 @@ function render() {
   const page = pages[pageIndex];
   pageMeta.textContent = `${page.label} of ${pages.length}`;
   pageSelect.value = String(pageIndex);
+  if (page.type === 'cover') {
+    viewer.innerHTML = renderCoverPage(page);
+    return;
+  }
+  if (page.type === 'intro') {
+    viewer.innerHTML = renderIntroPage(page);
+    return;
+  }
   if (detailsMode) {
     viewer.innerHTML = `<div class="spread"><section class="panel">${renderTypedText(page)}</section><section class="panel">${renderDetails(page)}</section></div>`;
   } else {

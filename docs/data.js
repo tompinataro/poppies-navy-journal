@@ -1,5 +1,55 @@
 window.JOURNAL_PAGES = [
   {
+    "type": "cover",
+    "label": "Cover",
+    "kicker": "Angelo \"Poppie\" Pignataro",
+    "title": "Poppie's Navy Journal",
+    "subtitle": "Account of my travels back home from the Philippines.",
+    "body": "A handwritten diary from January-February 1946, written aboard USS Pegasus as Poppie made the long trip home after service in the Western Pacific.",
+    "image": "assets/front/poppie-navy-portrait.jpg",
+    "imageAlt": "Angelo Pignataro in U.S. Navy uniform in front of an American flag.",
+    "caption": "Angelo \"Poppie\" Pignataro, U.S. Navy."
+  },
+  {
+    "type": "intro",
+    "label": "USS Pegasus",
+    "kicker": "The Ship",
+    "title": "USS Pegasus (AK-48 / IX-222)",
+    "paragraphs": [
+      "Pegasus began life as the Danish freighter Rita Maersk and was acquired by the U.S. Navy in 1941. During the war she served as a cargo ship and later as a miscellaneous unclassified dry-cargo station ship.",
+      "By 1945-1946 Pegasus was operating in the Western Pacific, including Leyte Gulf in the Philippines. The diary follows Poppie's homeward trip as the ship returned to San Francisco."
+    ],
+    "shipImage": "assets/front/uss-pegasus-ix-222.jpg",
+    "shipAlt": "USS Pegasus IX-222 underway in San Francisco Bay circa March 1946.",
+    "shipCaption": "USS Pegasus (IX-222) entering San Francisco Bay, circa March 4, 1946, with a long homeward-bound pennant.",
+    "specs": [
+      ["Built as", "Rita Maersk, Danish freighter, 1939"],
+      ["Acquired", "September 18, 1941"],
+      ["Commissioned", "December 3, 1941"],
+      ["Reclassified", "IX-222 on May 15, 1945"],
+      ["Decommissioned", "April 19, 1946, San Francisco"],
+      ["Length", "About 299.9 ft overall"],
+      ["Beam", "43.5 ft"],
+      ["Speed", "12 knots"],
+      ["Crew", "103 listed by Shipscribe for 1944; some summaries list 156"],
+      ["Armament", "Varied; included 4-inch, 3-inch, .50 cal, and 20 mm guns"],
+      ["Pacific service", "Leyte Gulf from July 18, 1945 into 1946"],
+      ["Returned home", "Arrived San Francisco March 4, 1946"]
+    ],
+    "photos": [
+      {
+        "src": "assets/front/poppie-with-brother.jpg",
+        "alt": "Poppie in Navy uniform standing with his brother in Army uniform.",
+        "caption": "Poppie in Navy uniform with his brother."
+      },
+      {
+        "src": "assets/front/pignataro-brothers.jpg",
+        "alt": "Two Pignataro brothers standing together in Army uniforms.",
+        "caption": "Two Pignataro brothers together."
+      }
+    ]
+  },
+  {
     "num": 1,
     "label": "Page 01",
     "image": "assets/pages/page_01.jpg",
