@@ -31,7 +31,7 @@ function escapeHtml(s) {
 function baseLineMax(page) {
   if (page.num === 1) return 25;
   if (page.num === 51) return 32;
-  return 30;
+  return 24;
 }
 function renderHandText(page, max = baseLineMax(page)) {
   return `<div class="handText">${page.paragraphs.map((p, i) => `<p>${lineSplitForPage(page, p, i, max).map(line => `<span class="line">${escapeHtml(line)}</span>`).join('')}</p>`).join('')}</div>`;
@@ -141,6 +141,19 @@ async function fitHandTextToManuscript(page) {
   while (fontSize > 18 && text.getBoundingClientRect().height > maxHeight + 4) {
     fontSize -= 1;
     text.style.fontSize = `${fontSize}px`;
+  }
+  const lineCount = text.querySelectorAll('.line').length;
+  const paragraphCount = text.querySelectorAll('p').length;
+  const currentHeight = text.getBoundingClientRect().height;
+  if (lineCount > 1 && currentHeight < maxHeight - 12) {
+    const baseLineHeight = fontSize * 1.12;
+    const baseParagraphGap = fontSize * .18;
+    const paragraphGaps = Math.max(0, paragraphCount - 1);
+    const extra = Math.min(maxHeight - currentHeight, fontSize * lineCount * .34);
+    const lineExtra = extra * .78 / Math.max(1, lineCount - 1);
+    const paragraphExtra = paragraphGaps ? extra * .22 / paragraphGaps : 0;
+    text.style.setProperty('--hand-line-height', `${baseLineHeight + lineExtra}px`);
+    text.style.setProperty('--hand-paragraph-gap', `${baseParagraphGap + paragraphExtra}px`);
   }
 }
 function render() {

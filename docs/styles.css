@@ -215,12 +215,12 @@ select { padding: 0 30px 0 10px; }
 .handText {
   font-family: BradleyLocal, "Comic Sans MS", cursive;
   font-size: clamp(24px, 2.15vw, 36px);
-  line-height: 1.12;
+  line-height: var(--hand-line-height, 1.12);
   color: #071624;
   letter-spacing: 0;
 }
-.handText p { margin: 0 0 .18em; }
-.handText .line { display: block; min-height: 1.12em; }
+.handText p { margin: 0 0 var(--hand-paragraph-gap, .18em); }
+.handText .line { display: block; min-height: var(--hand-line-height, 1.12em); }
 .typedText {
   font-size: clamp(20px, 1.45vw, 25px);
   line-height: 1.55;
