@@ -902,7 +902,28 @@ window.JOURNAL_PAGES = [
       "Fri. 8 March - U.S.",
       "I picked up my money order for $50.00. It came in handy. I had a date"
     ],
-    "details": []
+    "details": [
+      {
+        "title": "Liberty and dancing",
+        "body": "Poppie writes that he had to learn to dance all over again, then quickly adds that he still loved it. This September 1945 LIFE photograph from Hawaii shows the kind of USO dance floor and liberty atmosphere that gave servicemen a brief return to music, company, and ordinary social life after long stretches at sea.",
+        "photos": [
+          {
+            "title": "Maluhia USO dance floor, Hawaii, 1945",
+            "caption": "Servicemen and women dancing at the Maluhia USO dance floor in Hawaii, photographed by Eliot Elisofon in September 1945.",
+            "image": "https://www.gstatic.com/hostedimg/6e4e3b3501d5a7c7_large",
+            "alt": "Black-and-white LIFE photograph of servicemen and women dancing on the Maluhia USO dance floor in Hawaii in 1945.",
+            "url": "https://images.google.com/hosted/life/6e4e3b3501d5a7c7.html",
+            "linkLabel": "View LIFE source"
+          }
+        ],
+        "links": [
+          {
+            "label": "LIFE source record",
+            "url": "https://images.google.com/hosted/life/6e4e3b3501d5a7c7.html"
+          }
+        ]
+      }
+    ]
   },
   {
     "num": 50,
