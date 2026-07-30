@@ -22,7 +22,8 @@ function escapeHtml(s) {
   return s.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
 }
 function renderHandText(page) {
-  return `<div class="handText">${page.paragraphs.map(p => `<p>${lineSplit(p, page.num === 51 ? 32 : 21).map(line => `<span class="line">${escapeHtml(line)}</span>`).join('')}</p>`).join('')}</div>`;
+  const max = page.num === 1 ? 25 : page.num === 51 ? 32 : 21;
+  return `<div class="handText">${page.paragraphs.map(p => `<p>${lineSplit(p, max).map(line => `<span class="line">${escapeHtml(line)}</span>`).join('')}</p>`).join('')}</div>`;
 }
 function renderTypedText(page) {
   return `<div class="typedText">${page.paragraphs.map(p => `<p>${escapeHtml(p)}</p>`).join('')}</div>`;
