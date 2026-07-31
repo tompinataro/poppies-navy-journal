@@ -941,21 +941,21 @@ window.JOURNAL_PAGES = [
     "details": [
       {
         "title": "Liberty and dancing",
-        "body": "Poppie writes that he had to learn to dance all over again, then quickly adds that he still loved it. This September 1945 LIFE photograph from Hawaii shows the kind of USO dance floor and liberty atmosphere that gave servicemen a brief return to music, company, and ordinary social life after long stretches at sea.",
+        "body": "Poppie writes that he had to learn to dance all over again, then quickly adds that he still loved it. This official U.S. Navy photograph from June 1945 shows a similar wartime liberty scene: sailors in uniform dancing with friends while a Navy band plays.",
         "photos": [
           {
-            "title": "Maluhia USO dance floor, Hawaii, 1945",
-            "caption": "Servicemen and women dancing at the Maluhia USO dance floor in Hawaii, photographed by Eliot Elisofon in September 1945.",
-            "image": "https://www.gstatic.com/hostedimg/6e4e3b3501d5a7c7_large",
-            "alt": "Black-and-white LIFE photograph of servicemen and women dancing on the Maluhia USO dance floor in Hawaii in 1945.",
-            "url": "https://images.google.com/hosted/life/6e4e3b3501d5a7c7.html",
-            "linkLabel": "View LIFE source"
+            "title": "Navy dance, San Diego, 1945",
+            "caption": "Sailors and friends dancing at the Naval Athletic Field ballroom in San Diego on 20 June 1945. Official U.S. Navy Photograph, now in the collections of the National Archives.",
+            "image": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/images/g330000/g333975.jpg",
+            "alt": "Black-and-white official U.S. Navy photograph of sailors in uniform dancing with friends in a ballroom in 1945.",
+            "url": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/prs-tpic/af-amer/san-dieg.htm",
+            "linkLabel": "View Navy source"
           }
         ],
         "links": [
           {
-            "label": "LIFE source record",
-            "url": "https://images.google.com/hosted/life/6e4e3b3501d5a7c7.html"
+            "label": "Naval Historical Center source record",
+            "url": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/prs-tpic/af-amer/san-dieg.htm"
           }
         ]
       }
