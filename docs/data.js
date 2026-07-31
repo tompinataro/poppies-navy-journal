@@ -884,7 +884,27 @@ window.JOURNAL_PAGES = [
       {
         "title": "59-day route check",
         "body": "The route shown totals about 6,650 nautical miles. Poppie's 59-day count lines up with Jan. 4, 1946, the diary's first homeward-order entry, through the Mar. 4 arrival in San Francisco. From the Jan. 6 departure from Leyte to Mar. 4 is about 57 elapsed days. Spread across 59 days, the mapped distance averages about 113 nautical miles per day, which fits his notes about slow speed, engine trouble, Guam and Pearl Harbor delays, and port days.",
-        "visual": "route"
+        "visual": "route",
+        "routeMode": "mapOnly",
+        "routeTotalArc": true
+      }
+    ]
+  },
+  {
+    "num": 48,
+    "label": "Page 48",
+    "image": "assets/pages_filtered/page_48.jpg",
+    "paragraphs": [
+      "Tue. March 5 - U. States",
+      "We don't know when we're going to be decommissioned so I still don't know when my leave is due. I hope its soon.",
+      "Wed. March 6 - U. States",
+      "Went on liberty today again. I hope I get my money order soon. I got a date for Sat. nite with Dolores, my buddy who lives here fixed it up for me. I sure will feel funny. We went dancing"
+    ],
+    "details": [
+      {
+        "title": "Route details",
+        "body": "The route distances are approximate great-circle distances between locations, not Pegasus's exact track. Total shown route: about 6,650 nautical miles.",
+        "visual": "routeTable"
       },
       {
         "title": "Golden Gate Bridge",
@@ -906,18 +926,6 @@ window.JOURNAL_PAGES = [
         ]
       }
     ]
-  },
-  {
-    "num": 48,
-    "label": "Page 48",
-    "image": "assets/pages_filtered/page_48.jpg",
-    "paragraphs": [
-      "Tue. March 5 - U. States",
-      "We don't know when we're going to be decommissioned so I still don't know when my leave is due. I hope its soon.",
-      "Wed. March 6 - U. States",
-      "Went on liberty today again. I hope I get my money order soon. I got a date for Sat. nite with Dolores, my buddy who lives here fixed it up for me. I sure will feel funny. We went dancing"
-    ],
-    "details": []
   },
   {
     "num": 49,

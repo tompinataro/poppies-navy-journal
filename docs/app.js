@@ -78,24 +78,32 @@ function leyteMap() {
     <figcaption>Map of Samar and Leyte, from <em>Building the Navy's Bases in World War II</em>, Volume II.</figcaption>
   </figure>`;
 }
-function routeMap() {
+function routeTable() {
+  return `<div class="routeTable" aria-label="Approximate route distances and diary dates">
+    <h4>Dates and approximate leg distances</h4>
+    <div><strong>Leyte -> Guam</strong><span>1,172 nmi / 1,349 mi</span><em>Departed Jan. 6; arrived Jan. 15</em></div>
+    <div><strong>Guam -> Enewetak</strong><span>1,036 nmi / 1,192 mi</span><em>At Guam Jan. 15-19; at Enewetak Jan. 27-29</em></div>
+    <div><strong>Enewetak -> Pearl Harbor</strong><span>2,359 nmi / 2,714 mi</span><em>Departed Jan. 29; arrived/anchored Feb. 11</em></div>
+    <div><strong>Pearl Harbor -> San Francisco</strong><span>2,083 nmi / 2,397 mi</span><em>At Pearl Feb. 11-21; arrived San Francisco Mar. 4</em></div>
+  </div>`;
+}
+function routeMap(detail = {}) {
+  const showTable = detail.routeMode !== 'mapOnly';
   return `<figure class="routeMap">
     <div class="routeMapFrame">
       <img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco">
+      ${detail.routeTotalArc ? `<svg class="routeTotalArc" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 14 56 C 30 12, 69 5, 91 31"></path>
+      </svg>` : ''}
       <span class="routeTitleOverlay">Approximate Pacific Route, Jan. 4-Mar. 4, 1946</span>
+      ${detail.routeTotalArc ? '<span class="routeTotalLabel">Leyte -> San Francisco: about 6,650 nmi</span>' : ''}
       <span class="routeLeg routeLegLeyteGuam">1,172 nmi</span>
       <span class="routeLeg routeLegGuamEnewetak">1,036 nmi</span>
       <span class="routeLeg routeLegEnewetakPearl">2,359 nmi</span>
       <span class="routeLeg routeLegPearlSf">2,083 nmi</span>
     </div>
-    <div class="routeTable" aria-label="Approximate route distances and diary dates">
-      <h4>Dates and approximate leg distances</h4>
-      <div><strong>Leyte -> Guam</strong><span>1,172 nmi / 1,349 mi</span><em>Departed Jan. 6; arrived Jan. 15</em></div>
-      <div><strong>Guam -> Enewetak</strong><span>1,036 nmi / 1,192 mi</span><em>At Guam Jan. 15-19; at Enewetak Jan. 27-29</em></div>
-      <div><strong>Enewetak -> Pearl Harbor</strong><span>2,359 nmi / 2,714 mi</span><em>Departed Jan. 29; arrived/anchored Feb. 11</em></div>
-      <div><strong>Pearl Harbor -> San Francisco</strong><span>2,083 nmi / 2,397 mi</span><em>At Pearl Feb. 11-21; arrived San Francisco Mar. 4</em></div>
-    </div>
-    <figcaption>Distances are approximate great-circle distances between locations, not Pegasus's exact track. Total shown route: about 6,650 nautical miles.</figcaption>
+    ${showTable ? routeTable() : ''}
+    ${showTable ? `<figcaption>Distances are approximate great-circle distances between locations, not Pegasus's exact track. Total shown route: about 6,650 nautical miles.</figcaption>` : ''}
   </figure>`;
 }
 function renderDetailLinks(detail) {
@@ -117,7 +125,7 @@ function renderDetailPhotos(detail) {
 }
 function renderDetails(page) {
   if (!page.details.length) return '';
-  return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${renderMediaCards(d)}${renderDetailPhotos(d)}${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap() : ''}</article>`).join('')}</div>`;
+  return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${renderMediaCards(d)}${renderDetailPhotos(d)}${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap(d) : ''}${d.visual === 'routeTable' ? routeTable() : ''}</article>`).join('')}</div>`;
 }
 async function fitHandTextToManuscript(page) {
   const img = viewer.querySelector('.manuscriptPanel img');
