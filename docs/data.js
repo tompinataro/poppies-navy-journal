@@ -21,7 +21,7 @@ window.JOURNAL_PAGES = [
     ],
     "shipImage": "assets/front/uss-pegasus-ix-222.jpg",
     "shipAlt": "USS Pegasus IX-222 underway in San Francisco Bay circa March 1946.",
-    "shipCaption": "USS Pegasus (IX-222) entering San Francisco Bay, circa March 4, 1946, with a long homeward-bound pennant.",
+    "shipCaption": "USS Pegasus (IX-222) entering San Francisco Bay, circa March 4, 1946. Source notes identify a long homeward-bound pennant flying from the mainmast peak; in this reproduction it is very faint, trailing leftward from the mast.",
     "specs": [
       ["Built as", "Rita Maersk, Danish freighter, 1939"],
       ["Acquired", "September 18, 1941"],
