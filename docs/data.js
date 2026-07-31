@@ -908,20 +908,20 @@ window.JOURNAL_PAGES = [
       },
       {
         "title": "Golden Gate Bridge",
-        "body": "Poppie wrote that Pegasus went under the Golden Gate Bridge at 0830 on Mar. 4, 1946. This U.S. Navy image shows another homecoming ship, USS LST-938, entering San Francisco Bay after passing under the bridge on May 27, 1946.",
+        "body": "Poppie wrote that Pegasus went under the Golden Gate Bridge at 0830 on Mar. 4, 1946. This modern color photograph shows the bridge from the Marin Headlands, the same landmark that marked his arrival back in the United States.",
         "photos": [
           {
-            "title": "USS LST-938 entering San Francisco Bay",
-            "caption": "USS LST-938 entering San Francisco Bay after passing under the Golden Gate Bridge as she returned from duty in the South Pacific, May 27, 1946.",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/LST-938.jpg",
-            "alt": "U.S. Navy tank landing ship USS LST-938 entering San Francisco Bay after passing under the Golden Gate Bridge in May 1946.",
-            "url": "https://commons.wikimedia.org/wiki/File:LST-938.jpg"
+            "title": "Golden Gate Bridge",
+            "caption": "The Golden Gate Bridge and San Francisco at sunset, photographed from the Marin Headlands on Jan. 1, 2007.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/960px-GoldenGateBridge-001.jpg",
+            "alt": "Color photograph of the Golden Gate Bridge and San Francisco at sunset from the Marin Headlands.",
+            "url": "https://commons.wikimedia.org/wiki/File:GoldenGateBridge-001.jpg"
           }
         ],
         "links": [
           {
             "label": "Image source",
-            "url": "https://commons.wikimedia.org/wiki/File:LST-938.jpg"
+            "url": "https://commons.wikimedia.org/wiki/File:GoldenGateBridge-001.jpg"
           }
         ]
       }
