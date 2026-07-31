@@ -888,20 +888,20 @@ window.JOURNAL_PAGES = [
       },
       {
         "title": "Golden Gate Bridge",
-        "body": "Poppie wrote that Pegasus went under the Golden Gate Bridge at 0830 on Mar. 4, 1946. This period U.S. Navy image shows aircraft carriers passing under the bridge on Nov. 12, 1936, while the bridge was still under construction.",
+        "body": "Poppie wrote that Pegasus went under the Golden Gate Bridge at 0830 on Mar. 4, 1946. This U.S. Navy image shows another homecoming ship, USS LST-938, entering San Francisco Bay after passing under the bridge on May 27, 1946.",
         "photos": [
           {
-            "title": "U.S. Navy ships under the Golden Gate",
-            "caption": "USS Lexington, USS Ranger, and USS Saratoga passing under the Golden Gate Bridge, Nov. 12, 1936.",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg/960px-US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg",
-            "alt": "U.S. Navy aircraft carriers passing under the Golden Gate Bridge in November 1936.",
-            "url": "https://commons.wikimedia.org/wiki/File:US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg"
+            "title": "USS LST-938 entering San Francisco Bay",
+            "caption": "USS LST-938 entering San Francisco Bay after passing under the Golden Gate Bridge as she returned from duty in the South Pacific, May 27, 1946.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/LST-938.jpg",
+            "alt": "U.S. Navy tank landing ship USS LST-938 entering San Francisco Bay after passing under the Golden Gate Bridge in May 1946.",
+            "url": "https://commons.wikimedia.org/wiki/File:LST-938.jpg"
           }
         ],
         "links": [
           {
             "label": "Image source",
-            "url": "https://commons.wikimedia.org/wiki/File:US_Navy_aircraft_carriers_passing_under_the_Golden_Gate_Bridge_in_November_1936.jpg"
+            "url": "https://commons.wikimedia.org/wiki/File:LST-938.jpg"
           }
         ]
       }
