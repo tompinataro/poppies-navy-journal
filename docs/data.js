@@ -40,7 +40,7 @@ window.JOURNAL_PAGES = [
       {
         "src": "assets/front/poppie-with-brother.jpg",
         "alt": "Poppie in Navy uniform standing with his brother in Army uniform.",
-        "caption": "Homecoming: Poppie, in his Navy uniform with his oldest brother Joe, who is in his Army uniform."
+        "caption": "Homecoming: Poppie, wearing his Navy uniform with his oldest brother Joe, who is wearing his Army uniform."
       },
       {
         "src": "assets/front/pignataro-brothers.jpg",
