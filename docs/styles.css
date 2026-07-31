@@ -70,6 +70,9 @@ select { padding: 0 30px 0 10px; }
   width: max-content;
   min-width: 100%;
 }
+.triSpread.noDetails {
+  grid-template-columns: minmax(560px, 640px) minmax(440px, 520px);
+}
 .spread { display: grid; grid-template-columns: minmax(320px, .95fr) minmax(340px, 1.05fr); gap: 22px; align-items: start; }
 .panel {
   background: var(--panel);

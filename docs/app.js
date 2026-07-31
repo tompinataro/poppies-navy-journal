@@ -123,9 +123,13 @@ function renderDetailPhotos(detail) {
   if (!detail.photos || !detail.photos.length) return '';
   return `<div class="photoGrid">${detail.photos.map(photo => `<figure class="detailPhoto"><a href="${escapeHtml(photo.url)}" target="_blank" rel="noopener"><img src="${escapeHtml(photo.image)}" alt="${escapeHtml(photo.alt)}" loading="lazy"></a><figcaption><strong>${escapeHtml(photo.title)}</strong><span>${escapeHtml(photo.caption)}</span><a href="${escapeHtml(photo.url)}" target="_blank" rel="noopener">${escapeHtml(photo.linkLabel || 'View source')}</a></figcaption></figure>`).join('')}</div>`;
 }
+function hasRenderableDetails(page) {
+  return page.details.some(d => d.title || d.body || d.visual || (d.media && d.media.length) || (d.photos && d.photos.length) || (d.links && d.links.length));
+}
 function renderDetails(page) {
-  if (!page.details.length) return '';
-  return `<div class="detailsGrid">${page.details.map(d => `<article class="detailCard"><h3>${escapeHtml(d.title)}</h3><p>${escapeHtml(d.body)}</p>${renderMediaCards(d)}${renderDetailPhotos(d)}${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap(d) : ''}${d.visual === 'routeTable' ? routeTable() : ''}</article>`).join('')}</div>`;
+  const details = page.details.filter(d => d.title || d.body || d.visual || (d.media && d.media.length) || (d.photos && d.photos.length) || (d.links && d.links.length));
+  if (!details.length) return '';
+  return `<div class="detailsGrid">${details.map(d => `<article class="detailCard">${d.title ? `<h3>${escapeHtml(d.title)}</h3>` : ''}${d.body ? `<p>${escapeHtml(d.body)}</p>` : ''}${renderMediaCards(d)}${renderDetailPhotos(d)}${renderDetailLinks(d)}${d.visual === 'leyte' ? leyteMap() : ''}${d.visual === 'route' ? routeMap(d) : ''}${d.visual === 'routeTable' ? routeTable() : ''}</article>`).join('')}</div>`;
 }
 async function fitHandTextToManuscript(page) {
   const img = viewer.querySelector('.manuscriptPanel img');
@@ -176,14 +180,14 @@ function render() {
     viewer.innerHTML = renderIntroPage(page);
     return;
   }
-  const hasDetails = page.details.length > 0;
-  viewer.innerHTML = `<div class="triSpread">
+  const hasDetails = hasRenderableDetails(page);
+  viewer.innerHTML = `<div class="triSpread${hasDetails ? '' : ' noDetails'}">
     <section class="panel manuscriptPanel"><img src="${page.image}" alt="Handwritten diary ${page.label}" /></section>
     <section class="panel textPanel transcriptionPanel">
       ${renderHandText(page)}
       ${hasDetails ? '<button class="detailsArrow" type="button" aria-label="Show details column">›</button>' : ''}
     </section>
-    <section class="panel textPanel detailsPanel">${renderDetails(page)}</section>
+    ${hasDetails ? `<section class="panel textPanel detailsPanel">${renderDetails(page)}</section>` : ''}
   </div>`;
   fitHandTextToManuscript(page);
 }
