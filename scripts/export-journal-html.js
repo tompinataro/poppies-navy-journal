@@ -306,7 +306,7 @@ function renderHtml(entries) {
       backdrop-filter: blur(12px);
     }
     .cover-active .brand {
-      display: none;
+      visibility: hidden;
     }
     .brand strong { display: block; font-size: 17px; }
     .brand span { color: var(--muted); font-size: 13px; }
