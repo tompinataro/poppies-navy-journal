@@ -207,10 +207,11 @@ function formatVisual(detail) {
 
 function renderEntry(entry) {
   const hasNotes = Boolean(entry.notesHtml);
+  const showEntryHeader = entry.label !== 'Cover';
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
-  <header class="entryHeader">
+  ${showEntryHeader ? `<header class="entryHeader">
     <h2>${escapeHtml(entry.label)}</h2>
-  </header>
+  </header>` : ''}
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="${escapeHtml(entry.label)} handwritten page">
       <figure>
@@ -449,9 +450,9 @@ function renderHtml(entries) {
   <header class="topbar">
     <div class="brand">
       <strong>Poppie's Navy Journal</strong>
-      <span>Three-column review version</span>
     </div>
     <select class="jump" aria-label="Jump to entry" onchange="if (this.value) location.hash = this.value">
+      <option value="" selected>Jump to</option>
       ${entries.map(entry => `<option value="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">${escapeHtml(entry.label)}</option>`).join('\n      ')}
     </select>
   </header>
