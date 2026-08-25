@@ -56,7 +56,7 @@ function paragraphsHtml(paragraphs) {
 }
 
 function coverTranscript(page) {
-  return [page.kicker, page.title, page.subtitle, page.body].filter(Boolean);
+  return [page.title].filter(Boolean);
 }
 
 function introTranscript(page) {
@@ -86,6 +86,7 @@ function parseTypedSource(filePath) {
 function applyTypedSource(entries, typedEntries) {
   if (!typedEntries) return false;
   for (const entry of entries) {
+    if (entry.label === 'Cover') continue;
     if (!typedEntries.has(entry.label)) {
       throw new Error(`Typed source is missing "${entry.label}".`);
     }
@@ -121,7 +122,7 @@ function normalizeEntry(page) {
       caption: page.caption,
       alt: page.imageAlt,
       transcript: coverTranscript(page),
-      notesHtml: paragraphsHtml([page.caption, page.imageAlt ? `Image alt text: ${page.imageAlt}` : ''])
+      notesHtml: ''
     };
   }
   if (page.type === 'intro') {
@@ -209,7 +210,7 @@ function renderEntry(entry) {
   const hasNotes = Boolean(entry.notesHtml);
   const showEntryHeader = entry.label !== 'Cover';
   const coverCaption = entry.label === 'Cover'
-    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro</span><span>October 21, 1926 - May 26, 2019</span><strong><em>Novantadue!</em></strong></figcaption>'
+    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>'
     : '';
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   ${showEntryHeader ? `<header class="entryHeader">
@@ -463,7 +464,7 @@ function renderHtml(entries) {
 <body>
   <header class="topbar">
     <div class="brand">
-      <strong>Poppie's Navy Journal</strong>
+      <strong>Poppie's U.S. Navy Journal</strong>
     </div>
     <select class="jump" aria-label="Jump to entry" onchange="if (this.value) location.hash = this.value">
       <option value="" selected>Jump to</option>

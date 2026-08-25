@@ -3,7 +3,7 @@ window.JOURNAL_PAGES = [
     "type": "cover",
     "label": "Cover",
     "kicker": "Angelo \"Poppie\" Pignataro",
-    "title": "Poppie's Navy Journal",
+    "title": "Poppie's U.S. Navy Journal",
     "subtitle": "Account of my travels back home from the Philippines.",
     "body": "A handwritten diary from January-February 1946, written aboard USS Pegasus as Poppie made the long trip home after service in the Western Pacific.",
     "image": "assets/front/poppie-navy-portrait.jpg",
