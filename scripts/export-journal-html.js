@@ -199,6 +199,7 @@ function formatVisual(detail) {
 }
 
 function renderEntry(entry) {
+  const hasNotes = Boolean(entry.notesHtml);
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   <header class="entryHeader">
     <h2>${escapeHtml(entry.label)}</h2>
@@ -217,10 +218,10 @@ function renderEntry(entry) {
         ${paragraphsHtml(entry.transcript)}
       </div>
     </section>
-    <section class="column notesColumn" aria-label="${escapeHtml(entry.label)} notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn${hasNotes ? '' : ' emptyNotesColumn'}" aria-label="${escapeHtml(entry.label)} notes and details">
+      ${hasNotes ? '<h3>Notes &amp; Details</h3>' : ''}
       <div class="notesText">
-        ${entry.notesHtml || '<p class="emptyNote"></p>'}
+        ${entry.notesHtml}
       </div>
     </section>
   </div>
