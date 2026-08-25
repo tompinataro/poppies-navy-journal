@@ -320,7 +320,7 @@ function renderHtml(entries) {
       --accent-2: #b43f2e;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: auto; }
     body {
       margin: 0;
       background: var(--paper);
@@ -616,7 +616,7 @@ function renderHtml(entries) {
     <div class="brand">
       <strong>Poppie's U.S. Navy Journal</strong>
     </div>
-    <select class="jump" aria-label="Jump to entry" onchange="if (this.value) location.hash = this.value">
+    <select class="jump" aria-label="Jump to entry" onchange="if (this.value) { location.hash = this.value; this.blur(); }">
       <option value="" selected>Jump to</option>
       ${entries.map(entry => `<option value="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">${escapeHtml(entry.label)}</option>`).join('\n      ')}
     </select>
@@ -635,6 +635,13 @@ function renderHtml(entries) {
     window.addEventListener('scroll', updateCoverState, { passive: true });
     window.addEventListener('resize', updateCoverState);
     const jumpSelect = document.querySelector('.jump');
+    if (jumpSelect) {
+      jumpSelect.addEventListener('wheel', event => {
+        event.preventDefault();
+        jumpSelect.blur();
+        window.scrollBy({ top: event.deltaY, left: event.deltaX, behavior: 'auto' });
+      }, { passive: false });
+    }
     if (jumpSelect && location.hash) {
       const hashValue = location.hash.slice(1);
       if (Array.from(jumpSelect.options).some(option => option.value === hashValue)) {
