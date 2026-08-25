@@ -51,6 +51,42 @@ function repoRelativeAsset(assetPath) {
   return path.relative(outputDir, absoluteAssetPath).split(path.sep).join('/');
 }
 
+function imageSizeAttrs(assetPath) {
+  if (!assetPath || /^[a-z][a-z0-9+.-]*:/i.test(assetPath)) return '';
+  const absoluteAssetPath = path.join(repoRoot, 'docs', assetPath);
+  if (!fs.existsSync(absoluteAssetPath)) return '';
+  const buffer = fs.readFileSync(absoluteAssetPath);
+  const size = imageSize(buffer);
+  return size ? ` width="${size.width}" height="${size.height}"` : '';
+}
+
+function imageSize(buffer) {
+  if (buffer.length >= 24 && buffer.toString('ascii', 1, 4) === 'PNG') {
+    return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+  }
+  if (buffer.length >= 4 && buffer[0] === 0xff && buffer[1] === 0xd8) {
+    let offset = 2;
+    while (offset < buffer.length) {
+      if (buffer[offset] !== 0xff) {
+        offset += 1;
+        continue;
+      }
+      const marker = buffer[offset + 1];
+      const length = buffer.readUInt16BE(offset + 2);
+      if (marker >= 0xc0 && marker <= 0xc3) {
+        return { width: buffer.readUInt16BE(offset + 7), height: buffer.readUInt16BE(offset + 5) };
+      }
+      offset += 2 + length;
+    }
+  }
+  return null;
+}
+
+function imgTag(assetPath, alt, className = '') {
+  const classAttr = className ? ` class="${escapeHtml(className)}"` : '';
+  return `<img${classAttr} src="${escapeHtml(repoRelativeAsset(assetPath))}" alt="${escapeHtml(alt)}"${imageSizeAttrs(assetPath)} loading="lazy">`;
+}
+
 function paragraphsHtml(paragraphs) {
   return (paragraphs || []).filter(Boolean).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('\n');
 }
@@ -180,7 +216,7 @@ function isMoviePosterMedia(item) {
 }
 
 function formatMedia(item) {
-  const image = item.image ? `<img src="${escapeHtml(repoRelativeAsset(item.image))}" alt="${escapeHtml(item.alt || item.title)}" loading="lazy">` : '';
+  const image = item.image ? imgTag(item.image, item.alt || item.title) : '';
   const subtitle = item.subtitle && !isMoviePosterMedia(item) ? `<span>${escapeHtml(item.subtitle)}</span>` : '';
   const caption = item.caption ? `<span>${escapeHtml(item.caption)}</span>` : subtitle;
   return `<figure class="mediaFigure">${image}<figcaption><strong>${escapeHtml(item.title)}</strong>${caption}${item.url ? `<a href="${escapeHtml(item.url)}">More info</a>` : ''}</figcaption></figure>`;
@@ -189,16 +225,16 @@ function formatMedia(item) {
 function formatPhoto(photo) {
   const image = photo.image || photo.src;
   const title = photo.title || '';
-  return `<figure class="mediaFigure"><img src="${escapeHtml(repoRelativeAsset(image))}" alt="${escapeHtml(photo.alt || title)}" loading="lazy"><figcaption>${title ? `<strong>${escapeHtml(title)}</strong>` : ''}${photo.caption ? `<span>${escapeHtml(photo.caption)}</span>` : ''}${photo.url ? `<a href="${escapeHtml(photo.url)}">${escapeHtml(photo.linkLabel || 'View source')}</a>` : ''}</figcaption></figure>`;
+  return `<figure class="mediaFigure">${imgTag(image, photo.alt || title)}<figcaption>${title ? `<strong>${escapeHtml(title)}</strong>` : ''}${photo.caption ? `<span>${escapeHtml(photo.caption)}</span>` : ''}${photo.url ? `<a href="${escapeHtml(photo.url)}">${escapeHtml(photo.linkLabel || 'View source')}</a>` : ''}</figcaption></figure>`;
 }
 
 function formatVisual(detail) {
   if (detail.visual === 'leyte') {
-    return `<figure class="mediaFigure"><img src="${escapeHtml(repoRelativeAsset('assets/details/leyte-eastern-visayas-map.png'))}" alt="Map showing Leyte, Eastern Visayas, Philippines in Southeast Asia" loading="lazy"><figcaption><strong>Leyte map</strong><span>Leyte, Eastern Visayas, Philippines.</span></figcaption></figure>`;
+    return `<figure class="mediaFigure">${imgTag('assets/details/leyte-eastern-visayas-map.png', 'Map showing Leyte, Eastern Visayas, Philippines in Southeast Asia')}<figcaption><strong>Leyte map</strong><span>Leyte, Eastern Visayas, Philippines.</span></figcaption></figure>`;
   }
   if (detail.visual === 'route' || detail.visual === 'routeTable') {
     const map = detail.visual === 'route'
-      ? `<img src="${escapeHtml(repoRelativeAsset('assets/details/route-map.png'))}" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco" loading="lazy">`
+      ? imgTag('assets/details/route-map.png', 'Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco')
       : '';
     return `<figure class="mediaFigure">${map}<figcaption><strong>Dates and approximate leg distances</strong><span>Leyte -> Guam: 1,172 nmi / 1,349 mi. Guam -> Enewetak: 1,036 nmi / 1,192 mi. Enewetak -> Pearl Harbor: 2,359 nmi / 2,714 mi. Pearl Harbor -> San Francisco: 2,083 nmi / 2,397 mi.</span>${detail.routeTotalArc ? '<span>Leyte -> San Francisco: about 6,650 nmi.</span>' : ''}</figcaption></figure>`;
   }
@@ -224,7 +260,7 @@ function renderEntry(entry) {
     <section class="column handwrittenColumn" aria-label="${escapeHtml(entry.label)} handwritten page">
       ${coverTitle}
       <figure>
-        <img src="${escapeHtml(repoRelativeAsset(entry.image))}" alt="${escapeHtml(entry.alt || entry.imageLabel)}" loading="lazy">
+        ${imgTag(entry.image, entry.alt || entry.imageLabel)}
         ${coverCaption || (entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : '')}
       </figure>
     </section>
@@ -327,6 +363,7 @@ function renderHtml(entries) {
     }
     .entry {
       margin: 0 0 22px;
+      scroll-margin-top: 74px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--panel);
@@ -554,7 +591,7 @@ function renderHtml(entries) {
     <div class="brand">
       <strong>Poppie's U.S. Navy Journal</strong>
     </div>
-    <select class="jump" aria-label="Jump to entry" onchange="if (this.value) location.hash = this.value">
+    <select class="jump" aria-label="Jump to entry" onchange="window.jumpToEntry && window.jumpToEntry(this.value)">
       <option value="" selected>Jump to</option>
       ${entries.map(entry => `<option value="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">${escapeHtml(entry.label)}</option>`).join('\n      ')}
     </select>
@@ -572,6 +609,40 @@ function renderHtml(entries) {
     updateCoverState();
     window.addEventListener('scroll', updateCoverState, { passive: true });
     window.addEventListener('resize', updateCoverState);
+    const jumpSelect = document.querySelector('.jump');
+    const jumpToEntry = id => {
+      const entry = document.getElementById(id);
+      if (!entry) return;
+      if (jumpSelect && Array.from(jumpSelect.options).some(option => option.value === id)) {
+        jumpSelect.value = id;
+      }
+      history.replaceState(null, '', location.pathname + location.search + '#' + id);
+      const alignEntry = () => {
+        const top = Math.max(0, entry.getBoundingClientRect().top + window.scrollY - 74);
+        window.scrollTo({ top, behavior: 'auto' });
+        updateCoverState();
+      };
+      const watchedImages = Array.from(document.images).filter(image => !image.complete);
+      watchedImages.forEach(image => {
+        image.addEventListener('load', alignEntry, { once: true });
+        image.addEventListener('error', alignEntry, { once: true });
+      });
+      alignEntry();
+      let attempts = 0;
+      const timer = window.setInterval(() => {
+        alignEntry();
+        const aligned = Math.abs(entry.getBoundingClientRect().top - 74) < 3;
+        attempts += 1;
+        if (aligned || attempts >= 40) window.clearInterval(timer);
+      }, 125);
+    };
+    window.jumpToEntry = jumpToEntry;
+    if (jumpSelect) {
+      jumpSelect.addEventListener('change', event => jumpToEntry(event.target.value));
+    }
+    window.addEventListener('load', () => {
+      if (location.hash) jumpToEntry(location.hash.slice(1));
+    });
   </script>
 </body>
 </html>
