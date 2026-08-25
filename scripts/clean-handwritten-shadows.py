@@ -18,6 +18,40 @@ BOTTOM_CROP_HEIGHTS = {
     "page_47.jpg": 1775,
 }
 
+SPECIAL_POLYGONS = {
+    "page_12.jpg": [
+        [(0, 1740), (260, 1765), (520, 1782), (1023, 1778), (1023, 1800), (0, 1800)],
+    ],
+    "page_49.jpg": [
+        [(0, 0), (400, 0), (305, 155), (40, 280), (0, 255)],
+    ],
+    "page_51.jpg": [
+        [(0, 0), (180, 0), (125, 95), (0, 125)],
+        [(955, 0), (1158, 0), (1158, 160), (1010, 120)],
+    ],
+}
+
+SPECIAL_RECTS = {
+    "page_51.jpg": [
+        (996, 0, 1158, 1800),
+    ],
+}
+
+RIGHT_CROP_WIDTHS = {
+    "page_11.jpg": 860,
+    "page_51.jpg": 1002,
+}
+
+LEFT_CROP_WIDTHS = {
+    "page_02.jpg": 22,
+}
+
+PROTECTED_SHADOW_RECTS = {
+    "page_02.jpg": [
+        (0, 0, 58, 1800),
+    ],
+}
+
 
 def paper_color(image: np.ndarray) -> np.ndarray:
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
@@ -56,6 +90,16 @@ def add_rect(mask: np.ndarray, box: tuple[int, int, int, int]) -> None:
 
 def add_poly(mask: np.ndarray, points: list[tuple[int, int]]) -> None:
     cv2.fillPoly(mask, [np.array(points, dtype=np.int32)], 255)
+
+
+def page_specific_mask(image: np.ndarray, filename: str) -> np.ndarray:
+    height, width = image.shape[:2]
+    mask = np.zeros((height, width), np.uint8)
+    for polygon in SPECIAL_POLYGONS.get(filename, []):
+        add_poly(mask, polygon)
+    for rect in SPECIAL_RECTS.get(filename, []):
+        add_rect(mask, rect)
+    return mask
 
 
 def artifact_mask(image: np.ndarray) -> np.ndarray:
@@ -135,6 +179,27 @@ def feather_fill(image: np.ndarray, mask: np.ndarray, color: np.ndarray) -> np.n
     return result
 
 
+def protected_shadow_fill(image: np.ndarray, rect: tuple[int, int, int, int]) -> np.ndarray:
+    height, width = image.shape[:2]
+    x1, y1, x2, y2 = rect
+    mask = np.zeros((height, width), np.uint8)
+    add_rect(mask, (x1, y1, x2, y2))
+    mask = cv2.GaussianBlur(mask, (0, 0), sigmaX=4, sigmaY=1)
+
+    gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+    ink = (gray < 122).astype(np.uint8) * 255
+    ink = cv2.dilate(ink, np.ones((3, 3), np.uint8), iterations=1)
+    mask[ink > 0] = 0
+
+    alpha = (mask.astype(np.float32) / 255)[:, :, None]
+    color = paper_color(image)
+    return np.clip(
+        image.astype(np.float32) * (1 - alpha) + color[None, None, :].astype(np.float32) * alpha,
+        0,
+        255,
+    ).astype(np.uint8)
+
+
 def clean_image(path: Path) -> Image.Image:
     image = np.array(Image.open(path).convert("RGB"))
     mask = artifact_mask(image)
@@ -173,9 +238,22 @@ def main() -> None:
             original_array = np.asarray(original, dtype=np.float32)
             blended = original_array * (1 - args.clean_strength) + cleaned_array * args.clean_strength
             cleaned = Image.fromarray(np.clip(blended, 0, 255).astype(np.uint8))
+        special_mask = page_specific_mask(np.asarray(cleaned), source_file.name)
+        if np.any(special_mask):
+            cleaned = Image.fromarray(feather_fill(np.asarray(cleaned), special_mask, paper_color(np.asarray(cleaned))))
         crop_height = BOTTOM_CROP_HEIGHTS.get(source_file.name)
         if crop_height:
             cleaned = cleaned.crop((0, 0, cleaned.width, crop_height))
+        crop_width = RIGHT_CROP_WIDTHS.get(source_file.name)
+        if crop_width:
+            cleaned = cleaned.crop((0, 0, crop_width, cleaned.height))
+        left_crop = LEFT_CROP_WIDTHS.get(source_file.name)
+        if left_crop:
+            cleaned = cleaned.crop((left_crop, 0, cleaned.width, cleaned.height))
+        cleaned_array = np.asarray(cleaned)
+        for rect in PROTECTED_SHADOW_RECTS.get(source_file.name, []):
+            cleaned_array = protected_shadow_fill(cleaned_array, rect)
+        cleaned = Image.fromarray(cleaned_array)
         cleaned.save(output_dir / source_file.name, quality=94, optimize=True)
         print(f"cleaned {source_file.name}")
 
