@@ -616,7 +616,7 @@ function renderHtml(entries) {
     <div class="brand">
       <strong>Poppie's U.S. Navy Journal</strong>
     </div>
-    <select class="jump" aria-label="Jump to entry" onchange="window.jumpToEntry && window.jumpToEntry(this.value)">
+    <select class="jump" aria-label="Jump to entry" onchange="if (this.value) location.hash = this.value">
       <option value="" selected>Jump to</option>
       ${entries.map(entry => `<option value="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">${escapeHtml(entry.label)}</option>`).join('\n      ')}
     </select>
@@ -635,39 +635,12 @@ function renderHtml(entries) {
     window.addEventListener('scroll', updateCoverState, { passive: true });
     window.addEventListener('resize', updateCoverState);
     const jumpSelect = document.querySelector('.jump');
-    const jumpToEntry = id => {
-      const entry = document.getElementById(id);
-      if (!entry) return;
-      if (jumpSelect && Array.from(jumpSelect.options).some(option => option.value === id)) {
-        jumpSelect.value = id;
+    if (jumpSelect && location.hash) {
+      const hashValue = location.hash.slice(1);
+      if (Array.from(jumpSelect.options).some(option => option.value === hashValue)) {
+        jumpSelect.value = hashValue;
       }
-      history.replaceState(null, '', location.pathname + location.search + '#' + id);
-      const alignEntry = () => {
-        const top = Math.max(0, entry.getBoundingClientRect().top + window.scrollY - 74);
-        window.scrollTo({ top, behavior: 'auto' });
-        updateCoverState();
-      };
-      const watchedImages = Array.from(document.images).filter(image => !image.complete);
-      watchedImages.forEach(image => {
-        image.addEventListener('load', alignEntry, { once: true });
-        image.addEventListener('error', alignEntry, { once: true });
-      });
-      alignEntry();
-      let attempts = 0;
-      const timer = window.setInterval(() => {
-        alignEntry();
-        const aligned = Math.abs(entry.getBoundingClientRect().top - 74) < 3;
-        attempts += 1;
-        if (aligned || attempts >= 40) window.clearInterval(timer);
-      }, 125);
-    };
-    window.jumpToEntry = jumpToEntry;
-    if (jumpSelect) {
-      jumpSelect.addEventListener('change', event => jumpToEntry(event.target.value));
     }
-    window.addEventListener('load', () => {
-      if (location.hash) jumpToEntry(location.hash.slice(1));
-    });
   </script>
 </body>
 </html>
