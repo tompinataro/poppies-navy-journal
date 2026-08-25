@@ -11,11 +11,11 @@ const args = process.argv.slice(2);
 const outputArgIndex = args.indexOf('--output');
 const typedArgIndex = args.indexOf('--typed-source');
 const canonicalArgIndex = args.indexOf('--canonical-url');
-const outputName = outputArgIndex >= 0 ? args[outputArgIndex + 1] : 'docs/three-column.html';
+const outputName = outputArgIndex >= 0 ? args[outputArgIndex + 1] : 'docs/index.html';
 const typedSourceName = typedArgIndex >= 0 ? args[typedArgIndex + 1] : defaultTypedSourcePath;
 const canonicalUrl = canonicalArgIndex >= 0
   ? args[canonicalArgIndex + 1]
-  : 'https://tompinataro.github.io/poppies-navy-journal/three-column.html';
+  : 'https://tompinataro.github.io/poppies-navy-journal/';
 
 if (outputArgIndex >= 0 && !outputName) throw new Error('--output requires a file name.');
 if (typedArgIndex >= 0 && !typedSourceName) throw new Error('--typed-source requires a file name.');
