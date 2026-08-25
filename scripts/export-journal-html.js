@@ -194,7 +194,7 @@ function formatPhoto(photo) {
 
 function formatVisual(detail) {
   if (detail.visual === 'leyte') {
-    return `<figure class="mediaFigure"><img src="${escapeHtml(repoRelativeAsset('assets/details/samar-leyte-map.jpg'))}" alt="Map of Samar and Leyte" loading="lazy"><figcaption><strong>Leyte map</strong><span>Map of Samar and Leyte, from Building the Navy's Bases in World War II, Volume II.</span></figcaption></figure>`;
+    return `<figure class="mediaFigure"><img src="${escapeHtml(repoRelativeAsset('assets/details/leyte-eastern-visayas-map.png'))}" alt="Map showing Leyte, Eastern Visayas, Philippines in Southeast Asia" loading="lazy"><figcaption><strong>Leyte map</strong><span>Leyte, Eastern Visayas, Philippines.</span></figcaption></figure>`;
   }
   if (detail.visual === 'route' || detail.visual === 'routeTable') {
     const map = detail.visual === 'route'

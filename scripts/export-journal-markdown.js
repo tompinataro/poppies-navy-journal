@@ -135,8 +135,8 @@ function formatVisual(detail) {
   if (detail.visual === 'leyte') {
     return [
       '**Leyte map**',
-      imageMarkdown('Map of Samar and Leyte', 'assets/details/samar-leyte-map.jpg'),
-      'Map of Samar and Leyte, from *Building the Navy\'s Bases in World War II*, Volume II.'
+      imageMarkdown('Map showing Leyte, Eastern Visayas, Philippines in Southeast Asia', 'assets/details/leyte-eastern-visayas-map.png'),
+      'Leyte, Eastern Visayas, Philippines.'
     ].join('\n\n');
   }
   if (detail.visual === 'route' || detail.visual === 'routeTable') {
