@@ -761,7 +761,7 @@ window.JOURNAL_PAGES = [
     "image": "assets/pages_filtered/page_39.jpg",
     "paragraphs": [
       "Sat. Feb. 16, 1946 - Hawaii",
-      "I got paid today & I drew $110.00. It won't last long. I never spend so much money in my whole life so fast.",
+      "I got paid today & I drew $110.00. It won't last long. I never spent so much money in my whole life so fast.",
       "Sun. Feb. 17 - Honolulu",
       "Stayed aboard ship today to rest up a bit cause I'm going on liberty tomorrow. I borrowed $50.00 from my buddy.",
       "Mon. Feb. 18 - Honolulu, Hawaii",

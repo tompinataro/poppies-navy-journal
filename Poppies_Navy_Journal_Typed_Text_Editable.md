@@ -289,7 +289,7 @@ It's now Sat. morning. I couldn't write last night cause I was unexpectedly take
 
 Sat. Feb. 16, 1946 - Hawaii
 
-I got paid today & I drew $110.00. It won't last long. I never spend so much money in my whole life so fast.
+I got paid today & I drew $110.00. It won't last long. I never spent so much money in my whole life so fast.
 
 Sun. Feb. 17 - Honolulu
 
