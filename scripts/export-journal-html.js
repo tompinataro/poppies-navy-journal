@@ -184,7 +184,8 @@ function isMoviePosterMedia(item) {
 function formatMedia(item) {
   const image = item.image ? `<img src="${escapeHtml(repoRelativeAsset(item.image))}" alt="${escapeHtml(item.alt || item.title)}" loading="lazy">` : '';
   const subtitle = item.subtitle && !isMoviePosterMedia(item) ? `<span>${escapeHtml(item.subtitle)}</span>` : '';
-  return `<figure class="mediaFigure">${image}<figcaption><strong>${escapeHtml(item.title)}</strong>${subtitle}${item.url ? `<a href="${escapeHtml(item.url)}">More info</a>` : ''}</figcaption></figure>`;
+  const caption = item.caption ? `<span>${escapeHtml(item.caption)}</span>` : subtitle;
+  return `<figure class="mediaFigure">${image}<figcaption><strong>${escapeHtml(item.title)}</strong>${caption}${item.url ? `<a href="${escapeHtml(item.url)}">More info</a>` : ''}</figcaption></figure>`;
 }
 
 function formatPhoto(photo) {

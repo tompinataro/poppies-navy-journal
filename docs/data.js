@@ -563,7 +563,7 @@ window.JOURNAL_PAGES = [
           },
           {
             "title": "Scared Stiff cast",
-            "subtitle": "1945 film poster",
+            "caption": "Jack Haley and Ann Savage.",
             "image": "https://a.ltrbxd.com/resized/sm/upload/lc/kq/kx/vw/fojZicpGQCzhWCXea08FdJGCHBd-1200-1200-675-675-crop-000000.jpg?v=a39e58c328",
             "alt": "Promotional image for Scared Stiff, 1945.",
             "url": "https://en.wikipedia.org/wiki/Scared_Stiff_%281945_film%29"
@@ -821,7 +821,7 @@ window.JOURNAL_PAGES = [
           },
           {
             "title": "Duffy's Tavern cast",
-            "subtitle": "1945 film poster",
+            "caption": "Bing Crosby with Betty Hutton, Dorothy Lamour, and Diana Lynn.",
             "image": "https://a.ltrbxd.com/resized/sm/upload/st/8m/5h/pw/2R7O7OsXXfELGRjTjukPNAqyL3V-1200-1200-675-675-crop-000000.jpg?v=85505b5862",
             "alt": "Promotional image for Duffy's Tavern, 1945.",
             "url": "https://en.wikipedia.org/wiki/Duffy%27s_Tavern_%28film%29"
