@@ -38,12 +38,17 @@ SPECIAL_RECTS = {
 }
 
 RIGHT_CROP_WIDTHS = {
-    "page_11.jpg": 860,
+    "page_11.jpg": 825,
     "page_51.jpg": 1002,
 }
 
 LEFT_CROP_WIDTHS = {
+    "page_01.jpg": 58,
     "page_02.jpg": 22,
+}
+
+TOP_CROP_HEIGHTS = {
+    "page_01.jpg": 16,
 }
 
 PROTECTED_SHADOW_RECTS = {
@@ -250,6 +255,9 @@ def main() -> None:
         left_crop = LEFT_CROP_WIDTHS.get(source_file.name)
         if left_crop:
             cleaned = cleaned.crop((left_crop, 0, cleaned.width, cleaned.height))
+        top_crop = TOP_CROP_HEIGHTS.get(source_file.name)
+        if top_crop:
+            cleaned = cleaned.crop((0, top_crop, cleaned.width, cleaned.height))
         cleaned_array = np.asarray(cleaned)
         for rect in PROTECTED_SHADOW_RECTS.get(source_file.name, []):
             cleaned_array = protected_shadow_fill(cleaned_array, rect)
