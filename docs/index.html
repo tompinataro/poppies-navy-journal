@@ -112,6 +112,17 @@
       font-size: 14px;
       line-height: 1.35;
     }
+    .coverCaption {
+      display: grid;
+      justify-items: center;
+      gap: 4px;
+      color: var(--ink);
+      text-align: center;
+      font-size: 17px;
+    }
+    .coverCaption strong {
+      font-size: 20px;
+    }
     .transcriptText {
       max-width: 780px;
       font-size: clamp(18px, 1.2vw, 22px);
@@ -278,7 +289,7 @@
     <section class="column handwrittenColumn" aria-label="Cover handwritten page">
       <figure>
         <img src="assets/front/poppie-navy-portrait.jpg" alt="Angelo Pignataro in U.S. Navy uniform in front of an American flag." loading="lazy">
-        <figcaption>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</figcaption>
+        <figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro</span><span>October 21, 1926 - May 26, 2019</span><strong><em>Novantadue!</em></strong></figcaption>
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Cover typed transcript">

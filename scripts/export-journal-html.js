@@ -208,6 +208,9 @@ function formatVisual(detail) {
 function renderEntry(entry) {
   const hasNotes = Boolean(entry.notesHtml);
   const showEntryHeader = entry.label !== 'Cover';
+  const coverCaption = entry.label === 'Cover'
+    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro</span><span>October 21, 1926 - May 26, 2019</span><strong><em>Novantadue!</em></strong></figcaption>'
+    : '';
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   ${showEntryHeader ? `<header class="entryHeader">
     <h2>${escapeHtml(entry.label)}</h2>
@@ -216,7 +219,7 @@ function renderEntry(entry) {
     <section class="column handwrittenColumn" aria-label="${escapeHtml(entry.label)} handwritten page">
       <figure>
         <img src="${escapeHtml(repoRelativeAsset(entry.image))}" alt="${escapeHtml(entry.alt || entry.imageLabel)}" loading="lazy">
-        ${entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : ''}
+        ${coverCaption || (entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : '')}
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="${escapeHtml(entry.label)} typed transcript">
@@ -348,6 +351,17 @@ function renderHtml(entries) {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.35;
+    }
+    .coverCaption {
+      display: grid;
+      justify-items: center;
+      gap: 4px;
+      color: var(--ink);
+      text-align: center;
+      font-size: 17px;
+    }
+    .coverCaption strong {
+      font-size: 20px;
     }
     .transcriptText {
       max-width: 780px;
