@@ -439,8 +439,8 @@ function renderHtml(entries) {
       background: #f5f1ea;
     }
     .coverColumn img {
-      width: min(100%, 620px);
-      max-height: 78vh;
+      width: min(100%, 760px);
+      max-height: none;
     }
     figcaption {
       margin-top: 8px;
