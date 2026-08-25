@@ -165,20 +165,26 @@ function pageNotesHtml(page) {
 
 function formatDetail(detail) {
   const parts = [];
+  const hasMoviePosterMedia = Boolean(detail.media && detail.media.some(isMoviePosterMedia));
   if (detail.title) parts.push(`<h3>${escapeHtml(detail.title)}</h3>`);
   if (detail.body) parts.push(`<p>${escapeHtml(detail.body)}</p>`);
   if (detail.media && detail.media.length) parts.push(detail.media.map(formatMedia).join(''));
   if (detail.photos && detail.photos.length) parts.push(detail.photos.map(formatPhoto).join(''));
-  if (detail.links && detail.links.length) {
+  if (!hasMoviePosterMedia && detail.links && detail.links.length) {
     parts.push(`<ul class="linkList">${detail.links.map(link => `<li><a href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a></li>`).join('')}</ul>`);
   }
   if (detail.visual) parts.push(formatVisual(detail));
   return `<section class="noteBlock">${parts.join('\n')}</section>`;
 }
 
+function isMoviePosterMedia(item) {
+  return /(?:film|theatrical)\s+poster|promotional image/i.test(`${item.subtitle || ''} ${item.alt || ''}`);
+}
+
 function formatMedia(item) {
   const image = item.image ? `<img src="${escapeHtml(repoRelativeAsset(item.image))}" alt="${escapeHtml(item.alt || item.title)}" loading="lazy">` : '';
-  return `<figure class="mediaFigure">${image}<figcaption><strong>${escapeHtml(item.title)}</strong>${item.subtitle ? `<span>${escapeHtml(item.subtitle)}</span>` : ''}${item.url ? `<a href="${escapeHtml(item.url)}">More info</a>` : ''}</figcaption></figure>`;
+  const subtitle = item.subtitle && !isMoviePosterMedia(item) ? `<span>${escapeHtml(item.subtitle)}</span>` : '';
+  return `<figure class="mediaFigure">${image}<figcaption><strong>${escapeHtml(item.title)}</strong>${subtitle}${item.url ? `<a href="${escapeHtml(item.url)}">More info</a>` : ''}</figcaption></figure>`;
 }
 
 function formatPhoto(photo) {
