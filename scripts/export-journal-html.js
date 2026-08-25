@@ -206,14 +206,12 @@ function renderEntry(entry) {
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="${escapeHtml(entry.label)} handwritten page">
-      <h3>Handwritten</h3>
       <figure>
         <img src="${escapeHtml(repoRelativeAsset(entry.image))}" alt="${escapeHtml(entry.alt || entry.imageLabel)}" loading="lazy">
         ${entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : ''}
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="${escapeHtml(entry.label)} typed transcript">
-      <h3>Typed Transcript</h3>
       <div class="transcriptText">
         ${paragraphsHtml(entry.transcript)}
       </div>
