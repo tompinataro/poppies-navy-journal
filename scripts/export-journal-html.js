@@ -294,8 +294,7 @@ function renderBirthdayPage(entry) {
   return `<article class="entry birthdayPageEntry" id="${escapeHtml(entry.id)}">
   <div class="birthdayPage">
     <div class="birthdayMessage">
-      <h2 class="scriptTitle"><span>Commemorating</span><span>the 100th Anniversary</span><span>of your birth</span><span>Dad/Poppie</span></h2>
-      <p><span>with love, your son,</span><span>Tom</span></p>
+      <h2 class="scriptTitle"><span>Published with Love,</span><span>Commemorating</span><span>the 100th Anniversary</span><span>of my father&apos;s birth...</span></h2>
     </div>
     <p class="birthdayFooter"><span>Please let me know of any edits or improvements:</span><a href="mailto:tom@pinataro.com">tom@pinataro.com</a><span>Thank you.</span></p>
   </div>
