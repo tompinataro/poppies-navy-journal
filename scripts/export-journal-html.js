@@ -298,10 +298,14 @@ function renderPhotoPage(entry) {
 }
 
 function renderBirthdayPage(entry) {
+  const photo = entry.image
+    ? `<figure class="birthdayPhoto">${imgTag(entry.image, entry.alt || entry.label)}</figure>`
+    : '';
   return `<article class="entry birthdayPageEntry" id="${escapeHtml(entry.id)}">
   <div class="birthdayPage">
     <div class="birthdayMessage">
       <h2 class="scriptTitle"><span>Commemorating the</span><span>100th Anniversary</span><span>of my Father&apos;s birth,</span><span>with Love...</span></h2>
+      ${photo}
     </div>
     <p class="birthdayFooter"><span>Please let me know of any edits or improvements:</span><a href="mailto:tom@pinataro.com">tom@pinataro.com</a><span>Thank you.</span></p>
   </div>
@@ -496,6 +500,17 @@ function renderHtml(entries) {
       margin: 0;
       font-size: clamp(24px, 3vw, 42px);
       line-height: 1.25;
+    }
+    .birthdayPhoto {
+      width: min(760px, 86vw);
+      margin: 8px 0 72px;
+    }
+    .birthdayPhoto img {
+      width: 100%;
+      height: auto;
+      max-height: min(48vh, 540px);
+      object-fit: contain;
+      box-shadow: 0 18px 44px rgba(34, 29, 20, 0.18);
     }
     .birthdayFooter {
       position: absolute;
@@ -692,7 +707,9 @@ function main() {
   entries.push({
     type: 'birthdayPage',
     label: '100 years',
-    id: '100-years'
+    id: '100-years',
+    image: 'assets/front/tom-and-poppie-100-years.jpeg',
+    alt: 'Tom with Angelo "Poppie" Pignataro.'
   });
   const usedTypedSource = applyTypedSource(entries, parseTypedSource(typedSourcePath));
   if (!usedTypedSource) flowNumberedPageContinuations(entries);

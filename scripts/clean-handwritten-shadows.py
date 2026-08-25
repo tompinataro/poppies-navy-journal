@@ -12,22 +12,26 @@ from PIL import Image
 
 
 BOTTOM_CROP_HEIGHTS = {
-    "page_37.jpg": 1585,
-    "page_38.jpg": 1560,
+    "page_37.jpg": 1515,
+    "page_38.jpg": 1518,
+    "page_41.jpg": 1508,
     "page_42.jpg": 1525,
     "page_47.jpg": 1775,
 }
 
 SPECIAL_POLYGONS = {
-    "page_12.jpg": [
-        [(0, 1740), (260, 1765), (520, 1782), (1023, 1778), (1023, 1800), (0, 1800)],
-    ],
     "page_49.jpg": [
         [(0, 0), (400, 0), (305, 155), (40, 280), (0, 255)],
     ],
     "page_51.jpg": [
         [(0, 0), (180, 0), (125, 95), (0, 125)],
         [(955, 0), (1158, 0), (1158, 160), (1010, 120)],
+    ],
+}
+
+PROTECTED_POLYGONS = {
+    "page_12.jpg": [
+        [(0, 1710), (230, 1742), (560, 1770), (1023, 1778), (1023, 1800), (0, 1800)],
     ],
 }
 
@@ -45,6 +49,7 @@ RIGHT_CROP_WIDTHS = {
 LEFT_CROP_WIDTHS = {
     "page_01.jpg": 58,
     "page_02.jpg": 22,
+    "page_24.jpg": 42,
 }
 
 TOP_CROP_HEIGHTS = {
@@ -54,6 +59,9 @@ TOP_CROP_HEIGHTS = {
 PROTECTED_SHADOW_RECTS = {
     "page_02.jpg": [
         (0, 0, 58, 1800),
+    ],
+    "page_24.jpg": [
+        (0, 0, 70, 1800),
     ],
 }
 
@@ -104,6 +112,14 @@ def page_specific_mask(image: np.ndarray, filename: str) -> np.ndarray:
         add_poly(mask, polygon)
     for rect in SPECIAL_RECTS.get(filename, []):
         add_rect(mask, rect)
+    return mask
+
+
+def page_specific_protected_mask(image: np.ndarray, filename: str) -> np.ndarray:
+    height, width = image.shape[:2]
+    mask = np.zeros((height, width), np.uint8)
+    for polygon in PROTECTED_POLYGONS.get(filename, []):
+        add_poly(mask, polygon)
     return mask
 
 
@@ -189,6 +205,10 @@ def protected_shadow_fill(image: np.ndarray, rect: tuple[int, int, int, int]) ->
     x1, y1, x2, y2 = rect
     mask = np.zeros((height, width), np.uint8)
     add_rect(mask, (x1, y1, x2, y2))
+    return protected_mask_fill(image, mask)
+
+
+def protected_mask_fill(image: np.ndarray, mask: np.ndarray) -> np.ndarray:
     mask = cv2.GaussianBlur(mask, (0, 0), sigmaX=4, sigmaY=1)
 
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
@@ -246,6 +266,9 @@ def main() -> None:
         special_mask = page_specific_mask(np.asarray(cleaned), source_file.name)
         if np.any(special_mask):
             cleaned = Image.fromarray(feather_fill(np.asarray(cleaned), special_mask, paper_color(np.asarray(cleaned))))
+        protected_mask = page_specific_protected_mask(np.asarray(cleaned), source_file.name)
+        if np.any(protected_mask):
+            cleaned = Image.fromarray(protected_mask_fill(np.asarray(cleaned), protected_mask))
         crop_height = BOTTOM_CROP_HEIGHTS.get(source_file.name)
         if crop_height:
             cleaned = cleaned.crop((0, 0, cleaned.width, crop_height))
