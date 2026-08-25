@@ -11,6 +11,14 @@ import numpy as np
 from PIL import Image
 
 
+BOTTOM_CROP_HEIGHTS = {
+    "page_37.jpg": 1585,
+    "page_38.jpg": 1560,
+    "page_42.jpg": 1525,
+    "page_47.jpg": 1775,
+}
+
+
 def paper_color(image: np.ndarray) -> np.ndarray:
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     height, width = gray.shape
@@ -165,6 +173,9 @@ def main() -> None:
             original_array = np.asarray(original, dtype=np.float32)
             blended = original_array * (1 - args.clean_strength) + cleaned_array * args.clean_strength
             cleaned = Image.fromarray(np.clip(blended, 0, 255).astype(np.uint8))
+        crop_height = BOTTOM_CROP_HEIGHTS.get(source_file.name)
+        if crop_height:
+            cleaned = cleaned.crop((0, 0, cleaned.width, crop_height))
         cleaned.save(output_dir / source_file.name, quality=94, optimize=True)
         print(f"cleaned {source_file.name}")
 
