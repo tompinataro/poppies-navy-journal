@@ -86,7 +86,7 @@ function parseTypedSource(filePath) {
 function applyTypedSource(entries, typedEntries) {
   if (!typedEntries) return false;
   for (const entry of entries) {
-    if (entry.label === 'Cover') continue;
+    if (entry.label === 'Cover' || entry.type === 'photoPage') continue;
     if (!typedEntries.has(entry.label)) {
       throw new Error(`Typed source is missing "${entry.label}".`);
     }
@@ -153,9 +153,6 @@ function introNotesHtml(page) {
   if (page.specs && page.specs.length) {
     parts.push(`<section class="noteBlock"><h3>Specifications</h3><dl class="specList">${page.specs.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl></section>`);
   }
-  if (page.photos && page.photos.length) {
-    parts.push(page.photos.map(formatPhoto).join(''));
-  }
   return parts.join('\n');
 }
 
@@ -190,7 +187,9 @@ function formatMedia(item) {
 }
 
 function formatPhoto(photo) {
-  return `<figure class="mediaFigure"><img src="${escapeHtml(repoRelativeAsset(photo.image))}" alt="${escapeHtml(photo.alt || photo.title)}" loading="lazy"><figcaption><strong>${escapeHtml(photo.title)}</strong>${photo.caption ? `<span>${escapeHtml(photo.caption)}</span>` : ''}${photo.url ? `<a href="${escapeHtml(photo.url)}">${escapeHtml(photo.linkLabel || 'View source')}</a>` : ''}</figcaption></figure>`;
+  const image = photo.image || photo.src;
+  const title = photo.title || '';
+  return `<figure class="mediaFigure"><img src="${escapeHtml(repoRelativeAsset(image))}" alt="${escapeHtml(photo.alt || title)}" loading="lazy"><figcaption>${title ? `<strong>${escapeHtml(title)}</strong>` : ''}${photo.caption ? `<span>${escapeHtml(photo.caption)}</span>` : ''}${photo.url ? `<a href="${escapeHtml(photo.url)}">${escapeHtml(photo.linkLabel || 'View source')}</a>` : ''}</figcaption></figure>`;
 }
 
 function formatVisual(detail) {
@@ -207,6 +206,7 @@ function formatVisual(detail) {
 }
 
 function renderEntry(entry) {
+  if (entry.type === 'photoPage') return renderPhotoPage(entry);
   const hasNotes = Boolean(entry.notesHtml);
   const showEntryHeader = entry.label !== 'Cover';
   const coverCaption = entry.label === 'Cover'
@@ -234,6 +234,17 @@ function renderEntry(entry) {
         ${entry.notesHtml}
       </div>
     </section>
+  </div>
+</article>`;
+}
+
+function renderPhotoPage(entry) {
+  return `<article class="entry photoPageEntry" id="${escapeHtml(entry.id)}">
+  <header class="entryHeader">
+    <h2>${escapeHtml(entry.label)}</h2>
+  </header>
+  <div class="familyPhotoGrid">
+    ${entry.photos.map(formatPhoto).join('\n')}
   </div>
 </article>`;
 }
@@ -426,6 +437,19 @@ function renderHtml(entries) {
       color: var(--ink);
       font-size: 16px;
     }
+    .familyPhotoGrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 18px;
+      padding: 18px;
+    }
+    .familyPhotoGrid .mediaFigure img {
+      max-height: 620px;
+    }
+    .familyPhotoGrid .mediaFigure figcaption {
+      font-size: 16px;
+      line-height: 1.42;
+    }
     a {
       color: var(--accent);
       text-decoration-thickness: 1px;
@@ -440,6 +464,7 @@ function renderHtml(entries) {
     }
     @media (max-width: 1100px) {
       .threeColumns { grid-template-columns: 1fr; }
+      .familyPhotoGrid { grid-template-columns: 1fr; }
       .column + .column {
         border-left: 0;
         border-top: 1px solid var(--line);
@@ -483,6 +508,7 @@ function validate(entries) {
   const expectedLabels = [
     'Cover',
     'USS Pegasus',
+    'Pignataro Brothers',
     ...Array.from({ length: 51 }, (_, index) => `Page ${String(index + 1).padStart(2, '0')}`)
   ];
   const actualLabels = entries.map(entry => entry.label);
@@ -497,7 +523,17 @@ function validate(entries) {
 }
 
 function main() {
-  const entries = loadJournalPages().map(normalizeEntry);
+  const pages = loadJournalPages();
+  const entries = pages.map(normalizeEntry);
+  const introPage = pages.find(page => page.type === 'intro');
+  if (introPage && introPage.photos && introPage.photos.length) {
+    entries.splice(2, 0, {
+      type: 'photoPage',
+      label: 'Pignataro Brothers',
+      id: 'pignataro-brothers',
+      photos: introPage.photos
+    });
+  }
   const usedTypedSource = applyTypedSource(entries, parseTypedSource(typedSourcePath));
   if (!usedTypedSource) flowNumberedPageContinuations(entries);
   validate(entries);

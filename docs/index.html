@@ -185,6 +185,19 @@
       color: var(--ink);
       font-size: 16px;
     }
+    .familyPhotoGrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 18px;
+      padding: 18px;
+    }
+    .familyPhotoGrid .mediaFigure img {
+      max-height: 620px;
+    }
+    .familyPhotoGrid .mediaFigure figcaption {
+      font-size: 16px;
+      line-height: 1.42;
+    }
     a {
       color: var(--accent);
       text-decoration-thickness: 1px;
@@ -199,6 +212,7 @@
     }
     @media (max-width: 1100px) {
       .threeColumns { grid-template-columns: 1fr; }
+      .familyPhotoGrid { grid-template-columns: 1fr; }
       .column + .column {
         border-left: 0;
         border-top: 1px solid var(--line);
@@ -229,6 +243,7 @@
       <option value="" selected>Jump to</option>
       <option value="cover">Cover</option>
       <option value="uss-pegasus">USS Pegasus</option>
+      <option value="pignataro-brothers">Pignataro Brothers</option>
       <option value="page-01">Page 01</option>
       <option value="page-02">Page 02</option>
       <option value="page-03">Page 03</option>
@@ -328,9 +343,17 @@
       <div class="notesText">
         <p>USS Pegasus (IX-222) entering San Francisco Bay, circa March 4, 1946. Source notes identify a long homeward-bound pennant flying from the mainmast peak; in this reproduction it is very faint, trailing leftward from the mast.</p>
 <section class="noteBlock"><h3>Specifications</h3><dl class="specList"><div><dt>Built as</dt><dd>Rita Maersk, Danish freighter, 1939</dd></div><div><dt>Acquired</dt><dd>September 18, 1941</dd></div><div><dt>Commissioned</dt><dd>December 3, 1941</dd></div><div><dt>Reclassified</dt><dd>IX-222 on May 15, 1945</dd></div><div><dt>Decommissioned</dt><dd>April 19, 1946, San Francisco</dd></div><div><dt>Length</dt><dd>About 299.9 ft overall</dd></div><div><dt>Beam</dt><dd>43.5 ft</dd></div><div><dt>Speed</dt><dd>12 knots</dd></div><div><dt>Crew</dt><dd>103 listed by Shipscribe for 1944; some summaries list 156</dd></div><div><dt>Armament</dt><dd>Varied; included 4-inch, 3-inch, .50 cal, and 20 mm guns</dd></div><div><dt>Pacific service</dt><dd>Leyte Gulf from July 18, 1945 into 1946</dd></div><div><dt>Returned home</dt><dd>Arrived San Francisco March 4, 1946</dd></div></dl></section>
-<figure class="mediaFigure"><img src="" alt="Poppie in Navy uniform standing with his brother in Army uniform." loading="lazy"><figcaption><strong></strong><span>Homecoming: Poppie, wearing his Navy uniform with his oldest brother Joe, who is wearing his Army uniform.</span></figcaption></figure><figure class="mediaFigure"><img src="" alt="Two Pignataro brothers standing together in Army uniforms." loading="lazy"><figcaption><strong></strong><span>Poppie's two older brothers, Joe and Carmine Pignataro, were drafted into the army during WWII. They wrote home telling of the very rough conditions in Europe and told their younger brother to enlist in the Navy ahead of his 18th birthday.</span></figcaption></figure>
       </div>
     </section>
+  </div>
+</article>
+<article class="entry photoPageEntry" id="pignataro-brothers">
+  <header class="entryHeader">
+    <h2>Pignataro Brothers</h2>
+  </header>
+  <div class="familyPhotoGrid">
+    <figure class="mediaFigure"><img src="assets/front/poppie-with-brother.jpg" alt="Poppie in Navy uniform standing with his brother in Army uniform." loading="lazy"><figcaption><span>Homecoming: Poppie, wearing his Navy uniform with his oldest brother Joe, who is wearing his Army uniform.</span></figcaption></figure>
+<figure class="mediaFigure"><img src="assets/front/pignataro-brothers.jpg" alt="Two Pignataro brothers standing together in Army uniforms." loading="lazy"><figcaption><span>Poppie's two older brothers, Joe and Carmine Pignataro, were drafted into the army during WWII. They wrote home telling of the very rough conditions in Europe and told their younger brother to enlist in the Navy ahead of his 18th birthday.</span></figcaption></figure>
   </div>
 </article>
 <article class="entry" id="page-01">
