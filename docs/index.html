@@ -163,8 +163,9 @@
       position: relative;
       display: grid;
       min-height: calc(100vh - 96px);
-      padding: 56px 24px 34px;
-      place-items: center;
+      padding: 92px 24px 34px;
+      align-items: start;
+      justify-items: center;
       text-align: center;
     }
     .birthdayMessage {
@@ -317,6 +318,7 @@
       <option value="cover">Cover</option>
       <option value="uss-pegasus">USS Pegasus</option>
       <option value="pignataro-brothers">Pignataro Brothers</option>
+      <option value="dedication">Dedication</option>
       <option value="page-01">Page 01</option>
       <option value="page-02">Page 02</option>
       <option value="page-03">Page 03</option>
@@ -367,7 +369,6 @@
       <option value="page-48">Page 48</option>
       <option value="page-49">Page 49</option>
       <option value="page-50">Page 50</option>
-      <option value="page-51">Page 51</option>
       <option value="100-years">100 years</option>
     </select>
   </header>
@@ -432,6 +433,34 @@
 <figure class="mediaFigure"><img src="assets/front/pignataro-brothers.jpg" alt="Two Pignataro brothers standing together in Army uniforms." width="797" height="776" loading="lazy"><figcaption><span>Poppie's two older brothers, Joe and Carmine Pignataro, were drafted into the army during WWII. They wrote home telling of the very rough conditions in Europe and told their younger brother to enlist in the Navy ahead of his 18th birthday.</span></figcaption></figure>
   </div>
 </article>
+<article class="entry" id="dedication">
+  <header class="entryHeader">
+    <h2>Dedication</h2>
+  </header>
+  <div class="threeColumns">
+    <section class="column handwrittenColumn" aria-label="Dedication handwritten page">
+      
+      <figure>
+        <img src="assets/pages_filtered/page_01.jpg" alt="Handwritten diary Page 01" width="1086" height="1800" loading="lazy">
+        
+      </figure>
+    </section>
+    <section class="column transcriptColumn" aria-label="Dedication typed transcript">
+      <div class="transcriptText">
+        <p>Angelo Pignataro SC 3/c*</p>
+<p>Account of my travels back home from the Philippines.</p>
+<p>Written in diary form to Mom &amp; Dad.</p>
+      </div>
+    </section>
+    <section class="column notesColumn" aria-label="Dedication notes and details">
+      <h3>Notes &amp; Details</h3>
+      <div class="notesText">
+        <section class="noteBlock"><h3>Rating note</h3>
+<p>SC 3/C in a Navy context most likely means Ship's Cook, Third Class. SC = Ship's Cook; 3/C or 3c = Third Class. Full style: Ship's Cook Third Class. Roughly equivalent in rank level to Petty Officer Third Class, depending on the era. Modern closest successor: Culinary Specialist Third Class, CS3.</p></section>
+      </div>
+    </section>
+  </div>
+</article>
 <article class="entry" id="page-01">
   <header class="entryHeader">
     <h2>Page 01</h2>
@@ -440,22 +469,23 @@
     <section class="column handwrittenColumn" aria-label="Page 01 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_01.jpg" alt="Handwritten diary Page 01" width="1086" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_02.jpg" alt="Handwritten diary Page 02" width="1063" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 01 typed transcript">
       <div class="transcriptText">
-        <p>Angelo Pignataro SC 3/c*</p>
-<p>Account of my travels back home from the Philippines.</p>
-<p>Written in diary form to Mom &amp; Dad.</p>
+        <p>Jan. 4, 1946</p>
+<p>We received orders today to return to the states &amp; to report at San Francisco. It came as a surprise because we didn't get into dry dock yet. I can't explain how happy we all were. We needed fuel &amp; water so we went to Leyte to get them. On the way the engine craped out &amp; we were all pretty sore. In a few minutes the scuttlebutt was going around that it would take 12 days to fix it. There goes our chance of going home. Because as soon as the base command hears of it they'll tell us to stay here. But our captain didn't radio in &amp; they went to work to fix it. Its now 10 P.M. &amp; I guess I'll turn in.</p>
       </div>
     </section>
     <section class="column notesColumn" aria-label="Page 01 notes and details">
       <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        <section class="noteBlock"><h3>Rating note</h3>
-<p>SC 3/C in a Navy context most likely means Ship's Cook, Third Class. SC = Ship's Cook; 3/C or 3c = Third Class. Full style: Ship's Cook Third Class. Roughly equivalent in rank level to Petty Officer Third Class, depending on the era. Modern closest successor: Culinary Specialist Third Class, CS3.</p></section>
+        <section class="noteBlock"><h3>Leyte and liberation</h3>
+<p>Leyte is an island in the eastern Philippines. In this WWII context, liberation means the Allied campaign to free the Philippines from Japanese occupation; U.S. forces landed on Leyte on Oct. 20, 1944. The map below shows Leyte, Samar, Leyte Gulf, San Pedro Bay, and the surrounding islands with their actual coastlines.</p>
+<ul class="linkList"><li><a href="https://commons.wikimedia.org/wiki/File:Map_of_Samar_and_Leyte.jpg">Map source</a></li></ul>
+<figure class="mediaFigure"><img src="assets/details/leyte-eastern-visayas-map.png" alt="Map showing Leyte, Eastern Visayas, Philippines in Southeast Asia" width="1846" height="1556" loading="lazy"><figcaption><strong>Leyte map</strong><span>Leyte, Eastern Visayas, Philippines.</span></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -468,23 +498,20 @@
     <section class="column handwrittenColumn" aria-label="Page 02 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_02.jpg" alt="Handwritten diary Page 02" width="1063" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_03.jpg" alt="Handwritten diary Page 03" width="1051" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 02 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 4, 1946</p>
-<p>We received orders today to return to the states &amp; to report at San Francisco. It came as a surprise because we didn't get into dry dock yet. I can't explain how happy we all were. We needed fuel &amp; water so we went to Leyte to get them. On the way the engine craped out &amp; we were all pretty sore. In a few minutes the scuttlebutt was going around that it would take 12 days to fix it. There goes our chance of going home. Because as soon as the base command hears of it they'll tell us to stay here. But our captain didn't radio in &amp; they went to work to fix it. Its now 10 P.M. &amp; I guess I'll turn in.</p>
+        <p>Jan. 5, 1946</p>
+<p>Awoke this morning &amp; the first thing I heard was that the engines were fixed. That sounded pretty good. We got under way for Leyte again. We arrived at night &amp; got filled up in a few hours. We'll have to leave tomorrow cause of some details. There weren't any movies tonight &amp; the night was lonely &amp; solemn. But I'll take it now that we're going stateside, I need to turn in.</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 02 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 02 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Leyte and liberation</h3>
-<p>Leyte is an island in the eastern Philippines. In this WWII context, liberation means the Allied campaign to free the Philippines from Japanese occupation; U.S. forces landed on Leyte on Oct. 20, 1944. The map below shows Leyte, Samar, Leyte Gulf, San Pedro Bay, and the surrounding islands with their actual coastlines.</p>
-<ul class="linkList"><li><a href="https://commons.wikimedia.org/wiki/File:Map_of_Samar_and_Leyte.jpg">Map source</a></li></ul>
-<figure class="mediaFigure"><img src="assets/details/leyte-eastern-visayas-map.png" alt="Map showing Leyte, Eastern Visayas, Philippines in Southeast Asia" width="1846" height="1556" loading="lazy"><figcaption><strong>Leyte map</strong><span>Leyte, Eastern Visayas, Philippines.</span></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -497,14 +524,14 @@
     <section class="column handwrittenColumn" aria-label="Page 03 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_03.jpg" alt="Handwritten diary Page 03" width="1051" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_04.jpg" alt="Handwritten diary Page 04" width="1051" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 03 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 5, 1946</p>
-<p>Awoke this morning &amp; the first thing I heard was that the engines were fixed. That sounded pretty good. We got under way for Leyte again. We arrived at night &amp; got filled up in a few hours. We'll have to leave tomorrow cause of some details. There weren't any movies tonight &amp; the night was lonely &amp; solemn. But I'll take it now that we're going stateside, I need to turn in.</p>
+        <p>Jan. 6, 1946</p>
+<p>Today we get started for home at 1300. I went to work as usual. At 1330 we finally got started. Everyone was up getting their last look at the Philippines. (I hope) We're going pretty slow because of our bad engine. But as long as we're started we don't care. We got out of the harbor &amp; into the open sea. In a short while we couldn't see any land. This was noon. Most of the men were talking of getting sea sick, &amp; they did. They were heaving for hours. I can say truthfully I felt</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 03 notes and details">
@@ -523,14 +550,13 @@
     <section class="column handwrittenColumn" aria-label="Page 04 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_04.jpg" alt="Handwritten diary Page 04" width="1051" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_05.jpg" alt="Handwritten diary Page 05" width="1058" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 04 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 6, 1946</p>
-<p>Today we get started for home at 1300. I went to work as usual. At 1330 we finally got started. Everyone was up getting their last look at the Philippines. (I hope) We're going pretty slow because of our bad engine. But as long as we're started we don't care. We got out of the harbor &amp; into the open sea. In a short while we couldn't see any land. This was noon. Most of the men were talking of getting sea sick, &amp; they did. They were heaving for hours. I can say truthfully I felt</p>
+        
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 04 notes and details">
@@ -549,19 +575,20 @@
     <section class="column handwrittenColumn" aria-label="Page 05 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_05.jpg" alt="Handwritten diary Page 05" width="1058" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_06.jpg" alt="Handwritten diary Page 06" width="1058" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 05 typed transcript">
       <div class="transcriptText">
-        
+        <p>funny, but I didn't get sick. I guess I'm an old salt with sea legs. No more mail for about 28 days I hear. I didn't tell anyone of my homecoming because I want to surprise them. But I think I'll write at Pearl Harbor &amp; let them know. I don't want them to worry because I'm not writing. This trip will take about 41 days because of our engine. We make only five stops. Thats at Eniwetok &amp; Pearl Harbor then to Frisco &amp; the ship is to be decommissioned &amp; we might get a 30 day leave. The captain told us that. I can't wait. I'm so excited &amp; glad till tomorrow - good night.</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 05 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 05 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Age note</h3>
+<p>Poppie was born 10/21/26, so during this Jan. 1946 entry he was 19 years old.</p></section>
       </div>
     </section>
   </div>
@@ -574,20 +601,20 @@
     <section class="column handwrittenColumn" aria-label="Page 06 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_06.jpg" alt="Handwritten diary Page 06" width="1058" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_07.jpg" alt="Handwritten diary Page 07" width="1026" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 06 typed transcript">
       <div class="transcriptText">
-        <p>funny, but I didn't get sick. I guess I'm an old salt with sea legs. No more mail for about 28 days I hear. I didn't tell anyone of my homecoming because I want to surprise them. But I think I'll write at Pearl Harbor &amp; let them know. I don't want them to worry because I'm not writing. This trip will take about 41 days because of our engine. We make only five stops. Thats at Eniwetok &amp; Pearl Harbor then to Frisco &amp; the ship is to be decommissioned &amp; we might get a 30 day leave. The captain told us that. I can't wait. I'm so excited &amp; glad till tomorrow - good night.</p>
+        <p>Jan. 7, 1946</p>
+<p>The sea is still very rough &amp; the men are still sick. The ship's rocking very bad. That's because our holds are not full of cargo. Water is coming on the decks. The life lines were put up in case a wave hits you, then you can hold on. Our water has been rationed &amp; its pretty tough. It's only on for 3 hours a day in one hour periods. We have to use salt water for showers &amp; to wash our clothes. The laundry isn't working because of the water shortage. The water isn't exactly low but it has</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 06 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 06 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Age note</h3>
-<p>Poppie was born 10/21/26, so during this Jan. 1946 entry he was 19 years old.</p></section>
+        
       </div>
     </section>
   </div>
@@ -600,14 +627,13 @@
     <section class="column handwrittenColumn" aria-label="Page 07 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_07.jpg" alt="Handwritten diary Page 07" width="1026" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_08.jpg" alt="Handwritten diary Page 08" width="1026" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 07 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 7, 1946</p>
-<p>The sea is still very rough &amp; the men are still sick. The ship's rocking very bad. That's because our holds are not full of cargo. Water is coming on the decks. The life lines were put up in case a wave hits you, then you can hold on. Our water has been rationed &amp; its pretty tough. It's only on for 3 hours a day in one hour periods. We have to use salt water for showers &amp; to wash our clothes. The laundry isn't working because of the water shortage. The water isn't exactly low but it has</p>
+        
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 07 notes and details">
@@ -626,13 +652,15 @@
     <section class="column handwrittenColumn" aria-label="Page 08 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_08.jpg" alt="Handwritten diary Page 08" width="1026" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_09.jpg" alt="Handwritten diary Page 09" width="1032" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 08 typed transcript">
       <div class="transcriptText">
-        
+        <p>to be used this way if we want it to last till Pearl Harbor, which is still about 26 days away. We'll be at sea a long time.</p>
+<p>Jan. 8, 1946</p>
+<p>Sea still rough when I awoke. A couple of guys fell out of their sacks. Went to work &amp; here I am. Voyage is pretty slow &amp; long. We can't make good speed because it might hurt the engines. Still no movies. I hear we'll have them only on Saturday nights now because we only have 3 aboard ship. Water rationing getting worse. Salt water isn't good for laundry, found that out. I'll miss mail now.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 08 notes and details">
@@ -651,15 +679,14 @@
     <section class="column handwrittenColumn" aria-label="Page 09 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_09.jpg" alt="Handwritten diary Page 09" width="1032" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_10.jpg" alt="Handwritten diary Page 10" width="1033" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 09 typed transcript">
       <div class="transcriptText">
-        <p>to be used this way if we want it to last till Pearl Harbor, which is still about 26 days away. We'll be at sea a long time.</p>
-<p>Jan. 8, 1946</p>
-<p>Sea still rough when I awoke. A couple of guys fell out of their sacks. Went to work &amp; here I am. Voyage is pretty slow &amp; long. We can't make good speed because it might hurt the engines. Still no movies. I hear we'll have them only on Saturday nights now because we only have 3 aboard ship. Water rationing getting worse. Salt water isn't good for laundry, found that out. I'll miss mail now.</p>
+        <p>Jan. 9, 1946</p>
+<p>Water calm now &amp; the ship isn't rolling much. Today we're having target practice to use the ammunition up. I fired the 20 caliber rifle, 20 millimeter, 30 caliber machine guns, 3 inch gun &amp; the 4 inch gun. The 3 &amp; 4 make quite a bit of noise. The 4 inch has some flash too. Everyone got a chance at each gun. We had some ammo left over so they threw it over the side. The gunnery officer said we used more than $21,000 worth of ammo &amp; threw away about $6,000 worth. We had orders not to bring any ammo back so we used it up.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 09 notes and details">
@@ -678,20 +705,20 @@
     <section class="column handwrittenColumn" aria-label="Page 10 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_10.jpg" alt="Handwritten diary Page 10" width="1033" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_11.jpg" alt="Handwritten diary Page 11" width="1022" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 10 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 9, 1946</p>
-<p>Water calm now &amp; the ship isn't rolling much. Today we're having target practice to use the ammunition up. I fired the 20 caliber rifle, 20 millimeter, 30 caliber machine guns, 3 inch gun &amp; the 4 inch gun. The 3 &amp; 4 make quite a bit of noise. The 4 inch has some flash too. Everyone got a chance at each gun. We had some ammo left over so they threw it over the side. The gunnery officer said we used more than $21,000 worth of ammo &amp; threw away about $6,000 worth. We had orders not to bring any ammo back so we used it up.</p>
+        
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 10 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 10 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Money note</h3>
+<p>Using 1946-to-2026 CPI, $21,000 is about $359,600 today; $6,000 is about $102,800.</p></section>
       </div>
     </section>
   </div>
@@ -704,20 +731,21 @@
     <section class="column handwrittenColumn" aria-label="Page 11 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_11.jpg" alt="Handwritten diary Page 11" width="1022" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_12.jpg" alt="Handwritten diary Page 12" width="1023" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 11 typed transcript">
       <div class="transcriptText">
-        
+        <p>It sure was some waste. But its no good anymore. My right hand is sore from using that rifle. Till tomorrow - see you soon.</p>
+<p>Jan. 10, 1946</p>
+<p>Well here it is Thursday &amp; time to write today's account. Woke up this morning &amp; the sea was pretty rough again. Its rolling like a pea would feel in a tub. If our ship was full of supplies I wonder how much better. Today we had a few drills. They were fire drill, abandon ship drill, &amp; collision drill. Everyone has to wear a life jacket now because its so rough. They were issued to us the first day at sea. After work I went up for some more sun. I got some tan now and I guess as soon as I hit Frisco this will show you how sunburned we're getting. So far we've only gone 553 miles, but still have 6,663 miles to our first stop</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 11 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 11 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Money note</h3>
-<p>Using 1946-to-2026 CPI, $21,000 is about $359,600 today; $6,000 is about $102,800.</p></section>
+        
       </div>
     </section>
   </div>
@@ -730,15 +758,13 @@
     <section class="column handwrittenColumn" aria-label="Page 12 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_12.jpg" alt="Handwritten diary Page 12" width="1023" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_13.jpg" alt="Handwritten diary Page 13" width="1044" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 12 typed transcript">
       <div class="transcriptText">
-        <p>It sure was some waste. But its no good anymore. My right hand is sore from using that rifle. Till tomorrow - see you soon.</p>
-<p>Jan. 10, 1946</p>
-<p>Well here it is Thursday &amp; time to write today's account. Woke up this morning &amp; the sea was pretty rough again. Its rolling like a pea would feel in a tub. If our ship was full of supplies I wonder how much better. Today we had a few drills. They were fire drill, abandon ship drill, &amp; collision drill. Everyone has to wear a life jacket now because its so rough. They were issued to us the first day at sea. After work I went up for some more sun. I got some tan now and I guess as soon as I hit Frisco this will show you how sunburned we're getting. So far we've only gone 553 miles, but still have 6,663 miles to our first stop</p>
+        
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 12 notes and details">
@@ -757,19 +783,20 @@
     <section class="column handwrittenColumn" aria-label="Page 13 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_13.jpg" alt="Handwritten diary Page 13" width="1044" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_14.jpg" alt="Handwritten diary Page 14" width="1044" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 13 typed transcript">
       <div class="transcriptText">
-        
+        <p>at Eniwetok. We've been having a head wind all the way &amp; also a strong current. Thats not much traveling for being at sea for 4 days. At this rate we'll never hit the states. We got movies tonight. I know I'll enjoy it because I sure love to see movies. I'll let you know the name in tomorrow's story. We only see movies every week now on Thurs. Good night all &amp; hope to see you soon.</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 13 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 13 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Eniwetok / Enewetak</h3>
+<p>Eniwetok, now often spelled Enewetak, is an atoll in the Marshall Islands used by U.S. forces as a Pacific anchorage and base area after WWII.</p></section>
       </div>
     </section>
   </div>
@@ -782,20 +809,24 @@
     <section class="column handwrittenColumn" aria-label="Page 14 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_14.jpg" alt="Handwritten diary Page 14" width="1044" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_15.jpg" alt="Handwritten diary Page 15" width="1032" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 14 typed transcript">
       <div class="transcriptText">
-        <p>at Eniwetok. We've been having a head wind all the way &amp; also a strong current. Thats not much traveling for being at sea for 4 days. At this rate we'll never hit the states. We got movies tonight. I know I'll enjoy it because I sure love to see movies. I'll let you know the name in tomorrow's story. We only see movies every week now on Thurs. Good night all &amp; hope to see you soon.</p>
+        <p>Jan. 11, 1946</p>
+<p>Woke up this morning at 6:30 &amp; the sea was pretty calm. I hope it stays that way. Still making very slow progress. Rumors going around that we have to stop at Guam. I hope it doesn't delay our trip. I'm very anxious to get to the states. Last night's movie was &quot;What a Woman&quot; with B. O'Hara &amp; Ross Russell. Enjoyed it a lot. So long till Sat nite.</p>
+<p>Jan. 12, 1946</p>
+<p>Well here it is Sat night &amp; still out at sea. The sea been the roughest today than it ever was. The Captain told us we're going to Guam for sure now. It will delay us about 4 days. At least we might get liberty there. We need food supplies. We ran out of fruits 3 days ago &amp; vegetables 2 days ago. Food is very low. It might be rationed. The men are flooding No. 1 &amp; 5 holds to balance the ship. It's been rolling very bad. Lately, the water comes out of the water on every roll. It's been ruining the engine. We might also get a tug at Guam cause we're going so slow.</p>
       </div>
     </section>
     <section class="column notesColumn" aria-label="Page 14 notes and details">
       <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        <section class="noteBlock"><h3>Eniwetok / Enewetak</h3>
-<p>Eniwetok, now often spelled Enewetak, is an atoll in the Marshall Islands used by U.S. forces as a Pacific anchorage and base area after WWII.</p></section>
+        <section class="noteBlock"><h3>Film note</h3>
+<p>What a Woman! is a 1943 romantic comedy starring Rosalind Russell and Brian Aherne.</p>
+<figure class="mediaFigure"><img src="https://resizing.flixster.com/QPupapMT-tXPTrl2yA8mBMb45w8=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p41596_p_v7_aa.jpg" alt="Poster for What a Woman!, 1943." loading="lazy"><figcaption><strong>What a Woman!</strong><a href="https://en.wikipedia.org/wiki/What_a_Woman%21">More info</a></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -808,24 +839,19 @@
     <section class="column handwrittenColumn" aria-label="Page 15 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_15.jpg" alt="Handwritten diary Page 15" width="1032" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_16.jpg" alt="Handwritten diary Page 16" width="1033" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 15 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 11, 1946</p>
-<p>Woke up this morning at 6:30 &amp; the sea was pretty calm. I hope it stays that way. Still making very slow progress. Rumors going around that we have to stop at Guam. I hope it doesn't delay our trip. I'm very anxious to get to the states. Last night's movie was &quot;What a Woman&quot; with B. O'Hara &amp; Ross Russell. Enjoyed it a lot. So long till Sat nite.</p>
-<p>Jan. 12, 1946</p>
-<p>Well here it is Sat night &amp; still out at sea. The sea been the roughest today than it ever was. The Captain told us we're going to Guam for sure now. It will delay us about 4 days. At least we might get liberty there. We need food supplies. We ran out of fruits 3 days ago &amp; vegetables 2 days ago. Food is very low. It might be rationed. The men are flooding No. 1 &amp; 5 holds to balance the ship. It's been rolling very bad. Lately, the water comes out of the water on every roll. It's been ruining the engine. We might also get a tug at Guam cause we're going so slow.</p>
+        
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 15 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 15 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Film note</h3>
-<p>What a Woman! is a 1943 romantic comedy starring Rosalind Russell and Brian Aherne.</p>
-<figure class="mediaFigure"><img src="https://resizing.flixster.com/QPupapMT-tXPTrl2yA8mBMb45w8=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p41596_p_v7_aa.jpg" alt="Poster for What a Woman!, 1943." loading="lazy"><figcaption><strong>What a Woman!</strong><a href="https://en.wikipedia.org/wiki/What_a_Woman%21">More info</a></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -838,13 +864,14 @@
     <section class="column handwrittenColumn" aria-label="Page 16 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_16.jpg" alt="Handwritten diary Page 16" width="1033" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_17.jpg" alt="Handwritten diary Page 17" width="991" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 16 typed transcript">
       <div class="transcriptText">
-        
+        <p>Jan. 13, 1946 - At Sea</p>
+<p>Well, we've been at sea one week now &amp; it seems like one year. Water still very rough but ship isn't rolling so much now that No. 1 &amp; 5 holds are full of water. Its safer now. We'll arrive in Guam on Wed. We will get liberty there, water &amp; food still rationed it's getting tougher now. Having movie tonight because we're going to Guam &amp; we can get more of them. Good night.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 16 notes and details">
@@ -863,14 +890,14 @@
     <section class="column handwrittenColumn" aria-label="Page 17 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_17.jpg" alt="Handwritten diary Page 17" width="991" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_18.jpg" alt="Handwritten diary Page 18" width="991" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 17 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 13, 1946 - At Sea</p>
-<p>Well, we've been at sea one week now &amp; it seems like one year. Water still very rough but ship isn't rolling so much now that No. 1 &amp; 5 holds are full of water. Its safer now. We'll arrive in Guam on Wed. We will get liberty there, water &amp; food still rationed it's getting tougher now. Having movie tonight because we're going to Guam &amp; we can get more of them. Good night.</p>
+        <p>Jan. 14, 1946 - At Sea</p>
+<p>Well another day has passed &amp; I'm getting closer to home. Thats all we talk about now. Today was payday because we're getting liberty in Guam &amp; we need money. I didn't draw all my money. I'm saving it for when I come home. Then I can have a good time. We started an anchor pool today. We get 60 men to put up a dollar each. Then we got 60 sealed envelopes with numbers in them from one to 60. Every man puts his name on one of them. When we hit Guam &amp; the anchor drops its recorded to the minute on the bridge. So if its 4:35 the man with the number 35 wins $60.00. We're starting one for Frisco soon for $5.00 per man. Thats a $300.00 prize. We will arrive in Guam tomorrow I think. Then we'll find out who has won.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 17 notes and details">
@@ -889,20 +916,20 @@
     <section class="column handwrittenColumn" aria-label="Page 18 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_18.jpg" alt="Handwritten diary Page 18" width="991" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_19.jpg" alt="Handwritten diary Page 19" width="1041" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 18 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 14, 1946 - At Sea</p>
-<p>Well another day has passed &amp; I'm getting closer to home. Thats all we talk about now. Today was payday because we're getting liberty in Guam &amp; we need money. I didn't draw all my money. I'm saving it for when I come home. Then I can have a good time. We started an anchor pool today. We get 60 men to put up a dollar each. Then we got 60 sealed envelopes with numbers in them from one to 60. Every man puts his name on one of them. When we hit Guam &amp; the anchor drops its recorded to the minute on the bridge. So if its 4:35 the man with the number 35 wins $60.00. We're starting one for Frisco soon for $5.00 per man. Thats a $300.00 prize. We will arrive in Guam tomorrow I think. Then we'll find out who has won.</p>
+        
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 18 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 18 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Anchor pool money note</h3>
+<p>Approximate 2026 CPI equivalents for the 1946 anchor pool amounts: $1 is about $17; $5 is about $86; $60 is about $1,031; and the $300 Frisco prize is about $5,157.</p></section>
       </div>
     </section>
   </div>
@@ -915,20 +942,25 @@
     <section class="column handwrittenColumn" aria-label="Page 19 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_19.jpg" alt="Handwritten diary Page 19" width="1041" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_20.jpg" alt="Handwritten diary Page 20" width="1041" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 19 typed transcript">
       <div class="transcriptText">
-        
+        <p>I finished a good book last night. The name was &quot;Valiant Libertine&quot; by John Bryson. It took me quite a while to finish it because I only can read it at night. It's the longest book I ever read. It had 627 pages. I enjoy reading now. At one time I disliked it. Will tell tomorrow nite.</p>
+<p>Jan. 15, 1946 - At Port, Guam</p>
+<p>We arrived at Guam today after being at sea for 9 days. It was good to see land again. Guam is some place. It's the biggest naval base in the Pacific. There are over 100 ships in the harbor. We were anchored near the aircraft carriers &quot;Hornet&quot; &amp; &quot;Saratoga.&quot; Besides a few CVE's. We'll be here till Sunday then we'll begin our trip home again. We took the water out of No. 1 &amp; 5 holds &amp; were putting 150 aircraft engines in them. We're also getting supplies, water isn't rationed in port &amp; now we have fresh water showers. Till tomorrow night!</p>
       </div>
     </section>
     <section class="column notesColumn" aria-label="Page 19 notes and details">
       <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        <section class="noteBlock"><h3>Anchor pool money note</h3>
-<p>Approximate 2026 CPI equivalents for the 1946 anchor pool amounts: $1 is about $17; $5 is about $86; $60 is about $1,031; and the $300 Frisco prize is about $5,157.</p></section>
+        <section class="noteBlock"><h3>Book and route note</h3>
+<p>Valiant Libertine was a 1942 novel by John Bryson. The map below shows the approximate geography of the route, not the ship's exact track.</p>
+<figure class="mediaFigure"><figcaption><strong>Valiant Libertine</strong><span>John Bryson, 1942</span><a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Catalog_of_Copyright_Entries_1942_Books_New_Series_Vol_39_Pt_1_For_the_Year_1942_%28IA_catalogofcopyrig391li%29.pdf">More info</a></figcaption></figure>
+<ul class="linkList"><li><a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Catalog_of_Copyright_Entries_1942_Books_New_Series_Vol_39_Pt_1_For_the_Year_1942_%28IA_catalogofcopyrig391li%29.pdf">Copyright catalog</a></li></ul>
+<figure class="mediaFigure"><img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco" width="1600" height="940" loading="lazy"><figcaption><strong>Dates and approximate leg distances</strong><span>Leyte -> Guam: 1,172 nmi / 1,349 mi. Guam -> Enewetak: 1,036 nmi / 1,192 mi. Enewetak -> Pearl Harbor: 2,359 nmi / 2,714 mi. Pearl Harbor -> San Francisco: 2,083 nmi / 2,397 mi.</span></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -941,25 +973,19 @@
     <section class="column handwrittenColumn" aria-label="Page 20 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_20.jpg" alt="Handwritten diary Page 20" width="1041" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_21.jpg" alt="Handwritten diary Page 21" width="1018" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 20 typed transcript">
       <div class="transcriptText">
-        <p>I finished a good book last night. The name was &quot;Valiant Libertine&quot; by John Bryson. It took me quite a while to finish it because I only can read it at night. It's the longest book I ever read. It had 627 pages. I enjoy reading now. At one time I disliked it. Will tell tomorrow nite.</p>
-<p>Jan. 15, 1946 - At Port, Guam</p>
-<p>We arrived at Guam today after being at sea for 9 days. It was good to see land again. Guam is some place. It's the biggest naval base in the Pacific. There are over 100 ships in the harbor. We were anchored near the aircraft carriers &quot;Hornet&quot; &amp; &quot;Saratoga.&quot; Besides a few CVE's. We'll be here till Sunday then we'll begin our trip home again. We took the water out of No. 1 &amp; 5 holds &amp; were putting 150 aircraft engines in them. We're also getting supplies, water isn't rationed in port &amp; now we have fresh water showers. Till tomorrow night!</p>
+        
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 20 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 20 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Book and route note</h3>
-<p>Valiant Libertine was a 1942 novel by John Bryson. The map below shows the approximate geography of the route, not the ship's exact track.</p>
-<figure class="mediaFigure"><figcaption><strong>Valiant Libertine</strong><span>John Bryson, 1942</span><a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Catalog_of_Copyright_Entries_1942_Books_New_Series_Vol_39_Pt_1_For_the_Year_1942_%28IA_catalogofcopyrig391li%29.pdf">More info</a></figcaption></figure>
-<ul class="linkList"><li><a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Catalog_of_Copyright_Entries_1942_Books_New_Series_Vol_39_Pt_1_For_the_Year_1942_%28IA_catalogofcopyrig391li%29.pdf">Copyright catalog</a></li></ul>
-<figure class="mediaFigure"><img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco" width="1600" height="940" loading="lazy"><figcaption><strong>Dates and approximate leg distances</strong><span>Leyte -> Guam: 1,172 nmi / 1,349 mi. Guam -> Enewetak: 1,036 nmi / 1,192 mi. Enewetak -> Pearl Harbor: 2,359 nmi / 2,714 mi. Pearl Harbor -> San Francisco: 2,083 nmi / 2,397 mi.</span></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -972,13 +998,14 @@
     <section class="column handwrittenColumn" aria-label="Page 21 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_21.jpg" alt="Handwritten diary Page 21" width="1018" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_22.jpg" alt="Handwritten diary Page 22" width="1018" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 21 typed transcript">
       <div class="transcriptText">
-        
+        <p>Jan. 16, 1946 - At Port, Guam</p>
+<p>I mailed your letter this morning &amp; I know you'll be happy when you hear I'm coming home. I had a hard day today. Everyone had to work to clean out the 5 holds so we can put cargo in. I put in 8 hours in the galley &amp; then 5 hours in the holds. When we were fueling up today I met a buddy from boot camp on the oiler tanker. His name is Bill Horner. He's stationed in Guam. He lives in Jersey. We moved to a pier today at 8:20 P.M. I met a fellow who was on here in Leyte. He was transferred. He's stationed here also. He has a jeep &amp; I was driving it all night. It's now 11:30 so I was driving for about 3 hours. Those jeeps sure can go. Still loading tomorrow again. I hope we shove off Sunday. Good night. x</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 21 notes and details">
@@ -997,14 +1024,14 @@
     <section class="column handwrittenColumn" aria-label="Page 22 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_22.jpg" alt="Handwritten diary Page 22" width="1018" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_23.jpg" alt="Handwritten diary Page 23" width="1040" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 22 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 16, 1946 - At Port, Guam</p>
-<p>I mailed your letter this morning &amp; I know you'll be happy when you hear I'm coming home. I had a hard day today. Everyone had to work to clean out the 5 holds so we can put cargo in. I put in 8 hours in the galley &amp; then 5 hours in the holds. When we were fueling up today I met a buddy from boot camp on the oiler tanker. His name is Bill Horner. He's stationed in Guam. He lives in Jersey. We moved to a pier today at 8:20 P.M. I met a fellow who was on here in Leyte. He was transferred. He's stationed here also. He has a jeep &amp; I was driving it all night. It's now 11:30 so I was driving for about 3 hours. Those jeeps sure can go. Still loading tomorrow again. I hope we shove off Sunday. Good night. x</p>
+        <p>Jan. 17 - At Port, Guam</p>
+<p>Well its now Thurs. night &amp; I just came back from the movies. I had a full day today also. I worked from 8 to 12 in the holds &amp; then went on liberty &amp; then I worked in the galley from 3 to 7:30 P.M. It sure knocks a guy out. It sure is swell ashore on Guam. Swimming, cokes &amp; beer, all you want. I swam all afternoon. Just like you see in the movies. A nice white beach - only no girls! Still loading up. Thats all for now.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 22 notes and details">
@@ -1023,20 +1050,22 @@
     <section class="column handwrittenColumn" aria-label="Page 23 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_23.jpg" alt="Handwritten diary Page 23" width="1040" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_24.jpg" alt="Handwritten diary Page 24" width="1041" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 23 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 17 - At Port, Guam</p>
-<p>Well its now Thurs. night &amp; I just came back from the movies. I had a full day today also. I worked from 8 to 12 in the holds &amp; then went on liberty &amp; then I worked in the galley from 3 to 7:30 P.M. It sure knocks a guy out. It sure is swell ashore on Guam. Swimming, cokes &amp; beer, all you want. I swam all afternoon. Just like you see in the movies. A nice white beach - only no girls! Still loading up. Thats all for now.</p>
+        <p>Jan. 18, 1946 - At Sea, Guam</p>
+<p>Still loading up &amp; working like heck. I didn't work so hard since I came on here. I had off tonight so I went ashore. I went to a movie on the Base. I seen &quot;Pardon My Past,&quot; with F. MacMurray thats the fine picture I seen that I enjoyed. No breaks, no rain, no noise &amp; no separated reels. It was shown at &quot;Nab Hill Bowl&quot; outdoor theatre. I also seen a U.S.O. show with 5 beautiful American girls. They sure looked swell. Rumors we're leaving tomorrow instead of Sunday. So long.</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 23 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 23 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Film note</h3>
+<p>Pardon My Past is a 1945 comedy starring Fred MacMurray.</p>
+<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Pardon_My_Past_-_1945_Poster-color.jpg/250px-Pardon_My_Past_-_1945_Poster-color.jpg" alt="Theatrical poster for Pardon My Past, 1945." loading="lazy"><figcaption><strong>Pardon My Past</strong><a href="https://en.wikipedia.org/wiki/Pardon_My_Past">More info</a></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -1049,22 +1078,20 @@
     <section class="column handwrittenColumn" aria-label="Page 24 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_24.jpg" alt="Handwritten diary Page 24" width="1041" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_25.jpg" alt="Handwritten diary Page 25" width="1042" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 24 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 18, 1946 - At Sea, Guam</p>
-<p>Still loading up &amp; working like heck. I didn't work so hard since I came on here. I had off tonight so I went ashore. I went to a movie on the Base. I seen &quot;Pardon My Past,&quot; with F. MacMurray thats the fine picture I seen that I enjoyed. No breaks, no rain, no noise &amp; no separated reels. It was shown at &quot;Nab Hill Bowl&quot; outdoor theatre. I also seen a U.S.O. show with 5 beautiful American girls. They sure looked swell. Rumors we're leaving tomorrow instead of Sunday. So long.</p>
+        <p>Sat. Jan. 19 - At Sea</p>
+<p>We left Guam this morning at 0700. We sure were glad to get started again. Sea is getting rougher tonight. Cargo not helping much. Still rolling.</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 24 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 24 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Film note</h3>
-<p>Pardon My Past is a 1945 comedy starring Fred MacMurray.</p>
-<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Pardon_My_Past_-_1945_Poster-color.jpg/250px-Pardon_My_Past_-_1945_Poster-color.jpg" alt="Theatrical poster for Pardon My Past, 1945." loading="lazy"><figcaption><strong>Pardon My Past</strong><a href="https://en.wikipedia.org/wiki/Pardon_My_Past">More info</a></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -1077,14 +1104,16 @@
     <section class="column handwrittenColumn" aria-label="Page 25 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_25.jpg" alt="Handwritten diary Page 25" width="1042" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_26.jpg" alt="Handwritten diary Page 26" width="1043" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 25 typed transcript">
       <div class="transcriptText">
-        <p>Sat. Jan. 19 - At Sea</p>
-<p>We left Guam this morning at 0700. We sure were glad to get started again. Sea is getting rougher tonight. Cargo not helping much. Still rolling.</p>
+        <p>Sun. Jan. 20, 1946 - At Sea</p>
+<p>Today makes 2 weeks at sea. We still got 6 weeks left till we hit Frisco. Engine still bad. Trip very slow. Last nite we found out that the ship is going to the East Coast after Frisco. I was happy cause its closer to home but it takes too long through the Panama Canal. Good old &quot;B'klyn Navy Yard.&quot; Keep praying. xx</p>
+<p>Mon. Jan. 21 - At Sea</p>
+<p>Today we found out what our cargo is. We got carbines, .45's, shoes, parachutes, &amp; Arctic coats. We're all trying to get one of each. I heard that song &quot;Long Long Time&quot; 3 times &amp; I like it better every time.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 25 notes and details">
@@ -1103,22 +1132,24 @@
     <section class="column handwrittenColumn" aria-label="Page 26 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_26.jpg" alt="Handwritten diary Page 26" width="1043" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_27.jpg" alt="Handwritten diary Page 27" width="1051" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 26 typed transcript">
       <div class="transcriptText">
-        <p>Sun. Jan. 20, 1946 - At Sea</p>
-<p>Today makes 2 weeks at sea. We still got 6 weeks left till we hit Frisco. Engine still bad. Trip very slow. Last nite we found out that the ship is going to the East Coast after Frisco. I was happy cause its closer to home but it takes too long through the Panama Canal. Good old &quot;B'klyn Navy Yard.&quot; Keep praying. xx</p>
-<p>Mon. Jan. 21 - At Sea</p>
-<p>Today we found out what our cargo is. We got carbines, .45's, shoes, parachutes, &amp; Arctic coats. We're all trying to get one of each. I heard that song &quot;Long Long Time&quot; 3 times &amp; I like it better every time.</p>
+        <p>Jan. 22, 1946 - At Sea</p>
+<p>Had a fire drill &amp; abandon ship drill this morning. Sea isn't very rough now. Going very slow. Picture tonight was &quot;Pillow to Post&quot; - Ida Lupino. I can't wait to come home. I hope we go a little faster. Good night x</p>
+<p>Jan. 23 - At Sea, Wed.</p>
+<p>Last night I got my- self a aviation jacket, combat shoes &amp; work shoes (2 pair). No carbines yet. I wonder if I can get all this stuff off before we hit Eniwetok Saturday. Then P.H., Frisco, &amp; N.Y. O'Boy!</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 26 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 26 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Song and film notes</h3>
+<p>It's Been a Long, Long Time was a 1945 homecoming-era hit. Pillow to Post is a 1945 film starring Ida Lupino.</p>
+<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/2/26/Pillow_to_Post.jpg" alt="Full theatrical poster for Pillow to Post, 1945." loading="lazy"><figcaption><strong>Pillow to Post</strong><a href="https://en.wikipedia.org/wiki/Pillow_to_Post">More info</a></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -1131,24 +1162,22 @@
     <section class="column handwrittenColumn" aria-label="Page 27 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_27.jpg" alt="Handwritten diary Page 27" width="1051" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_28.jpg" alt="Handwritten diary Page 28" width="1051" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 27 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 22, 1946 - At Sea</p>
-<p>Had a fire drill &amp; abandon ship drill this morning. Sea isn't very rough now. Going very slow. Picture tonight was &quot;Pillow to Post&quot; - Ida Lupino. I can't wait to come home. I hope we go a little faster. Good night x</p>
-<p>Jan. 23 - At Sea, Wed.</p>
-<p>Last night I got my- self a aviation jacket, combat shoes &amp; work shoes (2 pair). No carbines yet. I wonder if I can get all this stuff off before we hit Eniwetok Saturday. Then P.H., Frisco, &amp; N.Y. O'Boy!</p>
+        <p>Thurs. Jan. 24, 1946 - At Sea</p>
+<p>Nothing new today. We're going a little faster now. It sure is a long trip. I've been at sea for 19 days now &amp; I still have 3 times that much to do yet. Tonight movie was &quot;Chip off the Old Block&quot; W. O'Connor &amp; Ryan. Good night &amp; hope to see you soon.</p>
       </div>
     </section>
     <section class="column notesColumn" aria-label="Page 27 notes and details">
       <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        <section class="noteBlock"><h3>Song and film notes</h3>
-<p>It's Been a Long, Long Time was a 1945 homecoming-era hit. Pillow to Post is a 1945 film starring Ida Lupino.</p>
-<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/2/26/Pillow_to_Post.jpg" alt="Full theatrical poster for Pillow to Post, 1945." loading="lazy"><figcaption><strong>Pillow to Post</strong><a href="https://en.wikipedia.org/wiki/Pillow_to_Post">More info</a></figcaption></figure></section>
+        <section class="noteBlock"><h3>Film note</h3>
+<p>Chip Off the Old Block is a 1944 musical comedy starring Donald O'Connor and Peggy Ryan.</p>
+<figure class="mediaFigure"><img src="https://a.ltrbxd.com/resized/film-poster/2/2/0/6/1/7/220617-chip-off-the-old-block-0-230-0-345-crop.jpg?v=ca769a3947" alt="Poster for Chip Off the Old Block, 1944." loading="lazy"><figcaption><strong>Chip Off the Old Block</strong><a href="https://en.wikipedia.org/wiki/Chip_Off_the_Old_Block">More info</a></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -1161,22 +1190,24 @@
     <section class="column handwrittenColumn" aria-label="Page 28 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_28.jpg" alt="Handwritten diary Page 28" width="1051" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_29.jpg" alt="Handwritten diary Page 29" width="1055" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 28 typed transcript">
       <div class="transcriptText">
-        <p>Thurs. Jan. 24, 1946 - At Sea</p>
-<p>Nothing new today. We're going a little faster now. It sure is a long trip. I've been at sea for 19 days now &amp; I still have 3 times that much to do yet. Tonight movie was &quot;Chip off the Old Block&quot; W. O'Connor &amp; Ryan. Good night &amp; hope to see you soon.</p>
+        <p>Jan. 25, 1946 - At Sea, Fri.</p>
+<p>Sea getting rough again. Nothing new! Reaching Eniwetok Sunday morning I hope we get mail. Thats all.</p>
+<p>Jan. 26, 1946 - At Sea</p>
+<p>Today we found out that we're not going to the East Coast. Somehow I'm glad. It would have taken too long to go through the Canal.</p>
+<p>Sun. Jan. 27, 1946 - At Port</p>
+<p>There's some more news. We were told today that we're going to be decommissioned in Frisco, on April 15th. And everyone has a good chance of getting discharged. I'll keep this a secret for now from your letters. Refueled. Promotions today to S.C. 3/c. I always wanted to be a petty officer. Arrived at Eniwetok this morning. Received 36 letters.</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 28 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 28 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Film note</h3>
-<p>Chip Off the Old Block is a 1944 musical comedy starring Donald O'Connor and Peggy Ryan.</p>
-<figure class="mediaFigure"><img src="https://a.ltrbxd.com/resized/film-poster/2/2/0/6/1/7/220617-chip-off-the-old-block-0-230-0-345-crop.jpg?v=ca769a3947" alt="Poster for Chip Off the Old Block, 1944." loading="lazy"><figcaption><strong>Chip Off the Old Block</strong><a href="https://en.wikipedia.org/wiki/Chip_Off_the_Old_Block">More info</a></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -1189,18 +1220,16 @@
     <section class="column handwrittenColumn" aria-label="Page 29 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_29.jpg" alt="Handwritten diary Page 29" width="1055" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_30.jpg" alt="Handwritten diary Page 30" width="1055" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 29 typed transcript">
       <div class="transcriptText">
-        <p>Jan. 25, 1946 - At Sea, Fri.</p>
-<p>Sea getting rough again. Nothing new! Reaching Eniwetok Sunday morning I hope we get mail. Thats all.</p>
-<p>Jan. 26, 1946 - At Sea</p>
-<p>Today we found out that we're not going to the East Coast. Somehow I'm glad. It would have taken too long to go through the Canal.</p>
-<p>Sun. Jan. 27, 1946 - At Port</p>
-<p>There's some more news. We were told today that we're going to be decommissioned in Frisco, on April 15th. And everyone has a good chance of getting discharged. I'll keep this a secret for now from your letters. Refueled. Promotions today to S.C. 3/c. I always wanted to be a petty officer. Arrived at Eniwetok this morning. Received 36 letters.</p>
+        <p>Mon. Jan. 28, 1946 - At Port</p>
+<p>Went on liberty today. I even had a Coke. Expect to leave tomorrow. Wrote some more letters home.</p>
+<p>Tue. Jan. 29, 1946 - At Sea</p>
+<p>We got more fuel &amp; water this morning &amp; shoved off. Water rationed again.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 29 notes and details">
@@ -1219,22 +1248,28 @@
     <section class="column handwrittenColumn" aria-label="Page 30 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_30.jpg" alt="Handwritten diary Page 30" width="1055" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_31.jpg" alt="Handwritten diary Page 31" width="1072" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 30 typed transcript">
       <div class="transcriptText">
-        <p>Mon. Jan. 28, 1946 - At Port</p>
-<p>Went on liberty today. I even had a Coke. Expect to leave tomorrow. Wrote some more letters home.</p>
-<p>Tue. Jan. 29, 1946 - At Sea</p>
-<p>We got more fuel &amp; water this morning &amp; shoved off. Water rationed again.</p>
+        <p>Wed. Jan. 30, 1946 - At Sea</p>
+<p>Water rough today. Ship still rolling. Going very slow. Movie tonight &quot;Girl Crazy.&quot; Making 92 miles a day! Unbelievable!</p>
+<p>Thur. Jan. 31, 1946 - At Sea</p>
+<p>Increased speed to 86 turns. If we keep up this speed we'll hit Pearl Harbor in 15 days instead of 20. Movie tonight &quot;Sacred Stiff.&quot; J.M.</p>
+<p>Fri. Feb. 1st, 1946 - At Sea</p>
+<p>Still going 86 turns. Sea calm now. No movies.</p>
+<p>Sat. Feb. 2 - At Sea</p>
+<p>Nothing new! Trip is very boring. Wish I was home.</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 30 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 30 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Speed note</h3>
+<p>92 miles per day is roughly 3.8 miles per hour; 86 turns likely refers to engine or shaft RPM, not miles per hour. Girl Crazy and Scared Stiff (written in the diary as &quot;Sacred Stiff&quot;) were period films.</p>
+<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Girl_Crazy.webp/500px-Girl_Crazy.webp.png" alt="Poster for Girl Crazy, 1943." loading="lazy"><figcaption><strong>Girl Crazy</strong><a href="https://en.wikipedia.org/wiki/Girl_Crazy_%281943_film%29">More info</a></figcaption></figure><figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Poster_of_the_movie_Scared_Stiff.jpg" alt="Color theatrical poster for Scared Stiff, 1945." loading="lazy"><figcaption><strong>Scared Stiff poster</strong><a href="https://en.wikipedia.org/wiki/File:Poster_of_the_movie_Scared_Stiff.jpg">More info</a></figcaption></figure><figure class="mediaFigure"><img src="https://a.ltrbxd.com/resized/sm/upload/lc/kq/kx/vw/fojZicpGQCzhWCXea08FdJGCHBd-1200-1200-675-675-crop-000000.jpg?v=a39e58c328" alt="Promotional image for Scared Stiff, 1945." loading="lazy"><figcaption><strong>Scared Stiff cast</strong><span>Jack Haley and Ann Savage.</span><a href="https://en.wikipedia.org/wiki/Scared_Stiff_%281945_film%29">More info</a></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -1247,28 +1282,24 @@
     <section class="column handwrittenColumn" aria-label="Page 31 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_31.jpg" alt="Handwritten diary Page 31" width="1072" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_32.jpg" alt="Handwritten diary Page 32" width="1072" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 31 typed transcript">
       <div class="transcriptText">
-        <p>Wed. Jan. 30, 1946 - At Sea</p>
-<p>Water rough today. Ship still rolling. Going very slow. Movie tonight &quot;Girl Crazy.&quot; Making 92 miles a day! Unbelievable!</p>
-<p>Thur. Jan. 31, 1946 - At Sea</p>
-<p>Increased speed to 86 turns. If we keep up this speed we'll hit Pearl Harbor in 15 days instead of 20. Movie tonight &quot;Sacred Stiff.&quot; J.M.</p>
-<p>Fri. Feb. 1st, 1946 - At Sea</p>
-<p>Still going 86 turns. Sea calm now. No movies.</p>
-<p>Sat. Feb. 2 - At Sea</p>
-<p>Nothing new! Trip is very boring. Wish I was home.</p>
+        <p>Sun. Feb. 3 - At Sea</p>
+<p>Cooked turkey today for crew. Same old news. Date line passed Wed. this week.</p>
+<p>Mon. Feb. 4 - At Sea</p>
+<p>Had target practice today with .45 pistols. My ears are still ringing. I also fired the 30 rifle. Had a fire in the engine room today. No damage - no one hurt.</p>
+<p>Tue. Feb. 5 - At Sea</p>
+<p>Sea very calm. Gunnery week. Making 85 turns. Ship that's going back with us ran out of food today. So they pulled alongside us &amp; we shot a line over &amp; sent them food. It took us about 2 hours. We're very short now on food also. Water rationing cut to 3 - 15 minute periods. Its only on for 45 minutes a day. It sure is getting tough. So long x</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 31 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 31 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Speed note</h3>
-<p>92 miles per day is roughly 3.8 miles per hour; 86 turns likely refers to engine or shaft RPM, not miles per hour. Girl Crazy and Scared Stiff (written in the diary as &quot;Sacred Stiff&quot;) were period films.</p>
-<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Girl_Crazy.webp/500px-Girl_Crazy.webp.png" alt="Poster for Girl Crazy, 1943." loading="lazy"><figcaption><strong>Girl Crazy</strong><a href="https://en.wikipedia.org/wiki/Girl_Crazy_%281943_film%29">More info</a></figcaption></figure><figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Poster_of_the_movie_Scared_Stiff.jpg" alt="Color theatrical poster for Scared Stiff, 1945." loading="lazy"><figcaption><strong>Scared Stiff poster</strong><a href="https://en.wikipedia.org/wiki/File:Poster_of_the_movie_Scared_Stiff.jpg">More info</a></figcaption></figure><figure class="mediaFigure"><img src="https://a.ltrbxd.com/resized/sm/upload/lc/kq/kx/vw/fojZicpGQCzhWCXea08FdJGCHBd-1200-1200-675-675-crop-000000.jpg?v=a39e58c328" alt="Promotional image for Scared Stiff, 1945." loading="lazy"><figcaption><strong>Scared Stiff cast</strong><span>Jack Haley and Ann Savage.</span><a href="https://en.wikipedia.org/wiki/Scared_Stiff_%281945_film%29">More info</a></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -1281,18 +1312,16 @@
     <section class="column handwrittenColumn" aria-label="Page 32 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_32.jpg" alt="Handwritten diary Page 32" width="1072" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_33.jpg" alt="Handwritten diary Page 33" width="1010" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 32 typed transcript">
       <div class="transcriptText">
-        <p>Sun. Feb. 3 - At Sea</p>
-<p>Cooked turkey today for crew. Same old news. Date line passed Wed. this week.</p>
-<p>Mon. Feb. 4 - At Sea</p>
-<p>Had target practice today with .45 pistols. My ears are still ringing. I also fired the 30 rifle. Had a fire in the engine room today. No damage - no one hurt.</p>
-<p>Tue. Feb. 5 - At Sea</p>
-<p>Sea very calm. Gunnery week. Making 85 turns. Ship that's going back with us ran out of food today. So they pulled alongside us &amp; we shot a line over &amp; sent them food. It took us about 2 hours. We're very short now on food also. Water rationing cut to 3 - 15 minute periods. Its only on for 45 minutes a day. It sure is getting tough. So long x</p>
+        <p>Wed. Feb. 6 - At Sea</p>
+<p>Today we lose a day &amp; go back a day. So tomorrow is Wed. again. 8 days in the week.</p>
+<p>Wed. Feb. 6 - At Sea</p>
+<p>Today we got the oven fixed &amp; tomorrow we have bread. I haven't eaten any bread in 8 days. Just crackers. Sea very calm. Just like glass. Today we seen 6 whales. Boy are they big.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 32 notes and details">
@@ -1311,22 +1340,24 @@
     <section class="column handwrittenColumn" aria-label="Page 33 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_33.jpg" alt="Handwritten diary Page 33" width="1010" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_34.jpg" alt="Handwritten diary Page 34" width="1010" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 33 typed transcript">
       <div class="transcriptText">
-        <p>Wed. Feb. 6 - At Sea</p>
-<p>Today we lose a day &amp; go back a day. So tomorrow is Wed. again. 8 days in the week.</p>
-<p>Wed. Feb. 6 - At Sea</p>
-<p>Today we got the oven fixed &amp; tomorrow we have bread. I haven't eaten any bread in 8 days. Just crackers. Sea very calm. Just like glass. Today we seen 6 whales. Boy are they big.</p>
+        <p>Thurs. Feb. 7 - At Sea</p>
+<p>I've became the tailor man on here. I've made $11.50 already sewing pants, rates &amp; buttons. I can use the money cause I lost another $50.00 in craps.</p>
+<p>Fri. Feb. 8 - At Sea</p>
+<p>The ship going to the states with us broke down &amp; we had to wait 6 hours for them. While we were waiting, we caught 2 sharks. We seen 100s whales. Tomorrow personnel inspection. White uniforms &amp; all. Today we failed inspection in the galley. We got 12 hours extra duty cause of that. And we spent 6 hours last night cleaning up too. They haven't any heart. For the past 2 days we've all been freezing. And guess what the temperature was, only 79 degrees? Imagine freezing in that warm weather. But after spending 7 months in the Phil. with a temperature of 100 to 120 anything lower than that &amp; we freeze. The doc's been giving us some pills so we won't catch cold. I don't know how we'll take it when we're in the states &amp; its about 40 degrees. I use a blanket now.</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 33 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 33 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Whales and money</h3>
+<p>Pacific whale sightings could include large species such as sperm, humpback, or blue whales. Poppie's February 1946 sightings came while Pegasus was at sea between Enewetak and Pearl Harbor; these NOAA sanctuary photos show representative humpback whales in Hawaiian waters. $11.50 in 1946 is about $197 today; $50 is about $856.</p>
+<figure class="mediaFigure"><img src="assets/details/whales/humpback-breach-hihwnms-noaa.jpg" alt="Humpback whale breaching out of the ocean near the Hawaiian Islands." width="1920" height="1280" loading="lazy"><figcaption><strong>Humpback whale breaching</strong><span>A humpback whale breaching in the Hawaiian Islands Humpback Whale National Marine Sanctuary. Photo: HIHWNMS/NOAA, permit #14097.</span><a href="https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg">View source</a></figcaption></figure><figure class="mediaFigure"><img src="assets/details/whales/humpback-breach-r-finn-noaa.jpg" alt="Humpback whale surfacing with spray and ocean around it." width="1920" height="1280" loading="lazy"><figcaption><strong>Humpback whale surfacing</strong><span>A humpback whale rising at the surface in the Hawaiian Islands Humpback Whale National Marine Sanctuary. Photo: R. Finn/NOAA, permit #15240.</span><a href="https://commons.wikimedia.org/wiki/File:HIHWNMS_-_humpback_whale_breaching_(31458927013).jpg">View source</a></figcaption></figure><figure class="mediaFigure"><img src="assets/details/whales/humpback-surface-noaa.jpg" alt="Humpback whale visible just below the ocean surface." width="1920" height="1280" loading="lazy"><figcaption><strong>Humpback near the surface</strong><span>A humpback whale just below the surface in Hawaiian waters. Photo: Ed Lyman/HIHWNMS/NOAA, permit #14097.</span><a href="https://commons.wikimedia.org/wiki/File:Humpback_Whale_Underwater_(37209287981).jpg">View source</a></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -1339,24 +1370,19 @@
     <section class="column handwrittenColumn" aria-label="Page 34 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_34.jpg" alt="Handwritten diary Page 34" width="1010" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_35.jpg" alt="Handwritten diary Page 35" width="1133" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 34 typed transcript">
       <div class="transcriptText">
-        <p>Thurs. Feb. 7 - At Sea</p>
-<p>I've became the tailor man on here. I've made $11.50 already sewing pants, rates &amp; buttons. I can use the money cause I lost another $50.00 in craps.</p>
-<p>Fri. Feb. 8 - At Sea</p>
-<p>The ship going to the states with us broke down &amp; we had to wait 6 hours for them. While we were waiting, we caught 2 sharks. We seen 100s whales. Tomorrow personnel inspection. White uniforms &amp; all. Today we failed inspection in the galley. We got 12 hours extra duty cause of that. And we spent 6 hours last night cleaning up too. They haven't any heart. For the past 2 days we've all been freezing. And guess what the temperature was, only 79 degrees? Imagine freezing in that warm weather. But after spending 7 months in the Phil. with a temperature of 100 to 120 anything lower than that &amp; we freeze. The doc's been giving us some pills so we won't catch cold. I don't know how we'll take it when we're in the states &amp; its about 40 degrees. I use a blanket now.</p>
+        <p>Sat. Feb. 9, 1946 - Sea Today personnel inspection was strictest I've ever attended. Men were given extra duty for such things as no buttons, shoes untied, not neatly pressed clothes, spots, etc. I was alright. We also took pictures of the crew dressed up. About to arrive in P.H. Mon Tue. morning.</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 34 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 34 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Whales and money</h3>
-<p>Pacific whale sightings could include large species such as sperm, humpback, or blue whales. Poppie's February 1946 sightings came while Pegasus was at sea between Enewetak and Pearl Harbor; these NOAA sanctuary photos show representative humpback whales in Hawaiian waters. $11.50 in 1946 is about $197 today; $50 is about $856.</p>
-<figure class="mediaFigure"><img src="assets/details/whales/humpback-breach-hihwnms-noaa.jpg" alt="Humpback whale breaching out of the ocean near the Hawaiian Islands." width="1920" height="1280" loading="lazy"><figcaption><strong>Humpback whale breaching</strong><span>A humpback whale breaching in the Hawaiian Islands Humpback Whale National Marine Sanctuary. Photo: HIHWNMS/NOAA, permit #14097.</span><a href="https://commons.wikimedia.org/wiki/File:HIHWNMS_-_Humpback_Whale_Breach_(33154058312).jpg">View source</a></figcaption></figure><figure class="mediaFigure"><img src="assets/details/whales/humpback-breach-r-finn-noaa.jpg" alt="Humpback whale surfacing with spray and ocean around it." width="1920" height="1280" loading="lazy"><figcaption><strong>Humpback whale surfacing</strong><span>A humpback whale rising at the surface in the Hawaiian Islands Humpback Whale National Marine Sanctuary. Photo: R. Finn/NOAA, permit #15240.</span><a href="https://commons.wikimedia.org/wiki/File:HIHWNMS_-_humpback_whale_breaching_(31458927013).jpg">View source</a></figcaption></figure><figure class="mediaFigure"><img src="assets/details/whales/humpback-surface-noaa.jpg" alt="Humpback whale visible just below the ocean surface." width="1920" height="1280" loading="lazy"><figcaption><strong>Humpback near the surface</strong><span>A humpback whale just below the surface in Hawaiian waters. Photo: Ed Lyman/HIHWNMS/NOAA, permit #14097.</span><a href="https://commons.wikimedia.org/wiki/File:Humpback_Whale_Underwater_(37209287981).jpg">View source</a></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -1369,13 +1395,17 @@
     <section class="column handwrittenColumn" aria-label="Page 35 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_35.jpg" alt="Handwritten diary Page 35" width="1133" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_36.jpg" alt="Handwritten diary Page 36" width="1134" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 35 typed transcript">
       <div class="transcriptText">
-        <p>Sat. Feb. 9, 1946 - Sea Today personnel inspection was strictest I've ever attended. Men were given extra duty for such things as no buttons, shoes untied, not neatly pressed clothes, spots, etc. I was alright. We also took pictures of the crew dressed up. About to arrive in P.H. Mon Tue. morning.</p>
+        <p>Sun. Feb. 10 - At Sea</p>
+<p>Weather getting cold again. Wish we had warm clothes. Getting my dress suit out for liberty in P.H.</p>
+<p>Mon. 11 Feb - At Sea</p>
+<p>Arrived at Pearl Harbor but can't go in yet. Anchored there.</p>
+<p>Tue. 12 Feb - At Port Hawaii Lost anchor pool which was for $250.00. Got liberty today &amp; the place is swell. Just like Frisco. Buses, shoeshine boys, taxis, everything. I sent a radiogram home to mom. I went to the Waikiki Beach &amp; Royal Hawaiian Hotel &amp; the Moana Hotel. All together I spent $46.00. I have to borrow some more so I can go today.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 35 notes and details">
@@ -1394,23 +1424,23 @@
     <section class="column handwrittenColumn" aria-label="Page 36 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_36.jpg" alt="Handwritten diary Page 36" width="1134" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_37.jpg" alt="Handwritten diary Page 37" width="924" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 36 typed transcript">
       <div class="transcriptText">
-        <p>Sun. Feb. 10 - At Sea</p>
-<p>Weather getting cold again. Wish we had warm clothes. Getting my dress suit out for liberty in P.H.</p>
-<p>Mon. 11 Feb - At Sea</p>
-<p>Arrived at Pearl Harbor but can't go in yet. Anchored there.</p>
-<p>Tue. 12 Feb - At Port Hawaii Lost anchor pool which was for $250.00. Got liberty today &amp; the place is swell. Just like Frisco. Buses, shoeshine boys, taxis, everything. I sent a radiogram home to mom. I went to the Waikiki Beach &amp; Royal Hawaiian Hotel &amp; the Moana Hotel. All together I spent $46.00. I have to borrow some more so I can go today.</p>
+        <p>Wed. Feb. 13 - At Port Hawaii</p>
+<p>Went on liberty again today &amp; had a swell time. We all got drunk. I think I'll get a tattoo Saturday. I wish I had more money. Received 20 letters today. I'll write a few now.</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 36 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 36 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Royal Hawaiian</h3>
+<p>The Royal Hawaiian opened in 1927 and was known as the Pink Palace of the Pacific; during WWII it served military R&amp;R use.</p>
+<figure class="mediaFigure"><img src="https://cdn.loc.gov/service/pnp/cph/3b10000/3b14000/3b14400/3b14469r.jpg" alt="Black-and-white aerial view of Waikiki Beach showing the Royal Hawaiian Hotel and mountains, circa 1930s." loading="lazy"><figcaption><strong>Period view, 1930s</strong><span>Aerial view of Waikiki Beach with the Royal Hawaiian Hotel and mountains, between 1930 and 1940.</span><a href="https://www.loc.gov/item/2003690382/">View source</a></figcaption></figure><figure class="mediaFigure"><img src="https://tile.loc.gov/storage-services/service/pnp/pcrd/1d00000/1d00000/1d00800/1d00838v.jpg" alt="Color postcard view of the Royal Hawaiian Hotel in Honolulu, 1938." loading="lazy"><figcaption><strong>Period postcard, 1938</strong><span>Royal Hawaiian Hotel postcard, Honolulu, Hawaii, 1938.</span><a href="https://www.loc.gov/item/2024687168/">View source</a></figcaption></figure><figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/The_Royal_Hawaiian_%282024%29-L1004750.jpg/960px-The_Royal_Hawaiian_%282024%29-L1004750.jpg" alt="The Royal Hawaiian Resort seen from Waikiki Beach in 2024." loading="lazy"><figcaption><strong>Current view, 2024</strong><span>The Royal Hawaiian Resort seen from Waikiki Beach, March 2, 2024.</span><a href="https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_(2024)-L1004750.jpg">View source</a></figcaption></figure><figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Waikiki_Beach_at_Sunset.jpg/960px-Waikiki_Beach_at_Sunset.jpg" alt="Waikiki Beach at sunset, looking east from the Royal Hawaiian Hotel." loading="lazy"><figcaption><strong>Waikiki beach view</strong><span>Waikiki Beach at sunset, looking east from the Royal Hawaiian Hotel, March 22, 2007.</span><a href="https://commons.wikimedia.org/wiki/File:Waikiki_Beach_at_Sunset.jpg">View source</a></figcaption></figure>
+<ul class="linkList"><li><a href="https://www.royal-hawaiian.com/history-overview/">Hotel history</a></li><li><a href="https://en.wikipedia.org/wiki/Royal_Hawaiian_Hotel">Wikipedia</a></li></ul></section>
       </div>
     </section>
   </div>
@@ -1423,23 +1453,23 @@
     <section class="column handwrittenColumn" aria-label="Page 37 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_37.jpg" alt="Handwritten diary Page 37" width="924" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_38.jpg" alt="Handwritten diary Page 38" width="924" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 37 typed transcript">
       <div class="transcriptText">
-        <p>Wed. Feb. 13 - At Port Hawaii</p>
-<p>Went on liberty again today &amp; had a swell time. We all got drunk. I think I'll get a tattoo Saturday. I wish I had more money. Received 20 letters today. I'll write a few now.</p>
+        <p>Thurs. Feb. 14 - At Port Hawaii</p>
+<p>Went on liberty again. I can't get enough of liberty to suit me. Boy these Hawaiians are nice. And pretty girls! A lot of Americans are too. I'll take either one. I can't wait to hit the states now.</p>
+<p>Fri. Feb. 15 - At Port Hawaii</p>
+<p>7:30 A.M.</p>
+<p>It's now Sat. morning. I couldn't write last night cause I was unexpectedly taken drunk. I'm sober now though &amp; liberty starts at 9:00 A.M. this morning &amp; I'm ready to go. I'm getting a tattoo today. I hope it takes.</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 37 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 37 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Royal Hawaiian</h3>
-<p>The Royal Hawaiian opened in 1927 and was known as the Pink Palace of the Pacific; during WWII it served military R&amp;R use.</p>
-<figure class="mediaFigure"><img src="https://cdn.loc.gov/service/pnp/cph/3b10000/3b14000/3b14400/3b14469r.jpg" alt="Black-and-white aerial view of Waikiki Beach showing the Royal Hawaiian Hotel and mountains, circa 1930s." loading="lazy"><figcaption><strong>Period view, 1930s</strong><span>Aerial view of Waikiki Beach with the Royal Hawaiian Hotel and mountains, between 1930 and 1940.</span><a href="https://www.loc.gov/item/2003690382/">View source</a></figcaption></figure><figure class="mediaFigure"><img src="https://tile.loc.gov/storage-services/service/pnp/pcrd/1d00000/1d00000/1d00800/1d00838v.jpg" alt="Color postcard view of the Royal Hawaiian Hotel in Honolulu, 1938." loading="lazy"><figcaption><strong>Period postcard, 1938</strong><span>Royal Hawaiian Hotel postcard, Honolulu, Hawaii, 1938.</span><a href="https://www.loc.gov/item/2024687168/">View source</a></figcaption></figure><figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/The_Royal_Hawaiian_%282024%29-L1004750.jpg/960px-The_Royal_Hawaiian_%282024%29-L1004750.jpg" alt="The Royal Hawaiian Resort seen from Waikiki Beach in 2024." loading="lazy"><figcaption><strong>Current view, 2024</strong><span>The Royal Hawaiian Resort seen from Waikiki Beach, March 2, 2024.</span><a href="https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_(2024)-L1004750.jpg">View source</a></figcaption></figure><figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Waikiki_Beach_at_Sunset.jpg/960px-Waikiki_Beach_at_Sunset.jpg" alt="Waikiki Beach at sunset, looking east from the Royal Hawaiian Hotel." loading="lazy"><figcaption><strong>Waikiki beach view</strong><span>Waikiki Beach at sunset, looking east from the Royal Hawaiian Hotel, March 22, 2007.</span><a href="https://commons.wikimedia.org/wiki/File:Waikiki_Beach_at_Sunset.jpg">View source</a></figcaption></figure>
-<ul class="linkList"><li><a href="https://www.royal-hawaiian.com/history-overview/">Hotel history</a></li><li><a href="https://en.wikipedia.org/wiki/Royal_Hawaiian_Hotel">Wikipedia</a></li></ul></section>
+        
       </div>
     </section>
   </div>
@@ -1452,17 +1482,19 @@
     <section class="column handwrittenColumn" aria-label="Page 38 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_38.jpg" alt="Handwritten diary Page 38" width="924" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_39.jpg" alt="Handwritten diary Page 39" width="1048" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 38 typed transcript">
       <div class="transcriptText">
-        <p>Thurs. Feb. 14 - At Port Hawaii</p>
-<p>Went on liberty again. I can't get enough of liberty to suit me. Boy these Hawaiians are nice. And pretty girls! A lot of Americans are too. I'll take either one. I can't wait to hit the states now.</p>
-<p>Fri. Feb. 15 - At Port Hawaii</p>
-<p>7:30 A.M.</p>
-<p>It's now Sat. morning. I couldn't write last night cause I was unexpectedly taken drunk. I'm sober now though &amp; liberty starts at 9:00 A.M. this morning &amp; I'm ready to go. I'm getting a tattoo today. I hope it takes.</p>
+        <p>Sat. Feb. 16, 1946 - Hawaii</p>
+<p>I got paid today &amp; I drew $110.00. It won't last long. I never spend so much money in my whole life so fast.</p>
+<p>Sun. Feb. 17 - Honolulu</p>
+<p>Stayed aboard ship today to rest up a bit cause I'm going on liberty tomorrow. I borrowed $50.00 from my buddy.</p>
+<p>Mon. Feb. 18 - Honolulu, Hawaii</p>
+<p>I had swell liberty today. I bought some bell bottom dungarees, a lighter, belt, pictures &amp; drinks. I spent $20.00. It was my last liberty cause we're leaving Wed. for Frisco.</p>
+<p>Tue. Feb. 19 - Hawaii</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 38 notes and details">
@@ -1481,19 +1513,17 @@
     <section class="column handwrittenColumn" aria-label="Page 39 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_39.jpg" alt="Handwritten diary Page 39" width="1048" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_40.jpg" alt="Handwritten diary Page 40" width="1048" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 39 typed transcript">
       <div class="transcriptText">
-        <p>Sat. Feb. 16, 1946 - Hawaii</p>
-<p>I got paid today &amp; I drew $110.00. It won't last long. I never spend so much money in my whole life so fast.</p>
-<p>Sun. Feb. 17 - Honolulu</p>
-<p>Stayed aboard ship today to rest up a bit cause I'm going on liberty tomorrow. I borrowed $50.00 from my buddy.</p>
-<p>Mon. Feb. 18 - Honolulu, Hawaii</p>
-<p>I had swell liberty today. I bought some bell bottom dungarees, a lighter, belt, pictures &amp; drinks. I spent $20.00. It was my last liberty cause we're leaving Wed. for Frisco.</p>
-<p>Tue. Feb. 19 - Hawaii</p>
+        <p>liberty. Tomorrow we head home. Expect to pull in on 5 March at 7:20 A.M.</p>
+<p>Wed. Feb. 20 - Hawaii</p>
+<p>Bad news the engine craped out &amp; we can't leave yet for 2 or 3 days. More bad news is they sent a last minute list of names ashore of the low point men. I'm one of them. It looks as if I might be left here. And after spending 6 months in the Philippines. Boy am I mad.</p>
+<p>Thur. Feb. 21 - At Sea</p>
+<p>Left Hawaii at 4 P.M. this noon. They fixed the engine pretty fast. This morning we got a call from the beach to leave 13 low point men here. It sure was a rotten trick to play on the men. The captain said he was glad &amp; boy we felt like killing him, the rat! I was lucky, I wasn't called cause I've been on here longer than most of the S 1/c &amp; I have 8 more points than them.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 39 notes and details">
@@ -1512,17 +1542,16 @@
     <section class="column handwrittenColumn" aria-label="Page 40 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_40.jpg" alt="Handwritten diary Page 40" width="1048" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_41.jpg" alt="Handwritten diary Page 41" width="885" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 40 typed transcript">
       <div class="transcriptText">
-        <p>liberty. Tomorrow we head home. Expect to pull in on 5 March at 7:20 A.M.</p>
-<p>Wed. Feb. 20 - Hawaii</p>
-<p>Bad news the engine craped out &amp; we can't leave yet for 2 or 3 days. More bad news is they sent a last minute list of names ashore of the low point men. I'm one of them. It looks as if I might be left here. And after spending 6 months in the Philippines. Boy am I mad.</p>
-<p>Thur. Feb. 21 - At Sea</p>
-<p>Left Hawaii at 4 P.M. this noon. They fixed the engine pretty fast. This morning we got a call from the beach to leave 13 low point men here. It sure was a rotten trick to play on the men. The captain said he was glad &amp; boy we felt like killing him, the rat! I was lucky, I wasn't called cause I've been on here longer than most of the S 1/c &amp; I have 8 more points than them.</p>
+        <p>Fri. Feb. 22 - At Sea</p>
+<p>Since we left yesterday at 4 till 12 noon today we covered 165 miles. Thats good for us. We'll make it in 43 days now. x</p>
+<p>Sat. Feb. 23rd - At Sea</p>
+<p>Sea very rough today. The ship is rolling pretty bad, can't walk straight. It's also very cold out. It wouldn't be to you. But, to us it is. The picture tonight was &quot;Duffy's Tavern.&quot; It was very good.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 40 notes and details">
@@ -1541,22 +1570,24 @@
     <section class="column handwrittenColumn" aria-label="Page 41 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_41.jpg" alt="Handwritten diary Page 41" width="885" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_42.jpg" alt="Handwritten diary Page 42" width="885" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 41 typed transcript">
       <div class="transcriptText">
-        <p>Fri. Feb. 22 - At Sea</p>
-<p>Since we left yesterday at 4 till 12 noon today we covered 165 miles. Thats good for us. We'll make it in 43 days now. x</p>
-<p>Sat. Feb. 23rd - At Sea</p>
-<p>Sea very rough today. The ship is rolling pretty bad, can't walk straight. It's also very cold out. It wouldn't be to you. But, to us it is. The picture tonight was &quot;Duffy's Tavern.&quot; It was very good.</p>
+        <p>Sun. Feb. 24 - At Sea</p>
+<p>The sea was pretty calm today. We had a fire drill &amp; a abandon ship drill. We were told today that we'll hit Frisco in 7 more days if we keep this speed. I hope so. I miss you all a lot. Inspection this afternoon &amp; sun. I hope I pass.</p>
+<p>Mon. Feb. 25 - At Sea</p>
+<p>Sea very calm. Making good progress now. Covered 213 miles today. O.K.!</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 41 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 41 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>Film note</h3>
+<p>Duffy's Tavern is a 1945 musical comedy based on the popular radio program of the same name.</p>
+<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Duffy%27s_Tavern_poster.jpg" alt="Color theatrical poster for Duffy's Tavern, 1945." loading="lazy"><figcaption><strong>Duffy's Tavern poster</strong><a href="https://en.wikipedia.org/wiki/File:Duffy%27s_Tavern_poster.jpg">More info</a></figcaption></figure><figure class="mediaFigure"><img src="https://a.ltrbxd.com/resized/sm/upload/st/8m/5h/pw/2R7O7OsXXfELGRjTjukPNAqyL3V-1200-1200-675-675-crop-000000.jpg?v=85505b5862" alt="Promotional image for Duffy's Tavern, 1945." loading="lazy"><figcaption><strong>Duffy's Tavern cast</strong><span>Bing Crosby with Betty Hutton, Dorothy Lamour, and Diana Lynn.</span><a href="https://en.wikipedia.org/wiki/Duffy%27s_Tavern_%28film%29">More info</a></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -1569,24 +1600,22 @@
     <section class="column handwrittenColumn" aria-label="Page 42 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_42.jpg" alt="Handwritten diary Page 42" width="885" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_43.jpg" alt="Handwritten diary Page 43" width="1059" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 42 typed transcript">
       <div class="transcriptText">
-        <p>Sun. Feb. 24 - At Sea</p>
-<p>The sea was pretty calm today. We had a fire drill &amp; a abandon ship drill. We were told today that we'll hit Frisco in 7 more days if we keep this speed. I hope so. I miss you all a lot. Inspection this afternoon &amp; sun. I hope I pass.</p>
-<p>Mon. Feb. 25 - At Sea</p>
-<p>Sea very calm. Making good progress now. Covered 213 miles today. O.K.!</p>
+        <p>Tue. Feb. 26 - At Sea</p>
+<p>Sea getting rough again. Weather very cool. Rain &amp; fog for 2 days. This is Calif. weather now. Everyone's freezing. They finally issued jackets. Boy am I glad. Did some more sewing. (5 more days.)</p>
+<p>Wed. Feb. 27 - At Sea</p>
+<p>Sea pretty calm now. Rain still coming down. About 15 minutes ago the bridge spotted a floating fire &amp; we're now on our way in that direction. They think its a downed plane cause of the bad weather. I'll let you know tomorrow - will waste a lot of time now.</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 42 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 42 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Film note</h3>
-<p>Duffy's Tavern is a 1945 musical comedy based on the popular radio program of the same name.</p>
-<figure class="mediaFigure"><img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Duffy%27s_Tavern_poster.jpg" alt="Color theatrical poster for Duffy's Tavern, 1945." loading="lazy"><figcaption><strong>Duffy's Tavern poster</strong><a href="https://en.wikipedia.org/wiki/File:Duffy%27s_Tavern_poster.jpg">More info</a></figcaption></figure><figure class="mediaFigure"><img src="https://a.ltrbxd.com/resized/sm/upload/st/8m/5h/pw/2R7O7OsXXfELGRjTjukPNAqyL3V-1200-1200-675-675-crop-000000.jpg?v=85505b5862" alt="Promotional image for Duffy's Tavern, 1945." loading="lazy"><figcaption><strong>Duffy's Tavern cast</strong><span>Bing Crosby with Betty Hutton, Dorothy Lamour, and Diana Lynn.</span><a href="https://en.wikipedia.org/wiki/Duffy%27s_Tavern_%28film%29">More info</a></figcaption></figure></section>
+        
       </div>
     </section>
   </div>
@@ -1599,16 +1628,20 @@
     <section class="column handwrittenColumn" aria-label="Page 43 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_43.jpg" alt="Handwritten diary Page 43" width="1059" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_44.jpg" alt="Handwritten diary Page 44" width="1059" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 43 typed transcript">
       <div class="transcriptText">
-        <p>Tue. Feb. 26 - At Sea</p>
-<p>Sea getting rough again. Weather very cool. Rain &amp; fog for 2 days. This is Calif. weather now. Everyone's freezing. They finally issued jackets. Boy am I glad. Did some more sewing. (5 more days.)</p>
-<p>Wed. Feb. 27 - At Sea</p>
-<p>Sea pretty calm now. Rain still coming down. About 15 minutes ago the bridge spotted a floating fire &amp; we're now on our way in that direction. They think its a downed plane cause of the bad weather. I'll let you know tomorrow - will waste a lot of time now.</p>
+        <p>Thur. Feb. 28 - At Sea</p>
+<p>We didn't find the lost plane, but we tried. Nothing new.</p>
+<p>Fri. March 1st - At Sea</p>
+<p>Sea pretty calm. I got a carbine last nite. I hope I can get it off. Just 3 more days.</p>
+<p>Sat. March 2 - At Sea</p>
+<p>Inspection went over very good. The Galley got 4.0. Very cold out.</p>
+<p>Sun. March 3 - At Sea</p>
+<p>Today personnel went O.K. We were in dress uniforms &amp; held our undress jumper on our arm. Very strict today. The sea was the roughest its ever been. Every time I go on deck I get a bath. Its coming over the bow &amp; even the gunnels. The weather seems like its below zero. When it gets rough at sea it really stays rough. I hope it calms down. We were told to expect rough weather near Frisco. We will pull in tomorrow morning. Today is our 58th day at sea from the Philippines &amp; tomorrow is our last. I'll call you as soon as I get ashore. I'll also send a wire. I hope</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 43 notes and details">
@@ -1627,20 +1660,13 @@
     <section class="column handwrittenColumn" aria-label="Page 44 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_44.jpg" alt="Handwritten diary Page 44" width="1059" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_45.jpg" alt="Handwritten diary Page 45" width="1038" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 44 typed transcript">
       <div class="transcriptText">
-        <p>Thur. Feb. 28 - At Sea</p>
-<p>We didn't find the lost plane, but we tried. Nothing new.</p>
-<p>Fri. March 1st - At Sea</p>
-<p>Sea pretty calm. I got a carbine last nite. I hope I can get it off. Just 3 more days.</p>
-<p>Sat. March 2 - At Sea</p>
-<p>Inspection went over very good. The Galley got 4.0. Very cold out.</p>
-<p>Sun. March 3 - At Sea</p>
-<p>Today personnel went O.K. We were in dress uniforms &amp; held our undress jumper on our arm. Very strict today. The sea was the roughest its ever been. Every time I go on deck I get a bath. Its coming over the bow &amp; even the gunnels. The weather seems like its below zero. When it gets rough at sea it really stays rough. I hope it calms down. We were told to expect rough weather near Frisco. We will pull in tomorrow morning. Today is our 58th day at sea from the Philippines &amp; tomorrow is our last. I'll call you as soon as I get ashore. I'll also send a wire. I hope</p>
+        
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 44 notes and details">
@@ -1659,13 +1685,13 @@
     <section class="column handwrittenColumn" aria-label="Page 45 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_45.jpg" alt="Handwritten diary Page 45" width="1038" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_46.jpg" alt="Handwritten diary Page 46" width="1039" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 45 typed transcript">
       <div class="transcriptText">
-        
+        <p>I get my leave soon as I'm very anxious to get home. I was told I'd make 3rd class petty officer before I got off. Well tomorrow is my last day at sea on this ship. It's being decommissioned &amp; I'll get a new ship now. I hope I get discharged. No more water rationing. We were told we can wear a star on our Philippine Liberation for the work we did near Luzon &amp; for the air raids on our fleet. We're finally near the U. States.</p>
       </div>
     </section>
     <section class="column notesColumn emptyNotesColumn" aria-label="Page 45 notes and details">
@@ -1684,19 +1710,22 @@
     <section class="column handwrittenColumn" aria-label="Page 46 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_46.jpg" alt="Handwritten diary Page 46" width="1039" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_47.jpg" alt="Handwritten diary Page 47" width="1023" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 46 typed transcript">
       <div class="transcriptText">
-        <p>I get my leave soon as I'm very anxious to get home. I was told I'd make 3rd class petty officer before I got off. Well tomorrow is my last day at sea on this ship. It's being decommissioned &amp; I'll get a new ship now. I hope I get discharged. No more water rationing. We were told we can wear a star on our Philippine Liberation for the work we did near Luzon &amp; for the air raids on our fleet. We're finally near the U. States.</p>
+        <p>Mon. March 4 - At Port San Francisco, United States</p>
+<p>After 59 days from the Philippines we arrived in Frisco at 0830 this morning. We went under the Golden Gate Bridge &amp; it sure looked good. I went on liberty today &amp; had a swell time. I sent a telegram to you. I spent $20.00. That sure is little. Altogether I spent $37.00 on liberty. Thats about 6 days combined. The states sure look good. But I still wish I was home. Twenty five men got discharged today. The ship sure seems deserted.</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 46 notes and details">
-      
+    <section class="column notesColumn" aria-label="Page 46 notes and details">
+      <h3>Notes &amp; Details</h3>
       <div class="notesText">
-        
+        <section class="noteBlock"><h3>59-day route check</h3>
+<p>The route shown totals about 6,650 nautical miles. Poppie's 59-day count lines up with Jan. 4, 1946, the diary's first homeward-order entry, through the Mar. 4 arrival in San Francisco. From the Jan. 6 departure from Leyte to Mar. 4 is about 57 elapsed days. Spread across 59 days, the mapped distance averages about 113 nautical miles per day, which fits his notes about slow speed, engine trouble, Guam and Pearl Harbor delays, and port days.</p>
+<figure class="mediaFigure"><img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco" width="1600" height="940" loading="lazy"><figcaption><strong>Dates and approximate leg distances</strong><span>Leyte -> Guam: 1,172 nmi / 1,349 mi. Guam -> Enewetak: 1,036 nmi / 1,192 mi. Enewetak -> Pearl Harbor: 2,359 nmi / 2,714 mi. Pearl Harbor -> San Francisco: 2,083 nmi / 2,397 mi.</span><span>Leyte -> San Francisco: about 6,650 nmi.</span></figcaption></figure></section>
       </div>
     </section>
   </div>
@@ -1709,39 +1738,11 @@
     <section class="column handwrittenColumn" aria-label="Page 47 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_47.jpg" alt="Handwritten diary Page 47" width="1023" height="1800" loading="lazy">
-        
-      </figure>
-    </section>
-    <section class="column transcriptColumn" aria-label="Page 47 typed transcript">
-      <div class="transcriptText">
-        <p>Mon. March 4 - At Port San Francisco, United States</p>
-<p>After 59 days from the Philippines we arrived in Frisco at 0830 this morning. We went under the Golden Gate Bridge &amp; it sure looked good. I went on liberty today &amp; had a swell time. I sent a telegram to you. I spent $20.00. That sure is little. Altogether I spent $37.00 on liberty. Thats about 6 days combined. The states sure look good. But I still wish I was home. Twenty five men got discharged today. The ship sure seems deserted.</p>
-      </div>
-    </section>
-    <section class="column notesColumn" aria-label="Page 47 notes and details">
-      <h3>Notes &amp; Details</h3>
-      <div class="notesText">
-        <section class="noteBlock"><h3>59-day route check</h3>
-<p>The route shown totals about 6,650 nautical miles. Poppie's 59-day count lines up with Jan. 4, 1946, the diary's first homeward-order entry, through the Mar. 4 arrival in San Francisco. From the Jan. 6 departure from Leyte to Mar. 4 is about 57 elapsed days. Spread across 59 days, the mapped distance averages about 113 nautical miles per day, which fits his notes about slow speed, engine trouble, Guam and Pearl Harbor delays, and port days.</p>
-<figure class="mediaFigure"><img src="assets/details/route-map.png" alt="Approximate Pacific route map from Leyte to Guam, Enewetak, Pearl Harbor, and San Francisco" width="1600" height="940" loading="lazy"><figcaption><strong>Dates and approximate leg distances</strong><span>Leyte -> Guam: 1,172 nmi / 1,349 mi. Guam -> Enewetak: 1,036 nmi / 1,192 mi. Enewetak -> Pearl Harbor: 2,359 nmi / 2,714 mi. Pearl Harbor -> San Francisco: 2,083 nmi / 2,397 mi.</span><span>Leyte -> San Francisco: about 6,650 nmi.</span></figcaption></figure></section>
-      </div>
-    </section>
-  </div>
-</article>
-<article class="entry" id="page-48">
-  <header class="entryHeader">
-    <h2>Page 48</h2>
-  </header>
-  <div class="threeColumns">
-    <section class="column handwrittenColumn" aria-label="Page 48 handwritten page">
-      
-      <figure>
         <img src="assets/pages_filtered/page_48.jpg" alt="Handwritten diary Page 48" width="1023" height="1800" loading="lazy">
         
       </figure>
     </section>
-    <section class="column transcriptColumn" aria-label="Page 48 typed transcript">
+    <section class="column transcriptColumn" aria-label="Page 47 typed transcript">
       <div class="transcriptText">
         <p>Tue. March 5 - U. States</p>
 <p>We don't know when we're going to be decommissioned so I still don't know when my leave is due. I hope its soon.</p>
@@ -1749,7 +1750,7 @@
 <p>Went on liberty today again. I hope I get my money order soon. I got a date for Sat. nite with Dolores, my buddy who lives here fixed it up for me. I sure will feel funny. We went dancing today &amp; I had to learn all over. But I got used to it again. I sure like to dance.</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 48 notes and details">
+    <section class="column notesColumn" aria-label="Page 47 notes and details">
       <h3>Notes &amp; Details</h3>
       <div class="notesText">
         <section class="noteBlock"><h3>Route details</h3>
@@ -1763,6 +1764,37 @@
     </section>
   </div>
 </article>
+<article class="entry" id="page-48">
+  <header class="entryHeader">
+    <h2>Page 48</h2>
+  </header>
+  <div class="threeColumns">
+    <section class="column handwrittenColumn" aria-label="Page 48 handwritten page">
+      
+      <figure>
+        <img src="assets/pages_filtered/page_49.jpg" alt="Handwritten diary Page 49" width="1045" height="1800" loading="lazy">
+        
+      </figure>
+    </section>
+    <section class="column transcriptColumn" aria-label="Page 48 typed transcript">
+      <div class="transcriptText">
+        <p>Thurs. 7 March - U. St.</p>
+<p>I received an answer to my telegram &amp; I have to pick the money up at San Francisco. We moved today to Oakland. We left Frisco cause the piers were all taken. No mail yet! Going on liberty soon. Its now 7 P.M.</p>
+<p>Fri. 8 March - U.S.</p>
+<p>I picked up my money order for $50.00. It came in handy. I had a date today &amp; it was swell. My buddy lives here &amp; he got an extra girl. Thats the first girl I kissed in 10 months.</p>
+      </div>
+    </section>
+    <section class="column notesColumn" aria-label="Page 48 notes and details">
+      <h3>Notes &amp; Details</h3>
+      <div class="notesText">
+        <section class="noteBlock"><h3>Liberty and dancing</h3>
+<p>Poppie writes that he had to learn to dance all over again, then quickly adds that he still loved it. This official U.S. Navy photograph from June 1945 shows a similar wartime liberty scene: sailors in uniform dancing with friends while a Navy band plays.</p>
+<figure class="mediaFigure"><img src="https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/images/g330000/g333975.jpg" alt="Black-and-white official U.S. Navy photograph of sailors in uniform dancing with friends in a ballroom in 1945." loading="lazy"><figcaption><strong>Navy dance, San Diego, 1945</strong><span>Sailors and friends dancing at the Naval Athletic Field ballroom in San Diego on 20 June 1945. Official U.S. Navy Photograph, now in the collections of the National Archives.</span><a href="https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/prs-tpic/af-amer/san-dieg.htm">View Navy source</a></figcaption></figure>
+<ul class="linkList"><li><a href="https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/prs-tpic/af-amer/san-dieg.htm">Naval Historical Center source record</a></li></ul></section>
+      </div>
+    </section>
+  </div>
+</article>
 <article class="entry" id="page-49">
   <header class="entryHeader">
     <h2>Page 49</h2>
@@ -1771,25 +1803,23 @@
     <section class="column handwrittenColumn" aria-label="Page 49 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_49.jpg" alt="Handwritten diary Page 49" width="1045" height="1800" loading="lazy">
+        <img src="assets/pages_filtered/page_50.jpg" alt="Handwritten diary Page 50" width="1045" height="1800" loading="lazy">
         
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Page 49 typed transcript">
       <div class="transcriptText">
-        <p>Thurs. 7 March - U. St.</p>
-<p>I received an answer to my telegram &amp; I have to pick the money up at San Francisco. We moved today to Oakland. We left Frisco cause the piers were all taken. No mail yet! Going on liberty soon. Its now 7 P.M.</p>
-<p>Fri. 8 March - U.S.</p>
-<p>I picked up my money order for $50.00. It came in handy. I had a date today &amp; it was swell. My buddy lives here &amp; he got an extra girl. Thats the first girl I kissed in 10 months.</p>
+        <p>Sat. 9 March - San Frisco</p>
+<p>Just wrote 4 letters home &amp; one to Marie. The weather's very cold. Its foggy all the time. Rumor going around that all leaves are cancelled. I'll kill somebody if they are.</p>
+<p>Sun. 10 March - Oakland</p>
+<p>Weather still foggy &amp; cold. Nothing to do. No liberty today.</p>
+<p>Mon. 11 March - Out in Harbor Tue. 12 March - Still waiting</p>
       </div>
     </section>
-    <section class="column notesColumn" aria-label="Page 49 notes and details">
-      <h3>Notes &amp; Details</h3>
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 49 notes and details">
+      
       <div class="notesText">
-        <section class="noteBlock"><h3>Liberty and dancing</h3>
-<p>Poppie writes that he had to learn to dance all over again, then quickly adds that he still loved it. This official U.S. Navy photograph from June 1945 shows a similar wartime liberty scene: sailors in uniform dancing with friends while a Navy band plays.</p>
-<figure class="mediaFigure"><img src="https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/images/g330000/g333975.jpg" alt="Black-and-white official U.S. Navy photograph of sailors in uniform dancing with friends in a ballroom in 1945." loading="lazy"><figcaption><strong>Navy dance, San Diego, 1945</strong><span>Sailors and friends dancing at the Naval Athletic Field ballroom in San Diego on 20 June 1945. Official U.S. Navy Photograph, now in the collections of the National Archives.</span><a href="https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/prs-tpic/af-amer/san-dieg.htm">View Navy source</a></figcaption></figure>
-<ul class="linkList"><li><a href="https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/prs-tpic/af-amer/san-dieg.htm">Naval Historical Center source record</a></li></ul></section>
+        
       </div>
     </section>
   </div>
@@ -1802,40 +1832,11 @@
     <section class="column handwrittenColumn" aria-label="Page 50 handwritten page">
       
       <figure>
-        <img src="assets/pages_filtered/page_50.jpg" alt="Handwritten diary Page 50" width="1045" height="1800" loading="lazy">
-        
-      </figure>
-    </section>
-    <section class="column transcriptColumn" aria-label="Page 50 typed transcript">
-      <div class="transcriptText">
-        <p>Sat. 9 March - San Frisco</p>
-<p>Just wrote 4 letters home &amp; one to Marie. The weather's very cold. Its foggy all the time. Rumor going around that all leaves are cancelled. I'll kill somebody if they are.</p>
-<p>Sun. 10 March - Oakland</p>
-<p>Weather still foggy &amp; cold. Nothing to do. No liberty today.</p>
-<p>Mon. 11 March - Out in Harbor Tue. 12 March - Still waiting</p>
-      </div>
-    </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 50 notes and details">
-      
-      <div class="notesText">
-        
-      </div>
-    </section>
-  </div>
-</article>
-<article class="entry" id="page-51">
-  <header class="entryHeader">
-    <h2>Page 51</h2>
-  </header>
-  <div class="threeColumns">
-    <section class="column handwrittenColumn" aria-label="Page 51 handwritten page">
-      
-      <figure>
         <img src="assets/pages_filtered/page_51.jpg" alt="Handwritten diary Page 51" width="1158" height="1800" loading="lazy">
         
       </figure>
     </section>
-    <section class="column transcriptColumn" aria-label="Page 51 typed transcript">
+    <section class="column transcriptColumn" aria-label="Page 50 typed transcript">
       <div class="transcriptText">
         <p>Wed. 13 March - Still waiting</p>
 <p>Thur. 14 March - Same</p>
@@ -1855,7 +1856,7 @@
 <p>Thur. 28 March - Liberty with Olive</p>
       </div>
     </section>
-    <section class="column notesColumn emptyNotesColumn" aria-label="Page 51 notes and details">
+    <section class="column notesColumn emptyNotesColumn" aria-label="Page 50 notes and details">
       
       <div class="notesText">
         
@@ -1866,7 +1867,7 @@
 <article class="entry birthdayPageEntry" id="100-years">
   <div class="birthdayPage">
     <div class="birthdayMessage">
-      <h2 class="scriptTitle"><span>Commemorating</span><span>the 100th Anniversary</span><span>of my Father&apos;s birth,</span><span>with Love...</span></h2>
+      <h2 class="scriptTitle"><span>Commemorating the</span><span>100th Anniversary</span><span>of my Father&apos;s birth,</span><span>with Love...</span></h2>
     </div>
     <p class="birthdayFooter"><span>Please let me know of any edits or improvements:</span><a href="mailto:tom@pinataro.com">tom@pinataro.com</a><span>Thank you.</span></p>
   </div>

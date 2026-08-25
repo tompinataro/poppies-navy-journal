@@ -149,6 +149,13 @@ function flowNumberedPageContinuations(entries) {
   }
 }
 
+function relabelJournalPages(entries) {
+  const journalPages = entries.filter(entry => /^Page \d{2}$/.test(entry.label));
+  journalPages.forEach((entry, index) => {
+    entry.label = index === 0 ? 'Dedication' : `Page ${String(index).padStart(2, '0')}`;
+  });
+}
+
 function normalizeEntry(page) {
   if (page.type === 'cover') {
     return {
@@ -294,7 +301,7 @@ function renderBirthdayPage(entry) {
   return `<article class="entry birthdayPageEntry" id="${escapeHtml(entry.id)}">
   <div class="birthdayPage">
     <div class="birthdayMessage">
-      <h2 class="scriptTitle"><span>Commemorating</span><span>the 100th Anniversary</span><span>of my Father&apos;s birth,</span><span>with Love...</span></h2>
+      <h2 class="scriptTitle"><span>Commemorating the</span><span>100th Anniversary</span><span>of my Father&apos;s birth,</span><span>with Love...</span></h2>
     </div>
     <p class="birthdayFooter"><span>Please let me know of any edits or improvements:</span><a href="mailto:tom@pinataro.com">tom@pinataro.com</a><span>Thank you.</span></p>
   </div>
@@ -467,8 +474,9 @@ function renderHtml(entries) {
       position: relative;
       display: grid;
       min-height: calc(100vh - 96px);
-      padding: 56px 24px 34px;
-      place-items: center;
+      padding: 92px 24px 34px;
+      align-items: start;
+      justify-items: center;
       text-align: center;
     }
     .birthdayMessage {
@@ -654,7 +662,8 @@ function validate(entries) {
     'Cover',
     'USS Pegasus',
     'Pignataro Brothers',
-    ...Array.from({ length: 51 }, (_, index) => `Page ${String(index + 1).padStart(2, '0')}`),
+    'Dedication',
+    ...Array.from({ length: 50 }, (_, index) => `Page ${String(index + 1).padStart(2, '0')}`),
     '100 years'
   ];
   const actualLabels = entries.map(entry => entry.label);
@@ -687,6 +696,7 @@ function main() {
   });
   const usedTypedSource = applyTypedSource(entries, parseTypedSource(typedSourcePath));
   if (!usedTypedSource) flowNumberedPageContinuations(entries);
+  relabelJournalPages(entries);
   validate(entries);
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(outputPath, renderHtml(entries), 'utf8');
