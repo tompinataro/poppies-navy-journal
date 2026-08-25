@@ -52,7 +52,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 1,
     "label": "Page 01",
-    "image": "assets/pages_shadow_cleaned/page_01.jpg",
+    "image": "assets/pages_shadow_midpoint/page_01.jpg",
     "paragraphs": [
       "Angelo Pignataro SC 3/c*",
       "Account of my travels back home from the Philippines.",
@@ -68,7 +68,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 2,
     "label": "Page 02",
-    "image": "assets/pages_shadow_cleaned/page_02.jpg",
+    "image": "assets/pages_shadow_midpoint/page_02.jpg",
     "paragraphs": [
       "Jan. 4, 1946",
       "We received orders today to return to the states & to report at San Francisco. It came as a surprise because we didn't get into dry dock yet. I can't explain how happy we all were. We needed fuel & water so we went to Leyte to get them. On the way the engine craped out & we were all pretty sore. In a few minutes the scuttlebutt was going around that it would take 12 days to fix it."
@@ -90,7 +90,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 3,
     "label": "Page 03",
-    "image": "assets/pages_shadow_cleaned/page_03.jpg",
+    "image": "assets/pages_shadow_midpoint/page_03.jpg",
     "paragraphs": [
       "There goes our chance of going home. Because as soon as the base command hears of it they'll tell us to stay here. But our captain didn't radio in & they went to work to fix it. Its now 10 P.M. & I guess I'll turn in.",
       "Jan. 5, 1946",
@@ -101,7 +101,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 4,
     "label": "Page 04",
-    "image": "assets/pages_shadow_cleaned/page_04.jpg",
+    "image": "assets/pages_shadow_midpoint/page_04.jpg",
     "paragraphs": [
       "We arrived at night & got filled up in a few hours. We'll have to leave tomorrow cause of some details. There weren't any movies tonight & the night was lonely & solemn. But I'll take it now that we're going stateside, I need to turn in.",
       "Jan. 6, 1946",
@@ -112,7 +112,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 5,
     "label": "Page 05",
-    "image": "assets/pages_shadow_cleaned/page_05.jpg",
+    "image": "assets/pages_shadow_midpoint/page_05.jpg",
     "paragraphs": [
       "was up getting their last look at the Philippines. (I hope) We're going pretty slow because of our bad engine. But as long as we're started we don't care. We got out of the harbor & into the open sea. In a short while we couldn't see any land. This was noon. Most of the men were talking of getting sea sick, & they did. They were heaving for hours. I can say truthfully I felt"
     ],
@@ -121,7 +121,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 6,
     "label": "Page 06",
-    "image": "assets/pages_shadow_cleaned/page_06.jpg",
+    "image": "assets/pages_shadow_midpoint/page_06.jpg",
     "paragraphs": [
       "funny, but I didn't get sick. I guess I'm an old salt with sea legs. No more mail for about 28 days I hear. I didn't tell anyone of my homecoming because I want to surprise them. But I think I'll write at Pearl Harbor & let them know. I don't want them to worry because I'm not writing. This trip will take about 41 days because of our engine. We make only five"
     ],
@@ -135,7 +135,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 7,
     "label": "Page 07",
-    "image": "assets/pages_shadow_cleaned/page_07.jpg",
+    "image": "assets/pages_shadow_midpoint/page_07.jpg",
     "paragraphs": [
       "stops. Thats at Eniwetok & Pearl Harbor then to Frisco & the ship is to be decommissioned & we might get a 30 day leave. The captain told us that. I can't wait. I'm so excited & glad till tomorrow - good night.",
       "Jan. 7, 1946",
@@ -146,7 +146,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 8,
     "label": "Page 08",
-    "image": "assets/pages_shadow_cleaned/page_08.jpg",
+    "image": "assets/pages_shadow_midpoint/page_08.jpg",
     "paragraphs": [
       "cargo. Water is coming on the decks. The life lines were put up in case a wave hits you, then you can hold on. Our water has been rationed & its pretty tough. It's only on for 3 hours a day in one hour periods. We have to use salt water for showers & to wash our clothes. The laundry isn't working because of the water shortage. The water isn't exactly low but it has"
     ],
@@ -155,7 +155,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 9,
     "label": "Page 09",
-    "image": "assets/pages_shadow_cleaned/page_09.jpg",
+    "image": "assets/pages_shadow_midpoint/page_09.jpg",
     "paragraphs": [
       "to be used this way if we want it to last till Pearl Harbor, which is still about 26 days away. We'll be at sea a long time.",
       "Jan. 8, 1946",
@@ -166,7 +166,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 10,
     "label": "Page 10",
-    "image": "assets/pages_shadow_cleaned/page_10.jpg",
+    "image": "assets/pages_shadow_midpoint/page_10.jpg",
     "paragraphs": [
       "have them only on Saturday nights now because we only have 3 aboard ship. Water rationing getting worse. Salt water isn't good for laundry, found that out. I'll miss mail now.",
       "Jan. 9, 1946",
@@ -177,7 +177,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 11,
     "label": "Page 11",
-    "image": "assets/pages_shadow_cleaned/page_11.jpg",
+    "image": "assets/pages_shadow_midpoint/page_11.jpg",
     "paragraphs": [
       "3 inch gun & the 4 inch gun. The 3 & 4 make quite a bit of noise. The 4 inch has some flash too. Everyone got a chance at each gun. We had some ammo left over so they threw it over the side. The gunnery officer said we used more than $21,000 worth of ammo & threw away about $6,000 worth. We had orders not to bring any ammo back so we used it up."
     ],
@@ -191,7 +191,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 12,
     "label": "Page 12",
-    "image": "assets/pages_shadow_cleaned/page_12.jpg",
+    "image": "assets/pages_shadow_midpoint/page_12.jpg",
     "paragraphs": [
       "It sure was some waste. But its no good anymore. My right hand is sore from using that rifle. Till tomorrow - see you soon.",
       "Jan. 10, 1946",
@@ -202,7 +202,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 13,
     "label": "Page 13",
-    "image": "assets/pages_shadow_cleaned/page_13.jpg",
+    "image": "assets/pages_shadow_midpoint/page_13.jpg",
     "paragraphs": [
       "They were fire drill, abandon ship drill, & collision drill. Everyone has to wear a life jacket now because its so rough. They were issued to us the first day at sea. After work I went up for some more sun. I got some tan now and I guess as soon as I hit Frisco this will show you how sunburned we're getting. So far we've only gone 553 miles, but still have 6,663 miles to our first stop"
     ],
@@ -211,7 +211,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 14,
     "label": "Page 14",
-    "image": "assets/pages_shadow_cleaned/page_14.jpg",
+    "image": "assets/pages_shadow_midpoint/page_14.jpg",
     "paragraphs": [
       "at Eniwetok. We've been having a head wind all the way & also a strong current. Thats not much traveling for being at sea for 4 days. At this rate we'll never hit the states. We got movies tonight. I know I'll enjoy it because I sure love to see movies. I'll let you know the name in tomorrow's story. We only see movies every week now on Thurs. Good night all & hope to see you soon."
     ],
@@ -225,7 +225,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 15,
     "label": "Page 15",
-    "image": "assets/pages_shadow_cleaned/page_15.jpg",
+    "image": "assets/pages_shadow_midpoint/page_15.jpg",
     "paragraphs": [
       "Jan. 11, 1946",
       "Woke up this morning at 6:30 & the sea was pretty calm. I hope it stays that way. Still making very slow progress. Rumors going around that we have to stop at Guam. I hope it doesn't delay our trip. I'm very anxious to get to the states. Last night's movie was \"What a Woman\" with B. O'Hara & Ross Russell. Enjoyed it a lot. So long till Sat nite.",
@@ -261,7 +261,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 16,
     "label": "Page 16",
-    "image": "assets/pages_shadow_cleaned/page_16.jpg",
+    "image": "assets/pages_shadow_midpoint/page_16.jpg",
     "paragraphs": [
       "The sea been the roughest today than it ever was. The Captain told us we're going to Guam for sure now. It will delay us about 4 days. At least we might get liberty there. We need food supplies. We ran out of fruits 3 days ago & vegetables 2 days ago. Food is very low. It might be rationed. The men are flooding No. 1 & 5 holds to balance the ship. It's been rolling very bad. Lately, the water comes out of the"
     ],
@@ -270,7 +270,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 17,
     "label": "Page 17",
-    "image": "assets/pages_shadow_cleaned/page_17.jpg",
+    "image": "assets/pages_shadow_midpoint/page_17.jpg",
     "paragraphs": [
       "water on every roll. It's been ruining the engine. We might also get a tug at Guam cause we're going so slow.",
       "Jan. 13, 1946 - At Sea",
@@ -281,7 +281,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 18,
     "label": "Page 18",
-    "image": "assets/pages_shadow_cleaned/page_18.jpg",
+    "image": "assets/pages_shadow_midpoint/page_18.jpg",
     "paragraphs": [
       "it's getting tougher now. Having movie tonight because we're going to Guam & we can get more of them. Good night.",
       "Jan. 14, 1946 - At Sea",
@@ -292,7 +292,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 19,
     "label": "Page 19",
-    "image": "assets/pages_shadow_cleaned/page_19.jpg",
+    "image": "assets/pages_shadow_midpoint/page_19.jpg",
     "paragraphs": [
       "pool today. We get 60 men to put up a dollar each. Then we got 60 sealed envelopes with numbers in them from one to 60. Every man puts his name on one of them. When we hit Guam & the anchor drops its recorded to the minute on the bridge. So if its 4:35 the man with the number 35 wins $60.00. We're starting one for Frisco soon for $5.00 per man. Thats a $300.00 prize. We will arrive in Guam tomorrow I think. Then we'll find out who has won."
     ],
@@ -306,7 +306,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 20,
     "label": "Page 20",
-    "image": "assets/pages_shadow_cleaned/page_20.jpg",
+    "image": "assets/pages_shadow_midpoint/page_20.jpg",
     "paragraphs": [
       "I finished a good book last night. The name was \"Valiant Libertine\" by John Bryson. It took me quite a while to finish it because I only can read it at night. It's the longest book I ever read. It had 627 pages. I enjoy reading now. At one time I disliked it. Will tell tomorrow nite.",
       "Jan. 15, 1946 - At Port, Guam",
@@ -337,7 +337,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 21,
     "label": "Page 21",
-    "image": "assets/pages_shadow_cleaned/page_21.jpg",
+    "image": "assets/pages_shadow_midpoint/page_21.jpg",
     "paragraphs": [
       "the Pacific. There are over 100 ships in the harbor. We were anchored near the aircraft carriers \"Hornet\" & \"Saratoga.\" Besides a few CVE's. We'll be here till Sunday then we'll begin our trip home again. We took the water out of No. 1 & 5 holds & were putting 150 aircraft engines in them. We're also getting supplies, water isn't rationed in port & now we have fresh water showers. Till tomorrow night!",
       "Jan. 16, 1946 - At Port, Guam",
@@ -348,7 +348,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 22,
     "label": "Page 22",
-    "image": "assets/pages_shadow_cleaned/page_22.jpg",
+    "image": "assets/pages_shadow_midpoint/page_22.jpg",
     "paragraphs": [
       "you'll be happy when you hear I'm coming home. I had a hard day today. Everyone had to work to clean out the 5 holds so we can put cargo in. I put in 8 hours in the galley & then 5 hours in the holds. When we were fueling up today I met a buddy from boot camp on the oiler tanker. His name is Bill Horner. He's stationed in Guam. He lives in Jersey. We moved to a pier today at 8:20 P.M. I met a fellow who was on here in Leyte. He was transferred."
     ],
@@ -357,7 +357,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 23,
     "label": "Page 23",
-    "image": "assets/pages_shadow_cleaned/page_23.jpg",
+    "image": "assets/pages_shadow_midpoint/page_23.jpg",
     "paragraphs": [
       "He's stationed here also. He has a jeep & I was driving it all night. It's now 11:30 so I was driving for about 3 hours. Those jeeps sure can go. Still loading tomorrow again. I hope we shove off Sunday. Good night. x",
       "Jan. 17 - At Port, Guam",
@@ -368,7 +368,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 24,
     "label": "Page 24",
-    "image": "assets/pages_shadow_cleaned/page_24.jpg",
+    "image": "assets/pages_shadow_midpoint/page_24.jpg",
     "paragraphs": [
       "a guy out. It sure is swell ashore on Guam. Swimming, cokes & beer, all you want. I swam all afternoon. Just like you see in the movies. A nice white beach - only no girls! Still loading up. Thats all for now.",
       "Jan. 18, 1946 - At Sea, Guam",
@@ -403,7 +403,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 25,
     "label": "Page 25",
-    "image": "assets/pages_shadow_cleaned/page_25.jpg",
+    "image": "assets/pages_shadow_midpoint/page_25.jpg",
     "paragraphs": [
       "thats the fine picture I seen that I enjoyed. No breaks, no rain, no noise & no separated reels. It was shown at \"Nab Hill Bowl\" outdoor theatre. I also seen a U.S.O. show with 5 beautiful American girls. They sure looked swell. Rumors we're leaving tomorrow instead of Sunday. So long.",
       "Sat. Jan. 19 - At Sea",
@@ -414,7 +414,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 26,
     "label": "Page 26",
-    "image": "assets/pages_shadow_cleaned/page_26.jpg",
+    "image": "assets/pages_shadow_midpoint/page_26.jpg",
     "paragraphs": [
       "tonight. Cargo not helping much. Still rolling.",
       "Sun. Jan. 20, 1946 - At Sea",
@@ -427,7 +427,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 27,
     "label": "Page 27",
-    "image": "assets/pages_shadow_cleaned/page_27.jpg",
+    "image": "assets/pages_shadow_midpoint/page_27.jpg",
     "paragraphs": [
       "our cargo is. We got carbines, .45's, shoes, parachutes, & Arctic coats. We're all trying to get one of each. I heard that song \"Long Long Time\" 3 times & I like it better every time.",
       "Jan. 22, 1946 - At Sea",
@@ -468,7 +468,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 28,
     "label": "Page 28",
-    "image": "assets/pages_shadow_cleaned/page_28.jpg",
+    "image": "assets/pages_shadow_midpoint/page_28.jpg",
     "paragraphs": [
       "self a aviation jacket, combat shoes & work shoes (2 pair). No carbines yet. I wonder if I can get all this stuff off before we hit Eniwetok Saturday. Then P.H., Frisco, & N.Y. O'Boy!",
       "Thurs. Jan. 24, 1946 - At Sea",
@@ -503,7 +503,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 29,
     "label": "Page 29",
-    "image": "assets/pages_shadow_cleaned/page_29.jpg",
+    "image": "assets/pages_shadow_midpoint/page_29.jpg",
     "paragraphs": [
       "Jan. 25, 1946 - At Sea, Fri.",
       "Sea getting rough again. Nothing new! Reaching Eniwetok Sunday morning I hope we get mail. Thats all.",
@@ -517,7 +517,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 30,
     "label": "Page 30",
-    "image": "assets/pages_shadow_cleaned/page_30.jpg",
+    "image": "assets/pages_shadow_midpoint/page_30.jpg",
     "paragraphs": [
       "on April 15th. And everyone has a good chance of getting discharged. I'll keep this a secret for now from your letters. Refueled. Promotions today to S.C. 3/c. I always wanted to be a petty officer. Arrived at Eniwetok this morning. Received 36 letters.",
       "Mon. Jan. 28, 1946 - At Port",
@@ -530,7 +530,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 31,
     "label": "Page 31",
-    "image": "assets/pages_shadow_cleaned/page_31.jpg",
+    "image": "assets/pages_shadow_midpoint/page_31.jpg",
     "paragraphs": [
       "Water rationed again.",
       "Wed. Jan. 30, 1946 - At Sea",
@@ -593,7 +593,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 32,
     "label": "Page 32",
-    "image": "assets/pages_shadow_cleaned/page_32.jpg",
+    "image": "assets/pages_shadow_midpoint/page_32.jpg",
     "paragraphs": [
       "very boring. Wish I was home.",
       "Sun. Feb. 3 - At Sea",
@@ -608,7 +608,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 33,
     "label": "Page 33",
-    "image": "assets/pages_shadow_cleaned/page_33.jpg",
+    "image": "assets/pages_shadow_midpoint/page_33.jpg",
     "paragraphs": [
       "So they pulled alongside us & we shot a line over & sent them food. It took us about 2 hours. We're very short now on food also. Water rationing cut to 3 - 15 minute periods. Its only on for 45 minutes a day. It sure is getting tough. So long x",
       "Wed. Feb. 6 - At Sea",
@@ -621,7 +621,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 34,
     "label": "Page 34",
-    "image": "assets/pages_shadow_cleaned/page_34.jpg",
+    "image": "assets/pages_shadow_midpoint/page_34.jpg",
     "paragraphs": [
       "Sea very calm. Just like glass. Today we seen 6 whales. Boy are they big.",
       "Thurs. Feb. 7 - At Sea",
@@ -665,7 +665,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 35,
     "label": "Page 35",
-    "image": "assets/pages_shadow_cleaned/page_35.jpg",
+    "image": "assets/pages_shadow_midpoint/page_35.jpg",
     "paragraphs": [
       "duty cause of that. And we spent 6 hours last night cleaning up too. They haven't any heart. For the past 2 days we've all been freezing. And guess what the temperature was, only 79 degrees? Imagine freezing in that warm weather. But after spending 7 months in the Phil. with a temperature of 100 to 120 anything lower than that & we freeze. The doc's been giving us some pills so we won't catch cold. I don't know how we'll take it when we're in the states & its about 40 degrees. I use a blanket now.",
       "Sat. Feb. 9, 1946 - Sea"
@@ -675,7 +675,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 36,
     "label": "Page 36",
-    "image": "assets/pages_shadow_cleaned/page_36.jpg",
+    "image": "assets/pages_shadow_midpoint/page_36.jpg",
     "paragraphs": [
       "Today personnel inspection was strictest I've ever attended. Men were given extra duty for such things as no buttons, shoes untied, not neatly pressed clothes, spots, etc. I was alright. We also took pictures of the crew dressed up. About to arrive in P.H. Mon Tue. morning.",
       "Sun. Feb. 10 - At Sea",
@@ -689,7 +689,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 37,
     "label": "Page 37",
-    "image": "assets/pages_shadow_cleaned/page_37.jpg",
+    "image": "assets/pages_shadow_midpoint/page_37.jpg",
     "paragraphs": [
       "Lost anchor pool which was for $250.00. Got liberty today & the place is swell. Just like Frisco. Buses, shoeshine boys, taxis, everything. I sent a radiogram home to mom. I went to the Waikiki Beach & Royal Hawaiian Hotel & the Moana Hotel. All together I spent $46.00. I have to borrow some more so I can go today.",
       "Wed. Feb. 13 - At Port Hawaii",
@@ -745,7 +745,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 38,
     "label": "Page 38",
-    "image": "assets/pages_shadow_cleaned/page_38.jpg",
+    "image": "assets/pages_shadow_midpoint/page_38.jpg",
     "paragraphs": [
       "Thurs. Feb. 14 - At Port Hawaii",
       "Went on liberty again. I can't get enough of liberty to suit me. Boy these Hawaiians are nice. And pretty girls! A lot of Americans are too. I'll take either one. I can't wait to hit the states now.",
@@ -758,7 +758,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 39,
     "label": "Page 39",
-    "image": "assets/pages_shadow_cleaned/page_39.jpg",
+    "image": "assets/pages_shadow_midpoint/page_39.jpg",
     "paragraphs": [
       "Sat. Feb. 16, 1946 - Hawaii",
       "I got paid today & I drew $110.00. It won't last long. I never spent so much money in my whole life so fast.",
@@ -773,7 +773,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 40,
     "label": "Page 40",
-    "image": "assets/pages_shadow_cleaned/page_40.jpg",
+    "image": "assets/pages_shadow_midpoint/page_40.jpg",
     "paragraphs": [
       "liberty. Tomorrow we head home. Expect to pull in on 5 March at 7:20 A.M.",
       "Wed. Feb. 20 - Hawaii",
@@ -786,7 +786,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 41,
     "label": "Page 41",
-    "image": "assets/pages_shadow_cleaned/page_41.jpg",
+    "image": "assets/pages_shadow_midpoint/page_41.jpg",
     "paragraphs": [
       "the beach to leave 13 low point men here. It sure was a rotten trick to play on the men. The captain said he was glad & boy we felt like killing him, the rat! I was lucky, I wasn't called cause I've been on here longer than most of the S 1/c & I have 8 more points than them.",
       "Fri. Feb. 22 - At Sea",
@@ -799,7 +799,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 42,
     "label": "Page 42",
-    "image": "assets/pages_shadow_cleaned/page_42.jpg",
+    "image": "assets/pages_shadow_midpoint/page_42.jpg",
     "paragraphs": [
       "ship is rolling pretty bad, can't walk straight. It's also very cold out. It wouldn't be to you. But, to us it is. The picture tonight was \"Duffy's Tavern.\" It was very good.",
       "Sun. Feb. 24 - At Sea",
@@ -843,7 +843,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 43,
     "label": "Page 43",
-    "image": "assets/pages_shadow_cleaned/page_43.jpg",
+    "image": "assets/pages_shadow_midpoint/page_43.jpg",
     "paragraphs": [
       "Tue. Feb. 26 - At Sea",
       "Sea getting rough again. Weather very cool. Rain & fog for 2 days. This is Calif. weather now. Everyone's freezing. They finally issued jackets. Boy am I glad. Did some more sewing. (5 more days.)",
@@ -855,7 +855,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 44,
     "label": "Page 44",
-    "image": "assets/pages_shadow_cleaned/page_44.jpg",
+    "image": "assets/pages_shadow_midpoint/page_44.jpg",
     "paragraphs": [
       "Thur. Feb. 28 - At Sea",
       "We didn't find the lost plane, but we tried. Nothing new.",
@@ -871,7 +871,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 45,
     "label": "Page 45",
-    "image": "assets/pages_shadow_cleaned/page_45.jpg",
+    "image": "assets/pages_shadow_midpoint/page_45.jpg",
     "paragraphs": [
       "The sea was the roughest its ever been. Every time I go on deck I get a bath. Its coming over the bow & even the gunnels. The weather seems like its below zero. When it gets rough at sea it really stays rough. I hope it calms down. We were told to expect rough weather near Frisco. We will pull in tomorrow morning. Today is our 58th day at sea from the Philippines & tomorrow is our last. I'll call you as soon as I get ashore. I'll also send a wire. I hope"
     ],
@@ -880,7 +880,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 46,
     "label": "Page 46",
-    "image": "assets/pages_shadow_cleaned/page_46.jpg",
+    "image": "assets/pages_shadow_midpoint/page_46.jpg",
     "paragraphs": [
       "I get my leave soon as I'm very anxious to get home. I was told I'd make 3rd class petty officer before I got off. Well tomorrow is my last day at sea on this ship. It's being decommissioned & I'll get a new ship now. I hope I get discharged. No more water rationing. We were told we can wear a star on our Philippine Liberation for the work we did near Luzon & for the air raids on our fleet. We're finally near the U. States."
     ],
@@ -889,7 +889,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 47,
     "label": "Page 47",
-    "image": "assets/pages_shadow_cleaned/page_47.jpg",
+    "image": "assets/pages_shadow_midpoint/page_47.jpg",
     "paragraphs": [
       "Mon. March 4 - At Port San Francisco, United States",
       "After 59 days from the Philippines we arrived in Frisco at 0830 this morning. We went under the Golden Gate Bridge & it sure looked good. I went on liberty today & had a swell time. I sent a telegram to you. I spent $20.00. That sure is little. Altogether I spent $37.00 on liberty. Thats about 6 days combined. The states sure look good. But I still wish I was home. Twenty five men got discharged today. The ship sure seems deserted."
@@ -907,7 +907,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 48,
     "label": "Page 48",
-    "image": "assets/pages_shadow_cleaned/page_48.jpg",
+    "image": "assets/pages_shadow_midpoint/page_48.jpg",
     "paragraphs": [
       "Tue. March 5 - U. States",
       "We don't know when we're going to be decommissioned so I still don't know when my leave is due. I hope its soon.",
@@ -944,7 +944,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 49,
     "label": "Page 49",
-    "image": "assets/pages_shadow_cleaned/page_49.jpg",
+    "image": "assets/pages_shadow_midpoint/page_49.jpg",
     "paragraphs": [
       "today & I had to learn all over. But I got used to it again. I sure like to dance.",
       "Thurs. 7 March - U. St.",
@@ -978,7 +978,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 50,
     "label": "Page 50",
-    "image": "assets/pages_shadow_cleaned/page_50.jpg",
+    "image": "assets/pages_shadow_midpoint/page_50.jpg",
     "paragraphs": [
       "today & it was swell. My buddy lives here & he got an extra girl. Thats the first girl I kissed in 10 months.",
       "Sat. 9 March - San Frisco",
@@ -992,7 +992,7 @@ window.JOURNAL_PAGES = [
   {
     "num": 51,
     "label": "Page 51",
-    "image": "assets/pages_shadow_cleaned/page_51.jpg",
+    "image": "assets/pages_shadow_midpoint/page_51.jpg",
     "paragraphs": [
       "Tue. 12 March - Still waiting",
       "Wed. 13 March - Still waiting",

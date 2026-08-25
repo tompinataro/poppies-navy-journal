@@ -138,7 +138,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", default="docs/assets/pages_filtered")
     parser.add_argument("--output", default="docs/assets/pages_shadow_cleaned")
+    parser.add_argument(
+        "--clean-strength",
+        type=float,
+        default=1.0,
+        help="Blend amount for the cleaned image. Use 0.4 for a midpoint between original and cleaned.",
+    )
     args = parser.parse_args()
+    if not 0 <= args.clean_strength <= 1:
+        raise SystemExit("--clean-strength must be between 0 and 1.")
 
     repo_root = Path(__file__).resolve().parents[1]
     source_dir = (repo_root / args.source).resolve()
@@ -150,7 +158,14 @@ def main() -> None:
         raise SystemExit(f"No page images found in {source_dir}")
 
     for source_file in source_files:
-        clean_image(source_file).save(output_dir / source_file.name, quality=94, optimize=True)
+        cleaned = clean_image(source_file)
+        if args.clean_strength < 1:
+            original = Image.open(source_file).convert("RGB")
+            cleaned_array = np.asarray(cleaned, dtype=np.float32)
+            original_array = np.asarray(original, dtype=np.float32)
+            blended = original_array * (1 - args.clean_strength) + cleaned_array * args.clean_strength
+            cleaned = Image.fromarray(np.clip(blended, 0, 255).astype(np.uint8))
+        cleaned.save(output_dir / source_file.name, quality=94, optimize=True)
         print(f"cleaned {source_file.name}")
 
 
