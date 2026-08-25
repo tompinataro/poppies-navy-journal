@@ -211,7 +211,7 @@ function renderEntry(entry) {
   const hasNotes = Boolean(entry.notesHtml);
   const showEntryHeader = entry.label !== 'Cover';
   const coverTitle = entry.label === 'Cover'
-    ? '<h1 class="scriptTitle coverTitle">Poppies U.S. Navy Journal</h1>'
+    ? '<h1 class="scriptTitle coverTitle">Poppie&apos;s U.S. Navy Journal</h1>'
     : '';
   const coverCaption = entry.label === 'Cover'
     ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>'
