@@ -294,10 +294,10 @@ function renderBirthdayPage(entry) {
   return `<article class="entry birthdayPageEntry" id="${escapeHtml(entry.id)}">
   <div class="birthdayPage">
     <div class="birthdayMessage">
-      <h2 class="scriptTitle">Happy 100th Birthday Poppie</h2>
-      <p>with love, your son, Tom.</p>
+      <h2 class="scriptTitle"><span>Celebrating</span><span>the 100th Anniversary</span><span>of your birth</span><span>Dad/Poppie</span></h2>
+      <p><span>with love, your son,</span><span>Tom</span></p>
     </div>
-    <p class="birthdayFooter">Please let me know of any edits or improvements: <a href="mailto:tom@pinataro.com">tom@pinataro.com</a> Thank you.</p>
+    <p class="birthdayFooter"><span>Please let me know of any edits or improvements:</span><a href="mailto:tom@pinataro.com">tom@pinataro.com</a><span>Thank you.</span></p>
   </div>
 </article>`;
 }
@@ -458,10 +458,14 @@ function renderHtml(entries) {
       justify-items: center;
     }
     .birthdayMessage h2 {
+      display: grid;
+      gap: 8px;
       max-width: 980px;
       font-size: clamp(48px, 7vw, 104px);
     }
     .birthdayMessage p {
+      display: grid;
+      gap: 6px;
       margin: 0;
       font-size: clamp(24px, 3vw, 42px);
       line-height: 1.25;
@@ -471,6 +475,8 @@ function renderHtml(entries) {
       right: 24px;
       bottom: 18px;
       left: 24px;
+      display: grid;
+      gap: 3px;
       margin: 0;
       color: var(--muted);
       font: 13px/1.35 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
