@@ -294,7 +294,7 @@ function renderBirthdayPage(entry) {
   return `<article class="entry birthdayPageEntry" id="${escapeHtml(entry.id)}">
   <div class="birthdayPage">
     <div class="birthdayMessage">
-      <h2 class="scriptTitle"><span>... with Love,</span><span>Commemorating</span><span>the 100th Anniversary</span><span>of my father&apos;s birth...</span></h2>
+      <h2 class="scriptTitle"><span>Commemorating</span><span>the 100th Anniversary</span><span>of my Father&apos;s birth,</span><span>with Love...</span></h2>
     </div>
     <p class="birthdayFooter"><span>Please let me know of any edits or improvements:</span><a href="mailto:tom@pinataro.com">tom@pinataro.com</a><span>Thank you.</span></p>
   </div>
@@ -676,7 +676,7 @@ function validate(entries) {
     'USS Pegasus',
     'Pignataro Brothers',
     ...Array.from({ length: 51 }, (_, index) => `Page ${String(index + 1).padStart(2, '0')}`),
-    'Happy 100th Birthday'
+    '100 years'
   ];
   const actualLabels = entries.map(entry => entry.label);
   if (actualLabels.length !== expectedLabels.length) {
@@ -703,8 +703,8 @@ function main() {
   }
   entries.push({
     type: 'birthdayPage',
-    label: 'Happy 100th Birthday',
-    id: 'happy-100th-birthday'
+    label: '100 years',
+    id: '100-years'
   });
   const usedTypedSource = applyTypedSource(entries, parseTypedSource(typedSourcePath));
   if (!usedTypedSource) flowNumberedPageContinuations(entries);
