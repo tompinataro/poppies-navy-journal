@@ -86,7 +86,7 @@ function parseTypedSource(filePath) {
 function applyTypedSource(entries, typedEntries) {
   if (!typedEntries) return false;
   for (const entry of entries) {
-    if (entry.label === 'Cover' || entry.type === 'photoPage') continue;
+    if (entry.label === 'Cover' || entry.type === 'photoPage' || entry.type === 'birthdayPage') continue;
     if (!typedEntries.has(entry.label)) {
       throw new Error(`Typed source is missing "${entry.label}".`);
     }
@@ -207,10 +207,14 @@ function formatVisual(detail) {
 
 function renderEntry(entry) {
   if (entry.type === 'photoPage') return renderPhotoPage(entry);
+  if (entry.type === 'birthdayPage') return renderBirthdayPage(entry);
   const hasNotes = Boolean(entry.notesHtml);
   const showEntryHeader = entry.label !== 'Cover';
+  const coverTitle = entry.label === 'Cover'
+    ? '<h1 class="scriptTitle coverTitle">Poppies U.S. Navy Journal</h1>'
+    : '';
   const coverCaption = entry.label === 'Cover'
-    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span><span>October 21, 1926 - May 26, 2019</span><strong><em>Novantadue!</em></strong></figcaption>'
+    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>'
     : '';
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   ${showEntryHeader ? `<header class="entryHeader">
@@ -218,6 +222,7 @@ function renderEntry(entry) {
   </header>` : ''}
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="${escapeHtml(entry.label)} handwritten page">
+      ${coverTitle}
       <figure>
         <img src="${escapeHtml(repoRelativeAsset(entry.image))}" alt="${escapeHtml(entry.alt || entry.imageLabel)}" loading="lazy">
         ${coverCaption || (entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : '')}
@@ -245,6 +250,18 @@ function renderPhotoPage(entry) {
   </header>
   <div class="familyPhotoGrid">
     ${entry.photos.map(formatPhoto).join('\n')}
+  </div>
+</article>`;
+}
+
+function renderBirthdayPage(entry) {
+  return `<article class="entry birthdayPageEntry" id="${escapeHtml(entry.id)}">
+  <div class="birthdayPage">
+    <div class="birthdayMessage">
+      <h2 class="scriptTitle">Happy 100th Birthday Poppie</h2>
+      <p>with love, your son, Tom.</p>
+    </div>
+    <p class="birthdayFooter">Please let me know of any edits or improvements: <a href="mailto:tom@pinataro.com">tom@pinataro.com</a> Thank you.</p>
   </div>
 </article>`;
 }
@@ -287,6 +304,9 @@ function renderHtml(entries) {
       border-bottom: 1px solid var(--line);
       background: rgba(255, 253, 248, .94);
       backdrop-filter: blur(12px);
+    }
+    .cover-active .brand strong {
+      visibility: hidden;
     }
     .brand strong { display: block; font-size: 17px; }
     .brand span { color: var(--muted); font-size: 13px; }
@@ -350,6 +370,18 @@ function renderHtml(entries) {
       text-transform: uppercase;
     }
     figure { margin: 0; }
+    .scriptTitle {
+      margin: 0;
+      text-align: center;
+      font-family: "Monotype Corsiva", "Apple Chancery", "Brush Script MT", cursive;
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--ink);
+    }
+    .coverTitle {
+      margin: 6px 0 18px;
+      font-size: clamp(42px, 5vw, 76px);
+    }
     .handwrittenColumn img {
       display: block;
       width: 100%;
@@ -374,6 +406,37 @@ function renderHtml(entries) {
     }
     .coverCaption strong {
       font-size: 20px;
+    }
+    .birthdayPage {
+      position: relative;
+      display: grid;
+      min-height: calc(100vh - 96px);
+      padding: 56px 24px 34px;
+      place-items: center;
+      text-align: center;
+    }
+    .birthdayMessage {
+      display: grid;
+      gap: 18px;
+      justify-items: center;
+    }
+    .birthdayMessage h2 {
+      max-width: 980px;
+      font-size: clamp(48px, 7vw, 104px);
+    }
+    .birthdayMessage p {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 42px);
+      line-height: 1.25;
+    }
+    .birthdayFooter {
+      position: absolute;
+      right: 24px;
+      bottom: 18px;
+      left: 24px;
+      margin: 0;
+      color: var(--muted);
+      font: 13px/1.35 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     .transcriptText {
       max-width: 780px;
@@ -486,7 +549,7 @@ function renderHtml(entries) {
     }
   </style>
 </head>
-<body>
+<body class="cover-active">
   <header class="topbar">
     <div class="brand">
       <strong>Poppie's U.S. Navy Journal</strong>
@@ -499,6 +562,17 @@ function renderHtml(entries) {
   <main>
     ${entries.map(renderEntry).join('\n')}
   </main>
+  <script>
+    const coverEntry = document.getElementById('cover');
+    const updateCoverState = () => {
+      if (!coverEntry) return;
+      const rect = coverEntry.getBoundingClientRect();
+      document.body.classList.toggle('cover-active', rect.top <= 68 && rect.bottom > 68);
+    };
+    updateCoverState();
+    window.addEventListener('scroll', updateCoverState, { passive: true });
+    window.addEventListener('resize', updateCoverState);
+  </script>
 </body>
 </html>
 `;
@@ -509,7 +583,8 @@ function validate(entries) {
     'Cover',
     'USS Pegasus',
     'Pignataro Brothers',
-    ...Array.from({ length: 51 }, (_, index) => `Page ${String(index + 1).padStart(2, '0')}`)
+    ...Array.from({ length: 51 }, (_, index) => `Page ${String(index + 1).padStart(2, '0')}`),
+    'Happy 100th Birthday'
   ];
   const actualLabels = entries.map(entry => entry.label);
   if (actualLabels.length !== expectedLabels.length) {
@@ -534,6 +609,11 @@ function main() {
       photos: introPage.photos
     });
   }
+  entries.push({
+    type: 'birthdayPage',
+    label: 'Happy 100th Birthday',
+    id: 'happy-100th-birthday'
+  });
   const usedTypedSource = applyTypedSource(entries, parseTypedSource(typedSourcePath));
   if (!usedTypedSource) flowNumberedPageContinuations(entries);
   validate(entries);

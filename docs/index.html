@@ -36,6 +36,9 @@
       background: rgba(255, 253, 248, .94);
       backdrop-filter: blur(12px);
     }
+    .cover-active .brand strong {
+      visibility: hidden;
+    }
     .brand strong { display: block; font-size: 17px; }
     .brand span { color: var(--muted); font-size: 13px; }
     .jump {
@@ -98,6 +101,18 @@
       text-transform: uppercase;
     }
     figure { margin: 0; }
+    .scriptTitle {
+      margin: 0;
+      text-align: center;
+      font-family: "Monotype Corsiva", "Apple Chancery", "Brush Script MT", cursive;
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--ink);
+    }
+    .coverTitle {
+      margin: 6px 0 18px;
+      font-size: clamp(42px, 5vw, 76px);
+    }
     .handwrittenColumn img {
       display: block;
       width: 100%;
@@ -122,6 +137,37 @@
     }
     .coverCaption strong {
       font-size: 20px;
+    }
+    .birthdayPage {
+      position: relative;
+      display: grid;
+      min-height: calc(100vh - 96px);
+      padding: 56px 24px 34px;
+      place-items: center;
+      text-align: center;
+    }
+    .birthdayMessage {
+      display: grid;
+      gap: 18px;
+      justify-items: center;
+    }
+    .birthdayMessage h2 {
+      max-width: 980px;
+      font-size: clamp(48px, 7vw, 104px);
+    }
+    .birthdayMessage p {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 42px);
+      line-height: 1.25;
+    }
+    .birthdayFooter {
+      position: absolute;
+      right: 24px;
+      bottom: 18px;
+      left: 24px;
+      margin: 0;
+      color: var(--muted);
+      font: 13px/1.35 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     .transcriptText {
       max-width: 780px;
@@ -234,7 +280,7 @@
     }
   </style>
 </head>
-<body>
+<body class="cover-active">
   <header class="topbar">
     <div class="brand">
       <strong>Poppie's U.S. Navy Journal</strong>
@@ -295,6 +341,7 @@
       <option value="page-49">Page 49</option>
       <option value="page-50">Page 50</option>
       <option value="page-51">Page 51</option>
+      <option value="happy-100th-birthday">Happy 100th Birthday</option>
     </select>
   </header>
   <main>
@@ -302,9 +349,10 @@
   
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Cover handwritten page">
+      <h1 class="scriptTitle coverTitle">Poppies U.S. Navy Journal</h1>
       <figure>
         <img src="assets/front/poppie-navy-portrait.jpg" alt="Angelo Pignataro in U.S. Navy uniform in front of an American flag." loading="lazy">
-        <figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span><span>October 21, 1926 - May 26, 2019</span><strong><em>Novantadue!</em></strong></figcaption>
+        <figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Cover typed transcript">
@@ -326,6 +374,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="USS Pegasus handwritten page">
+      
       <figure>
         <img src="assets/front/uss-pegasus-ix-222.jpg" alt="USS Pegasus IX-222 underway in San Francisco Bay circa March 1946." loading="lazy">
         <figcaption>USS Pegasus (IX-222) entering San Francisco Bay, circa March 4, 1946. Source notes identify a long homeward-bound pennant flying from the mainmast peak; in this reproduction it is very faint, trailing leftward from the mast.</figcaption>
@@ -362,6 +411,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 01 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_01.jpg" alt="Handwritten diary Page 01" loading="lazy">
         
@@ -389,6 +439,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 02 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_02.jpg" alt="Handwritten diary Page 02" loading="lazy">
         
@@ -417,6 +468,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 03 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_03.jpg" alt="Handwritten diary Page 03" loading="lazy">
         
@@ -442,6 +494,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 04 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_04.jpg" alt="Handwritten diary Page 04" loading="lazy">
         
@@ -467,6 +520,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 05 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_05.jpg" alt="Handwritten diary Page 05" loading="lazy">
         
@@ -491,6 +545,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 06 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_06.jpg" alt="Handwritten diary Page 06" loading="lazy">
         
@@ -516,6 +571,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 07 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_07.jpg" alt="Handwritten diary Page 07" loading="lazy">
         
@@ -541,6 +597,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 08 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_08.jpg" alt="Handwritten diary Page 08" loading="lazy">
         
@@ -565,6 +622,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 09 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_09.jpg" alt="Handwritten diary Page 09" loading="lazy">
         
@@ -591,6 +649,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 10 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_10.jpg" alt="Handwritten diary Page 10" loading="lazy">
         
@@ -616,6 +675,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 11 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_11.jpg" alt="Handwritten diary Page 11" loading="lazy">
         
@@ -641,6 +701,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 12 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_12.jpg" alt="Handwritten diary Page 12" loading="lazy">
         
@@ -667,6 +728,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 13 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_13.jpg" alt="Handwritten diary Page 13" loading="lazy">
         
@@ -691,6 +753,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 14 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_14.jpg" alt="Handwritten diary Page 14" loading="lazy">
         
@@ -716,6 +779,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 15 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_15.jpg" alt="Handwritten diary Page 15" loading="lazy">
         
@@ -745,6 +809,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 16 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_16.jpg" alt="Handwritten diary Page 16" loading="lazy">
         
@@ -769,6 +834,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 17 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_17.jpg" alt="Handwritten diary Page 17" loading="lazy">
         
@@ -794,6 +860,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 18 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_18.jpg" alt="Handwritten diary Page 18" loading="lazy">
         
@@ -819,6 +886,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 19 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_19.jpg" alt="Handwritten diary Page 19" loading="lazy">
         
@@ -844,6 +912,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 20 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_20.jpg" alt="Handwritten diary Page 20" loading="lazy">
         
@@ -874,6 +943,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 21 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_21.jpg" alt="Handwritten diary Page 21" loading="lazy">
         
@@ -898,6 +968,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 22 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_22.jpg" alt="Handwritten diary Page 22" loading="lazy">
         
@@ -923,6 +994,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 23 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_23.jpg" alt="Handwritten diary Page 23" loading="lazy">
         
@@ -948,6 +1020,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 24 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_24.jpg" alt="Handwritten diary Page 24" loading="lazy">
         
@@ -975,6 +1048,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 25 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_25.jpg" alt="Handwritten diary Page 25" loading="lazy">
         
@@ -1000,6 +1074,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 26 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_26.jpg" alt="Handwritten diary Page 26" loading="lazy">
         
@@ -1027,6 +1102,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 27 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_27.jpg" alt="Handwritten diary Page 27" loading="lazy">
         
@@ -1056,6 +1132,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 28 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_28.jpg" alt="Handwritten diary Page 28" loading="lazy">
         
@@ -1083,6 +1160,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 29 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_29.jpg" alt="Handwritten diary Page 29" loading="lazy">
         
@@ -1112,6 +1190,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 30 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_30.jpg" alt="Handwritten diary Page 30" loading="lazy">
         
@@ -1139,6 +1218,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 31 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_31.jpg" alt="Handwritten diary Page 31" loading="lazy">
         
@@ -1172,6 +1252,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 32 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_32.jpg" alt="Handwritten diary Page 32" loading="lazy">
         
@@ -1201,6 +1282,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 33 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_33.jpg" alt="Handwritten diary Page 33" loading="lazy">
         
@@ -1228,6 +1310,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 34 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_34.jpg" alt="Handwritten diary Page 34" loading="lazy">
         
@@ -1257,6 +1340,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 35 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_35.jpg" alt="Handwritten diary Page 35" loading="lazy">
         
@@ -1281,6 +1365,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 36 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_36.jpg" alt="Handwritten diary Page 36" loading="lazy">
         
@@ -1309,6 +1394,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 37 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_37.jpg" alt="Handwritten diary Page 37" loading="lazy">
         
@@ -1337,6 +1423,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 38 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_38.jpg" alt="Handwritten diary Page 38" loading="lazy">
         
@@ -1365,6 +1452,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 39 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_39.jpg" alt="Handwritten diary Page 39" loading="lazy">
         
@@ -1395,6 +1483,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 40 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_40.jpg" alt="Handwritten diary Page 40" loading="lazy">
         
@@ -1423,6 +1512,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 41 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_41.jpg" alt="Handwritten diary Page 41" loading="lazy">
         
@@ -1450,6 +1540,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 42 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_42.jpg" alt="Handwritten diary Page 42" loading="lazy">
         
@@ -1479,6 +1570,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 43 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_43.jpg" alt="Handwritten diary Page 43" loading="lazy">
         
@@ -1506,6 +1598,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 44 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_44.jpg" alt="Handwritten diary Page 44" loading="lazy">
         
@@ -1537,6 +1630,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 45 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_45.jpg" alt="Handwritten diary Page 45" loading="lazy">
         
@@ -1561,6 +1655,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 46 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_46.jpg" alt="Handwritten diary Page 46" loading="lazy">
         
@@ -1585,6 +1680,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 47 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_47.jpg" alt="Handwritten diary Page 47" loading="lazy">
         
@@ -1612,6 +1708,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 48 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_48.jpg" alt="Handwritten diary Page 48" loading="lazy">
         
@@ -1645,6 +1742,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 49 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_49.jpg" alt="Handwritten diary Page 49" loading="lazy">
         
@@ -1675,6 +1773,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 50 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_50.jpg" alt="Handwritten diary Page 50" loading="lazy">
         
@@ -1703,6 +1802,7 @@
   </header>
   <div class="threeColumns">
     <section class="column handwrittenColumn" aria-label="Page 51 handwritten page">
+      
       <figure>
         <img src="assets/pages_filtered/page_51.jpg" alt="Handwritten diary Page 51" loading="lazy">
         
@@ -1736,6 +1836,26 @@
     </section>
   </div>
 </article>
+<article class="entry birthdayPageEntry" id="happy-100th-birthday">
+  <div class="birthdayPage">
+    <div class="birthdayMessage">
+      <h2 class="scriptTitle">Happy 100th Birthday Poppie</h2>
+      <p>with love, your son, Tom.</p>
+    </div>
+    <p class="birthdayFooter">Please let me know of any edits or improvements: <a href="mailto:tom@pinataro.com">tom@pinataro.com</a> Thank you.</p>
+  </div>
+</article>
   </main>
+  <script>
+    const coverEntry = document.getElementById('cover');
+    const updateCoverState = () => {
+      if (!coverEntry) return;
+      const rect = coverEntry.getBoundingClientRect();
+      document.body.classList.toggle('cover-active', rect.top <= 68 && rect.bottom > 68);
+    };
+    updateCoverState();
+    window.addEventListener('scroll', updateCoverState, { passive: true });
+    window.addEventListener('resize', updateCoverState);
+  </script>
 </body>
 </html>
