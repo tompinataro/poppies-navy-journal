@@ -250,7 +250,7 @@ function renderEntry(entry) {
     ? '<h1 class="scriptTitle coverTitle">Poppie&apos;s U.S. Navy Journal</h1>'
     : '';
   const captionHtml = entry.label === 'Cover'
-    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>'
+    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro.</span></figcaption>'
     : (entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : '');
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   ${showEntryHeader ? `<header class="entryHeader">
