@@ -751,9 +751,14 @@ window.JOURNAL_PAGES = [
       "Went on liberty again. I can't get enough of liberty to suit me. Boy these Hawaiians are nice. And pretty girls! A lot of Americans are too. I'll take either one. I can't wait to hit the states now.",
       "Fri. Feb. 15 - At Port Hawaii",
       "7:30 A.M.",
-      "It's now Sat. morning. I couldn't write last night cause I was unexpectedly taken drunk. I'm sober now though & liberty starts at 9:00 A.M. this morning & I'm ready to go. I'm getting a tattoo today. I hope it takes."
+      "It's now Sat. morning. I couldn't write last night cause I was unexpectedly taken drunk. I'm sober now though & liberty starts at 9:00 A.M. this morning & I'm ready to go. I'm getting a tattoo today. I hope it's OK!"
     ],
-    "details": []
+    "details": [
+      {
+        "title": "Tattoo Note",
+        "body": "When Poppie returned home he wore long-sleeved shirts into the summer to cover the tattoo because he regretted getting it and wanted to keep it from his parents. His mom took notice. Since she had read about it in his journal, she told him he didn't need to hide it."
+      }
+    ]
   },
   {
     "num": 39,

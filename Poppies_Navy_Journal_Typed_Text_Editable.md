@@ -283,7 +283,7 @@ Fri. Feb. 15 - At Port Hawaii
 
 7:30 A.M.
 
-It's now Sat. morning. I couldn't write last night cause I was unexpectedly taken drunk. I'm sober now though & liberty starts at 9:00 A.M. this morning & I'm ready to go. I'm getting a tattoo today. I hope it takes.
+It's now Sat. morning. I couldn't write last night cause I was unexpectedly taken drunk. I'm sober now though & liberty starts at 9:00 A.M. this morning & I'm ready to go. I'm getting a tattoo today. I hope it's OK!
 
 # Page 39
 
