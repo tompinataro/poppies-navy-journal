@@ -555,7 +555,14 @@ window.JOURNAL_PAGES = [
             "url": "https://en.wikipedia.org/wiki/Girl_Crazy_%281943_film%29"
           },
           {
-            "title": "Scared Stiff",
+            "title": "Scared Stiff poster",
+            "subtitle": "1945 film poster",
+            "image": "https://upload.wikimedia.org/wikipedia/en/9/9c/Poster_of_the_movie_Scared_Stiff.jpg",
+            "alt": "Color theatrical poster for Scared Stiff, 1945.",
+            "url": "https://en.wikipedia.org/wiki/File:Poster_of_the_movie_Scared_Stiff.jpg"
+          },
+          {
+            "title": "Scared Stiff cast",
             "subtitle": "1945 film poster",
             "image": "https://a.ltrbxd.com/resized/sm/upload/lc/kq/kx/vw/fojZicpGQCzhWCXea08FdJGCHBd-1200-1200-675-675-crop-000000.jpg?v=a39e58c328",
             "alt": "Promotional image for Scared Stiff, 1945.",
@@ -806,7 +813,14 @@ window.JOURNAL_PAGES = [
         "body": "Duffy's Tavern is a 1945 musical comedy based on the popular radio program of the same name.",
         "media": [
           {
-            "title": "Duffy's Tavern",
+            "title": "Duffy's Tavern poster",
+            "subtitle": "1945 film poster",
+            "image": "https://upload.wikimedia.org/wikipedia/en/c/c4/Duffy%27s_Tavern_poster.jpg",
+            "alt": "Color theatrical poster for Duffy's Tavern, 1945.",
+            "url": "https://en.wikipedia.org/wiki/File:Duffy%27s_Tavern_poster.jpg"
+          },
+          {
+            "title": "Duffy's Tavern cast",
             "subtitle": "1945 film poster",
             "image": "https://a.ltrbxd.com/resized/sm/upload/st/8m/5h/pw/2R7O7OsXXfELGRjTjukPNAqyL3V-1200-1200-675-675-crop-000000.jpg?v=85505b5862",
             "alt": "Promotional image for Duffy's Tavern, 1945.",
