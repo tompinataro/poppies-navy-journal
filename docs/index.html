@@ -126,16 +126,20 @@
     #cover .notesColumn {
       display: none;
     }
+    #cover figure {
+      width: min(86vw, 620px);
+    }
     .handwrittenColumn img {
       display: block;
       width: 100%;
+      height: auto;
       max-height: 84vh;
       object-fit: contain;
       border: 1px solid #cfc7ba;
       background: #f5f1ea;
     }
     .coverColumn img {
-      width: min(100%, 760px);
+      width: 100%;
       max-height: none;
     }
     figcaption {
@@ -375,7 +379,7 @@
       <h1 class="scriptTitle coverTitle">Poppie&apos;s U.S. Navy Journal</h1>
       <figure>
         <img src="assets/front/poppie-navy-portrait.jpg" alt="Angelo Pignataro in U.S. Navy uniform in front of an American flag." width="167" height="300" loading="lazy">
-        
+        <figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Cover typed transcript">

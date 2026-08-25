@@ -250,7 +250,7 @@ function renderEntry(entry) {
     ? '<h1 class="scriptTitle coverTitle">Poppie&apos;s U.S. Navy Journal</h1>'
     : '';
   const captionHtml = entry.label === 'Cover'
-    ? ''
+    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>'
     : (entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : '');
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   ${showEntryHeader ? `<header class="entryHeader">
@@ -430,16 +430,20 @@ function renderHtml(entries) {
     #cover .notesColumn {
       display: none;
     }
+    #cover figure {
+      width: min(86vw, 620px);
+    }
     .handwrittenColumn img {
       display: block;
       width: 100%;
+      height: auto;
       max-height: 84vh;
       object-fit: contain;
       border: 1px solid #cfc7ba;
       background: #f5f1ea;
     }
     .coverColumn img {
-      width: min(100%, 760px);
+      width: 100%;
       max-height: none;
     }
     figcaption {
