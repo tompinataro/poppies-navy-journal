@@ -616,7 +616,7 @@ function renderHtml(entries) {
     <div class="brand">
       <strong>Poppie's U.S. Navy Journal</strong>
     </div>
-    <select class="jump" aria-label="Jump to entry" onchange="if (this.value) { location.hash = this.value; this.blur(); }">
+    <select class="jump" aria-label="Jump to entry" onchange="if (this.value) { location.hash = this.value; this.selectedIndex = 0; this.blur(); }">
       <option value="" selected>Jump to</option>
       ${entries.map(entry => `<option value="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">${escapeHtml(entry.label)}</option>`).join('\n      ')}
     </select>
@@ -642,12 +642,7 @@ function renderHtml(entries) {
         window.scrollBy({ top: event.deltaY, left: event.deltaX, behavior: 'auto' });
       }, { passive: false });
     }
-    if (jumpSelect && location.hash) {
-      const hashValue = location.hash.slice(1);
-      if (Array.from(jumpSelect.options).some(option => option.value === hashValue)) {
-        jumpSelect.value = hashValue;
-      }
-    }
+    if (jumpSelect) jumpSelect.selectedIndex = 0;
   </script>
 </body>
 </html>
