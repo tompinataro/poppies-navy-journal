@@ -114,6 +114,18 @@
       margin: 6px 0 18px;
       font-size: clamp(42px, 5vw, 76px);
     }
+    .coverColumn {
+      display: grid;
+      align-content: start;
+      justify-items: center;
+    }
+    #cover .threeColumns {
+      display: block;
+    }
+    #cover .transcriptColumn,
+    #cover .notesColumn {
+      display: none;
+    }
     .handwrittenColumn img {
       display: block;
       width: 100%;
@@ -121,6 +133,10 @@
       object-fit: contain;
       border: 1px solid #cfc7ba;
       background: #f5f1ea;
+    }
+    .coverColumn img {
+      width: min(100%, 620px);
+      max-height: 78vh;
     }
     figcaption {
       margin-top: 8px;
@@ -355,11 +371,11 @@
     <article class="entry" id="cover">
   
   <div class="threeColumns">
-    <section class="column handwrittenColumn" aria-label="Cover handwritten page">
+    <section class="column handwrittenColumn coverColumn" aria-label="Cover handwritten page">
       <h1 class="scriptTitle coverTitle">Poppie&apos;s U.S. Navy Journal</h1>
       <figure>
         <img src="assets/front/poppie-navy-portrait.jpg" alt="Angelo Pignataro in U.S. Navy uniform in front of an American flag." width="167" height="300" loading="lazy">
-        <figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>
+        
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="Cover typed transcript">

@@ -249,19 +249,19 @@ function renderEntry(entry) {
   const coverTitle = entry.label === 'Cover'
     ? '<h1 class="scriptTitle coverTitle">Poppie&apos;s U.S. Navy Journal</h1>'
     : '';
-  const coverCaption = entry.label === 'Cover'
-    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>'
-    : '';
+  const captionHtml = entry.label === 'Cover'
+    ? ''
+    : (entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : '');
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   ${showEntryHeader ? `<header class="entryHeader">
     <h2>${escapeHtml(entry.label)}</h2>
   </header>` : ''}
   <div class="threeColumns">
-    <section class="column handwrittenColumn" aria-label="${escapeHtml(entry.label)} handwritten page">
+    <section class="column handwrittenColumn${entry.label === 'Cover' ? ' coverColumn' : ''}" aria-label="${escapeHtml(entry.label)} handwritten page">
       ${coverTitle}
       <figure>
         ${imgTag(entry.image, entry.alt || entry.imageLabel)}
-        ${coverCaption || (entry.caption ? `<figcaption>${escapeHtml(entry.caption)}</figcaption>` : '')}
+        ${captionHtml}
       </figure>
     </section>
     <section class="column transcriptColumn" aria-label="${escapeHtml(entry.label)} typed transcript">
@@ -418,6 +418,18 @@ function renderHtml(entries) {
       margin: 6px 0 18px;
       font-size: clamp(42px, 5vw, 76px);
     }
+    .coverColumn {
+      display: grid;
+      align-content: start;
+      justify-items: center;
+    }
+    #cover .threeColumns {
+      display: block;
+    }
+    #cover .transcriptColumn,
+    #cover .notesColumn {
+      display: none;
+    }
     .handwrittenColumn img {
       display: block;
       width: 100%;
@@ -425,6 +437,10 @@ function renderHtml(entries) {
       object-fit: contain;
       border: 1px solid #cfc7ba;
       background: #f5f1ea;
+    }
+    .coverColumn img {
+      width: min(100%, 620px);
+      max-height: 78vh;
     }
     figcaption {
       margin-top: 8px;
