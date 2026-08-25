@@ -56,7 +56,7 @@ function paragraphsHtml(paragraphs) {
 }
 
 function coverTranscript(page) {
-  return [page.title].filter(Boolean);
+  return [];
 }
 
 function introTranscript(page) {
@@ -210,7 +210,7 @@ function renderEntry(entry) {
   const hasNotes = Boolean(entry.notesHtml);
   const showEntryHeader = entry.label !== 'Cover';
   const coverCaption = entry.label === 'Cover'
-    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span></figcaption>'
+    ? '<figcaption class="coverCaption"><span>Angelo &quot;Poppie&quot; Pignataro, U.S. Navy.</span><span>October 21, 1926 - May 26, 2019</span><strong><em>Novantadue!</em></strong></figcaption>'
     : '';
   return `<article class="entry" id="${escapeHtml(entry.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))}">
   ${showEntryHeader ? `<header class="entryHeader">
