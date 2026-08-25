@@ -306,7 +306,7 @@ function renderHtml(entries) {
       backdrop-filter: blur(12px);
     }
     .cover-active .brand {
-      visibility: hidden;
+      display: none;
     }
     .brand strong { display: block; font-size: 17px; }
     .brand span { color: var(--muted); font-size: 13px; }
@@ -566,8 +566,8 @@ function renderHtml(entries) {
     const coverEntry = document.getElementById('cover');
     const updateCoverState = () => {
       if (!coverEntry) return;
-      const rect = coverEntry.getBoundingClientRect();
-      document.body.classList.toggle('cover-active', rect.top <= 68 && rect.bottom > 68);
+      const coverEnd = coverEntry.offsetTop + coverEntry.offsetHeight - 68;
+      document.body.classList.toggle('cover-active', window.scrollY < coverEnd);
     };
     updateCoverState();
     window.addEventListener('scroll', updateCoverState, { passive: true });
