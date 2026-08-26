@@ -773,7 +773,11 @@ window.JOURNAL_PAGES = [
       "I had swell liberty today. I bought some bell bottom dungarees, a lighter, belt, pictures & drinks. I spent $20.00. It was my last liberty cause we're leaving Wed. for Frisco.",
       "Tue. Feb. 19 - Hawaii"
     ],
-    "details": []
+    "details": [
+      {
+        "body": "Due to inflation, $110 from 1946 would be worth about $1,884 today."
+      }
+    ]
   },
   {
     "num": 40,
