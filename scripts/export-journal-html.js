@@ -360,7 +360,12 @@ function renderHtml(entries) {
     .cover-active .brand {
       visibility: hidden;
     }
-    .brand strong { display: block; font-size: 17px; }
+    .brand strong {
+      display: block;
+      font-size: 15px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
     .brand span { color: var(--muted); font-size: 13px; }
     .jump {
       width: min(205px, 52vw);
@@ -643,7 +648,7 @@ function renderHtml(entries) {
 <body class="cover-active">
   <header class="topbar">
     <div class="brand">
-      <strong>Poppie's U.S. Navy Journal</strong>
+      <strong>Poppie's Navy Journal</strong>
     </div>
     <select class="jump" aria-label="Jump to entry" onchange="if (this.value) { location.hash = this.value; this.selectedIndex = 0; this.blur(); }">
       <option value="" selected>Jump to</option>
