@@ -12,6 +12,7 @@ from PIL import Image
 
 
 BOTTOM_CROP_HEIGHTS = {
+    "page_01.jpg": 1728,
     "page_37.jpg": 1515,
     "page_38.jpg": 1518,
     "page_41.jpg": 1508,
