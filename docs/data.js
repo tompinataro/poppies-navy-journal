@@ -46,6 +46,16 @@ window.JOURNAL_PAGES = [
         "src": "assets/front/pignataro-brothers.jpg",
         "alt": "Two Pignataro brothers standing together in Army uniforms.",
         "caption": "Poppie's two older brothers, Joe and Carmine Pignataro, were drafted into the army during WWII. They wrote home telling of the very rough conditions in Europe and told their younger brother to enlist in the Navy ahead of his 18th birthday."
+      },
+      {
+        "src": "assets/front/faragasso-pignataro-brothers.jpg",
+        "alt": "Cousin Angelo Faragasso with Joseph, Angelo Poppie, and Carmine Pignataro, from left to right.",
+        "caption": "For left to right: Cousin Angelo Faragasso grew up with the Pignataro brothers: Joseph, Angelo \"Poppie\" and Carmine."
+      },
+      {
+        "src": "assets/front/poppie-beside-car.jpg",
+        "alt": "Angelo Poppie Pignataro in Navy uniform standing beside a car.",
+        "caption": "Poppie's childhood nickname was: \"Diddy.\""
       }
     ]
   },
