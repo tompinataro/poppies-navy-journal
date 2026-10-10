@@ -304,6 +304,7 @@ function renderBirthdayPage(entry) {
   return `<article class="entry birthdayPageEntry" id="${escapeHtml(entry.id)}">
   <div class="birthdayPage">
     <div class="birthdayMessage">
+      <p><time datetime="2026-10-21">October 21, 2026</time></p>
       <h2 class="scriptTitle"><span>Commemorating the</span><span>100th Anniversary</span><span>of my Father&apos;s birth,</span><span>with Love...</span></h2>
       ${photo}
     </div>
