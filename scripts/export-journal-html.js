@@ -326,7 +326,25 @@ function renderHtml(entries) {
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <title>Poppie's Navy Journal - Three Column Review</title>
+  <title>Poppie's Navy Journal</title>
+  <meta name="description" content="Angelo “Poppie” Pignataro’s handwritten Navy journal of his 1946 journey home from the Philippines, with a typed transcription.">
+  <meta property="og:title" content="Poppie's Navy Journal">
+  <meta property="og:description" content="Angelo “Poppie” Pignataro’s handwritten Navy journal of his 1946 journey home from the Philippines, with a typed transcription.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${escapeHtml(canonicalUrl)}">
+  <meta property="og:site_name" content="Poppie's Navy Journal">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="${escapeHtml(new URL('assets/social/poppies-navy-journal-preview.jpg', canonicalUrl).href)}">
+  <meta property="og:image:secure_url" content="${escapeHtml(new URL('assets/social/poppies-navy-journal-preview.jpg', canonicalUrl).href)}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Angelo Pignataro in U.S. Navy uniform before an American flag, alongside the title Poppie's Navy Journal.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Poppie's Navy Journal">
+  <meta name="twitter:description" content="Angelo “Poppie” Pignataro’s handwritten Navy journal of his 1946 journey home from the Philippines, with a typed transcription.">
+  <meta name="twitter:image" content="${escapeHtml(new URL('assets/social/poppies-navy-journal-preview.jpg', canonicalUrl).href)}">
+  <meta name="twitter:image:alt" content="Angelo Pignataro in U.S. Navy uniform before an American flag, alongside the title Poppie's Navy Journal.">
   <style>
     :root {
       --paper: #f7f4ed;
