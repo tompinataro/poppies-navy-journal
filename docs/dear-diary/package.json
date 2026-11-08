@@ -1,0 +1,12 @@
+{
+  "name": "dear-diary",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A customizable personal journal shell",
+  "scripts": {
+    "test": "node --check app.js && node tests/journal.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "^27.0.1"
+  }
+}

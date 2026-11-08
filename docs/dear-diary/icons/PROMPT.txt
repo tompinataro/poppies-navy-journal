@@ -1,0 +1,4 @@
+Tool: built-in image_gen.imagegen
+Transparent background: true
+
+Use case: logo-brand. Asset type: square favicon and app icon for Dear Diary. Primary request: a single vintage leather-covered diary book with the exact word "Diary" and a clearly visible keyhole in a brass latch. Style: lovingly crafted vintage book illustration with realistic warm chestnut brown leather grain, slightly worn edges, restrained gold embossed border and large gold serif lettering "Diary" (D-i-a-r-y), antique brass clasp crossing the right cover edge, with a bold dark keyhole. Composition: nearly front-facing, very slight book depth at left spine, centered and filling about 88 percent of a square canvas; simple strong silhouette readable at favicon sizes; large latch and clear lettering; no extra objects, hands, keys, scenery, extra text or watermark. Transparent background outside the diary.

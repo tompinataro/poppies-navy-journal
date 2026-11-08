@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#355d50" />
+    <meta
+      name="description"
+      content="A personal home for your stories, photographs, handwritten pages and little things worth keeping."
+    />
+    <title>Dear Diary.</title>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/diary-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/diary-16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#"
+        ><img
+          class="brand-icon"
+          src="icons/diary-192.png"
+          width="46"
+          height="46"
+          alt=""
+        /><span
+          >Dear Diary.<small>A place for the things worth keeping</small></span
+        ></a
+      >
+      <div class="top-actions">
+        <span id="saveStatus" role="status">Saved on this browser</span
+        ><button id="backup">Export backup</button
+        ><button id="settingsButton" class="primary">
+          Make it yours <span>↗</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="cover" id="cover">
+        <div class="cover-art" id="coverArt">
+          <div class="cover-lines"></div>
+          <span>Every life<br />holds a story.</span>
+        </div>
+        <div class="cover-copy">
+          <p class="eyebrow">YOUR LIFE. YOUR WORDS.</p>
+          <h1 id="journalTitle"></h1>
+          <p id="journalSubtitle" class="subtitle"></p>
+          <div class="owner">
+            <span class="owner-icon" aria-hidden="true">✦</span
+            ><span id="journalOwner"></span>
+          </div>
+          <button class="light" id="coverButton">
+            Personalize your cover ↗
+          </button>
+        </div>
+      </section>
+      <section class="workspace">
+        <aside>
+          <div class="side-heading">YOUR COLLECTION</div>
+          <button class="nav active" data-filter="all">
+            ▤ <span>All pages</span><b id="allCount">0</b></button
+          ><button class="nav" data-filter="favorites">
+            ☆ <span>Favorites</span><b id="favoriteCount">0</b>
+          </button>
+          <div class="side-heading tags-heading">EXPLORE BY TAG</div>
+          <div id="tagList"></div>
+          <div class="aside-note">
+            <span>✧</span>
+            <h3>A little, often.</h3>
+            <p>A photograph. A few words. A moment you don’t want to forget.</p>
+            <button id="promptButton">Give me a writing prompt ↗</button>
+          </div>
+          <button class="restore" id="restore">↥ Restore a backup</button
+          ><input
+            type="file"
+            id="importFile"
+            accept="application/json,.json"
+            hidden
+          />
+          <p class="privacy">
+            Stored in this browser on this device. Export a backup to keep
+            another copy.
+          </p>
+        </aside>
+        <div class="collection">
+          <div class="collection-heading">
+            <div>
+              <p class="eyebrow">THE CHAPTERS OF YOU</p>
+              <h2 id="collectionTitle">Your pages</h2>
+            </div>
+            <button id="newPage" class="primary">＋ Add a page</button>
+          </div>
+          <div class="toolbar">
+            <label class="search"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                type="search"
+                id="search"
+                aria-label="Search pages"
+                placeholder="Find a memory, a place, a word…" /></label
+            ><label class="sort-label"
+              >View
+              <select id="sort" aria-label="Sort pages">
+                <option value="manual">Journal order</option>
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+              </select></label
+            >
+          </div>
+          <div id="pages" class="pages"></div>
+          <div id="empty" class="empty" hidden>
+            <span>✎</span>
+            <h3 id="emptyTitle">Your story starts here.</h3>
+            <p id="emptyCopy">
+              Add a written entry, a photograph, or a scanned journal page.
+            </p>
+          </div>
+          <div class="bottom-note">Made of moments. Kept by you.</div>
+        </div>
+      </section>
+    </main>
+    <dialog id="settingsDialog">
+      <form id="settingsForm">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">MAKE ROOM FOR YOUR STORY</p>
+            <h2>Make it yours</h2>
+          </div>
+          <button type="button" class="close" data-close aria-label="Close">
+            ×
+          </button>
+        </div>
+        <label
+          >Journal title<input name="title" maxlength="100" required /></label
+        ><label
+          >A few words about your journal<textarea
+            name="subtitle"
+            rows="2"
+            maxlength="400"
+          ></textarea></label
+        ><label
+          >Your name<input name="owner" maxlength="100" placeholder="Your name"
+        /></label>
+        <div class="field-row">
+          <label
+            >Color palette<select name="theme">
+              <option value="forest">Forest & cream</option>
+              <option value="ocean">Ocean & sand</option>
+              <option value="plum">Plum & paper</option>
+            </select></label
+          ><label
+            >Cover photograph<input
+              type="file"
+              name="cover"
+              accept="image/jpeg,image/png,image/webp"
+          /></label>
+        </div>
+        <label class="check"
+          ><input type="checkbox" name="removeCover" /> Remove current cover
+          photograph</label
+        >
+        <p class="hint">
+          Images are resized to save space. Keep original photos separately.
+        </p>
+        <div class="form-actions">
+          <button type="button" data-close>Cancel</button
+          ><button class="primary" type="submit">Save my journal</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="pageDialog">
+      <form id="pageForm">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">A MOMENT WORTH KEEPING</p>
+            <h2 id="editorTitle">Add a page</h2>
+          </div>
+          <button type="button" class="close" data-close aria-label="Close">
+            ×
+          </button>
+        </div>
+        <input type="hidden" name="id" />
+        <div class="field-row">
+          <label
+            >Page title<input
+              name="title"
+              required
+              maxlength="150"
+              placeholder="Give this moment a name" /></label
+          ><label>Date<input name="date" type="date" /></label>
+        </div>
+        <label
+          >Words / transcription<textarea
+            name="body"
+            rows="7"
+            placeholder="Tell your story, or type the words from a handwritten page…"
+          ></textarea>
+        </label>
+        <div class="field-row">
+          <label
+            >Photograph or scanned page<input
+              name="image"
+              type="file"
+              accept="image/jpeg,image/png,image/webp" /></label
+          ><label
+            >Photo description / caption<input
+              name="caption"
+              maxlength="300"
+              placeholder="Who, where, or what’s pictured?"
+          /></label>
+        </div>
+        <label class="check"
+          ><input name="removeImage" type="checkbox" /> Remove current page
+          image</label
+        ><label
+          >Notes<textarea
+            name="notes"
+            rows="3"
+            placeholder="Context, a detail to remember, or something to look up later"
+          ></textarea></label
+        ><label
+          >Links
+          <span class="hint">One per line: label | https://example.com</span
+          ><textarea
+            name="links"
+            rows="2"
+            placeholder="A related place | https://example.com"
+          ></textarea>
+        </label>
+        <div class="field-row">
+          <label
+            >Tags <span class="hint">Separate with commas</span
+            ><input name="tags" placeholder="Family, Travel, Everyday" /></label
+          ><label class="check"
+            ><input name="favorite" type="checkbox" /> Keep in favorites</label
+          >
+        </div>
+        <div class="form-actions">
+          <button type="button" data-close>Cancel</button
+          ><button class="primary" type="submit">Save page</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="readerDialog" class="reader">
+      <div class="dialog-heading">
+        <p class="eyebrow">FROM YOUR JOURNAL</p>
+        <button class="close" data-close aria-label="Close">×</button>
+      </div>
+      <div id="readerContent"></div>
+      <div class="reader-controls">
+        <button id="prevPage">← Previous</button
+        ><span id="readerPosition"></span><button id="nextPage">Next →</button>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <script src="app.js"></script>
+  </body>
+</html>
