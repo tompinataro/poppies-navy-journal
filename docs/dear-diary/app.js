@@ -1,6 +1,8 @@
 "use strict";
 const $ = (s) => document.querySelector(s);
 const KEY = "dear-diary-v1";
+const RECOVERY_KEY = "dear-diary-v1-recovery";
+const MAX_PAGES = 2000;
 const themes = {
   forest: ["#355d50", "#e7ede7"],
   ocean: ["#315a70", "#e5edf0"],
@@ -51,6 +53,8 @@ function validImage(value) {
   );
 }
 function validate(data) {
+  if (Array.isArray(data?.pages) && data.pages.length > MAX_PAGES)
+    throw Error("Dear Diary supports up to 2,000 pages. No pages were saved.");
   if (
     !data ||
     data.version !== 1 ||
@@ -63,8 +67,7 @@ function validate(data) {
     data.owner.length > 100 ||
     !Object.hasOwn(themes, data.theme) ||
     !validImage(data.cover) ||
-    !Array.isArray(data.pages) ||
-    data.pages.length > 2000
+    !Array.isArray(data.pages)
   )
     throw Error("This is not a supported Dear Diary backup.");
   const ids = new Set();
@@ -123,19 +126,57 @@ let state = starter(),
   tag = "",
   readerId = "",
   toastTimer,
-  savedSnapshot = null;
+  savedSnapshot = null,
+  recoveryMode = null,
+  retainedRecovery = null;
 try {
-  const stored = localStorage.getItem(KEY);
-  savedSnapshot = stored;
-  if (stored) state = validate(JSON.parse(stored));
+  savedSnapshot = localStorage.getItem(KEY);
 } catch {
-  setTimeout(
-    () =>
-      toast(
-        "Saved data could not be read. Restore a backup if you have one; existing storage has not been changed.",
-      ),
-    100,
-  );
+  recoveryMode = "unavailable";
+}
+if (recoveryMode !== "unavailable" && savedSnapshot !== null) {
+  try {
+    state = validate(JSON.parse(savedSnapshot));
+  } catch {
+    recoveryMode = "unreadable";
+  }
+}
+try {
+  retainedRecovery = localStorage.getItem(RECOVERY_KEY);
+} catch {
+  // Reading saved recovery is optional. An unreadable primary remains protected.
+}
+
+const recoveryPanel = document.createElement("section");
+recoveryPanel.id = "diaryRecovery";
+recoveryPanel.className = "empty";
+recoveryPanel.hidden = true;
+recoveryPanel.setAttribute("aria-labelledby", "recoveryHeading");
+recoveryPanel.innerHTML = `
+  <h3 id="recoveryHeading">Diary recovery</h3>
+  <p id="recoveryStatus" role="status"></p>
+  <button id="downloadOriginalRecovery" type="button" class="primary">Download original recovery data</button>
+  <button id="downloadRetainedRecovery" type="button">Download saved recovery copy</button>
+  <button id="restoreFromRecovery" type="button">Restore a valid backup</button>
+`;
+$("main").prepend(recoveryPanel);
+
+function renderRecovery() {
+  recoveryPanel.hidden = !recoveryMode && retainedRecovery === null;
+  $("#recoveryStatus").textContent = recoveryMode === "unreadable"
+    ? "Saved diary data could not be opened. Editing and ordinary backup are disabled to protect it. Download recovery data before restoring a valid backup. Recovery data is not a normal backup."
+    : recoveryMode === "unavailable"
+      ? "Browser storage could not be read. Nothing will be replaced. Restore browser storage access and reload."
+      : retainedRecovery === null
+        ? ""
+        : "A copy of an earlier unreadable diary is retained here. Recovery data is not a normal backup.";
+  $("#downloadOriginalRecovery").hidden = recoveryMode !== "unreadable";
+  $("#downloadRetainedRecovery").hidden = retainedRecovery === null;
+  $("#restoreFromRecovery").hidden = recoveryMode !== "unreadable";
+  for (const id of ["backup", "newPage", "settingsButton", "coverButton", "promptButton"])
+    $("#" + id).disabled = Boolean(recoveryMode);
+  $("#restore").disabled = recoveryMode === "unavailable";
+  if (recoveryMode) $("#saveStatus").textContent = "Recovery required";
 }
 function toast(message) {
   $("#toast").textContent = message;
@@ -143,28 +184,67 @@ function toast(message) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => ($("#toast").hidden = true), 6500);
 }
-function persist(next) {
-  try {
-    if (localStorage.getItem(KEY) !== savedSnapshot) {
-      $("#saveStatus").textContent = "Changes not saved";
-      toast(
-        "This journal changed in another tab. Copy any unsaved text, then reload before saving.",
-      );
+function storageFailure() {
+  $("#saveStatus").textContent = recoveryMode ? "Recovery required" : "Changes not saved";
+  toast(recoveryMode
+    ? "Could not preserve a recovery copy and restore safely. The original diary was not replaced. Download its recovery data."
+    : "Could not save. Browser storage may be full or unavailable. Export a backup of saved pages, then try a smaller image.");
+  return false;
+}
+function sameSnapshot(expected) {
+  if (savedSnapshot === expected && localStorage.getItem(KEY) === expected) return true;
+  $("#saveStatus").textContent = recoveryMode ? "Recovery required" : "Changes not saved";
+  toast("This journal changed in another tab or another save. Copy any unsaved text, then reload before saving.");
+  return false;
+}
+function persist(next, { expected = savedSnapshot, restore = false } = {}) {
+  const write = () => {
+    if (recoveryMode === "unavailable" || (recoveryMode && !restore)) {
+      toast("Ordinary saves are blocked while this diary needs recovery.");
       return false;
     }
-    const serialized = JSON.stringify(next);
-    localStorage.setItem(KEY, serialized);
-    savedSnapshot = serialized;
-    state = next;
+    let validated;
+    try {
+      validated = validate(next);
+    } catch (e) {
+      $("#saveStatus").textContent = recoveryMode ? "Recovery required" : "Changes not saved";
+      toast(e.message);
+      return false;
+    }
+    try {
+      if (!sameSnapshot(expected)) return false;
+      if (recoveryMode === "unreadable") {
+        const previous = localStorage.getItem(RECOVERY_KEY);
+        if (previous !== null && previous !== expected) {
+          retainedRecovery = previous;
+          renderRecovery();
+          toast("A different recovery copy is already retained. Nothing was replaced; download both recovery files.");
+          return false;
+        }
+        if (previous === null) localStorage.setItem(RECOVERY_KEY, expected);
+        if (localStorage.getItem(RECOVERY_KEY) !== expected) return storageFailure();
+        retainedRecovery = expected;
+        renderRecovery();
+        if (!sameSnapshot(expected)) return false;
+      }
+      const serialized = JSON.stringify(validated);
+      localStorage.setItem(KEY, serialized);
+      savedSnapshot = serialized;
+      state = validated;
+      recoveryMode = null;
+    } catch {
+      return storageFailure();
+    }
     $("#saveStatus").textContent = "Saved on this browser";
     render();
     return true;
+  };
+  try {
+    return navigator.locks?.request
+      ? navigator.locks.request(KEY, write).catch(storageFailure)
+      : write();
   } catch {
-    $("#saveStatus").textContent = "Changes not saved";
-    toast(
-      "Could not save. Browser storage may be full or unavailable. Export a backup of saved pages, then try a smaller image.",
-    );
-    return false;
+    return storageFailure();
   }
 }
 function visiblePages() {
@@ -208,6 +288,7 @@ function dateLabel(value) {
       });
 }
 function render() {
+  renderRecovery();
   const [accent, soft] = themes[state.theme];
   document.documentElement.style.setProperty("--accent", accent);
   document.documentElement.style.setProperty("--accent-soft", soft);
@@ -251,10 +332,10 @@ function render() {
   const pageOrder = new Map(state.pages.map((page, index) => [page.id, index]));
   $("#empty").hidden = pages.length > 0;
   const narrowed = filter !== "all" || tag || $("#search").value.trim();
-  $("#emptyTitle").textContent = narrowed
+  $("#emptyTitle").textContent = recoveryMode ? "Saved pages are unavailable." : narrowed
     ? "No pages found."
     : "Your story starts here.";
-  $("#emptyCopy").textContent = narrowed
+  $("#emptyCopy").textContent = recoveryMode ? "Follow the diary recovery instructions above." : narrowed
     ? "Try another search, tag, or collection."
     : "Add a written entry, a photograph, or a scanned journal page.";
   $("#pages").innerHTML = pages
@@ -363,6 +444,7 @@ for (const dialog of document.querySelectorAll("dialog")) {
 $("#settingsForm").addEventListener("submit", (e) =>
   submitForm(e, async () => {
     const f = e.target;
+    const expected = savedSnapshot;
     const next = {
       ...state,
       title: f.elements.title.value.trim(),
@@ -374,12 +456,13 @@ $("#settingsForm").addEventListener("submit", (e) =>
     if (!next.title) throw Error("Enter a journal title.");
     const image = f.elements.cover.files[0];
     if (image) next.cover = await imageData(image);
-    if (persist(next)) $("#settingsDialog").close();
+    if (await persist(next, { expected })) $("#settingsDialog").close();
   }),
 );
 $("#pageForm").addEventListener("submit", (e) =>
   submitForm(e, async () => {
     const f = e.target;
+    const expected = savedSnapshot;
     const old = state.pages.find((p) => p.id === f.elements.id.value);
     const links = f.elements.links.value
       .split("\n")
@@ -418,7 +501,7 @@ $("#pageForm").addEventListener("submit", (e) =>
     const pages = old
       ? state.pages.map((p) => (p.id === old.id ? page : p))
       : [...state.pages, page];
-    if (persist({ ...state, pages })) $("#pageDialog").close();
+    if (await persist({ ...state, pages }, { expected })) $("#pageDialog").close();
   }),
 );
 $("#pages").addEventListener("click", (e) => {
@@ -490,34 +573,56 @@ for (const [selector, offset] of [
       i = pages.findIndex((p) => p.id === readerId);
     if (pages[i + offset]) showReader(pages[i + offset].id);
   };
-$("#backup").onclick = () => {
-  const blob = new Blob([JSON.stringify(state, null, 2)], {
+function downloadJson(value, filename) {
+  const blob = new Blob([JSON.stringify(value, null, 2)], {
     type: "application/json",
   });
-  const url = URL.createObjectURL(blob),
-    a = document.createElement("a");
+  const url = URL.createObjectURL(blob), a = document.createElement("a");
   a.href = url;
-  a.download = `dear-diary-backup-${today()}.json`;
+  a.download = filename;
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
-  toast(
-    "Backup exported. Keep it somewhere safe; it includes your photos and writing.",
-  );
+}
+$("#backup").onclick = () => {
+  if (recoveryMode) return toast("Use Download original recovery data; an ordinary backup is not available.");
+  try {
+    if (!sameSnapshot(savedSnapshot)) return;
+    downloadJson(validate(state), `dear-diary-backup-${today()}.json`);
+    toast("Backup export requested. Keep it somewhere safe; it includes your photos and writing.");
+  } catch {
+    toast("Backup could not be exported. Your diary was not changed.");
+  }
 };
-$("#restore").onclick = () => $("#importFile").click();
+function downloadRecovery(raw, kind) {
+  if (raw === null) return;
+  try {
+    // The JSON envelope preserves all original localStorage string code units,
+    // including malformed JSON and unpaired surrogates, without treating it as HTML.
+    downloadJson({ format: "dear-diary-raw-recovery-v1", raw }, `dear-diary-recovery-${kind}-${today()}.json`);
+    toast("Recovery download requested. Keep the file private; it is not a normal backup.");
+  } catch {
+    toast("Recovery could not be downloaded. The saved diary was not changed.");
+  }
+}
+$("#downloadOriginalRecovery").onclick = () => downloadRecovery(savedSnapshot, "original");
+$("#downloadRetainedRecovery").onclick = () => downloadRecovery(retainedRecovery, "retained");
+$("#restore").onclick = $("#restoreFromRecovery").onclick = () => $("#importFile").click();
 $("#importFile").onchange = async (e) => {
   const file = e.target.files[0];
   if (!file) return;
+  const expected = savedSnapshot;
   try {
     if (file.size > 25 * 1024 * 1024)
       throw Error("This backup is larger than the 25 MB import limit.");
     const next = validate(JSON.parse(await file.text()));
     if (
       confirm(
-        "Replace this browser’s journal with this backup? Export your current journal first if you want to keep it.",
+        recoveryMode
+          ? "Replace the unreadable diary with this validated backup? The original must first be retained as a recovery copy."
+          : "Replace this browser’s journal with this backup? Export your current journal first if you want to keep it.",
       )
     ) {
-      if (persist(next)) {
+      if (await persist(next, { expected, restore: true })) {
         filter = "all";
         tag = "";
         $("#search").value = "";
